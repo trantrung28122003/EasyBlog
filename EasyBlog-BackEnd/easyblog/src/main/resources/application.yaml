@@ -1,0 +1,69 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: test
+
+  # Database connection properties
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/easyBlog?createDatabaseIfNotExist=true
+    username: root
+    password:
+    #password: Password@1234
+
+  # Hibernate properties
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: workflowttp@gmail.com
+#    password: mytk qdlt eyfl xfby
+#    fromEmail: workflowttp@gmail.com
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: easylearning2k3@gmail.com
+    password: zcnv gqkk vzvm vpky
+    fromEmail: easylearning2k3@gmail.com
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+jwt:
+  signerKey: "a0YJZqjYV1ny1WVzrErLD1cWFmSiTfzDOIhsYH+Fw45JDN6WukcgWRWd+4zka+9G"
+  valid-duration: 36000
+  refreshable-duration: 36000
+
+google:
+  client-id: "409126728225-mn4h754gh3l2a1vhd3jjk74ug5b0dmug.apps.googleusercontent.com"
+  client-secret: "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"
+  redirect-uri: "http://localhost:5173"
+  token-uri: "https://oauth2.googleapis.com/token"
+  user-info-uri: "https://www.googleapis.com/oauth2/v2/userinfo"
+
+payment:
+  vnPay:
+    tmn-code: 9FAYTC6C
+    init-payment-url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+    secret-key: S02BYPGAMK4K8PJKECWRTJCIKCSB8F5P
+    return-url: http://localhost:5173/checkout/confirmPaymentVNPayClient
+
+

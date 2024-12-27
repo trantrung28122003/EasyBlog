@@ -1,0 +1,250 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 266338304 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3631), pid=14500, tid=20412
+#
+# JRE version:  (22.0.1+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (22.0.1+8-16, mixed mode, emulated-client, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.1\lib\idea_rt.jar=59186:C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 com.hutech.easylearning.EasylearningApplication
+
+Host: 11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz, 8 cores, 15G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Fri Nov 22 19:04:25 2024 SE Asia Standard Time elapsed time: 0.054108 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000209c735fc10):  JavaThread "Unknown thread" [_thread_in_vm, id=20412, stack(0x0000000b76400000,0x0000000b76500000) (1024K)]
+
+Stack: [0x0000000b76400000,0x0000000b76500000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6e2279]  (no source info available)
+V  [jvm.dll+0x874e33]  (no source info available)
+V  [jvm.dll+0x87725e]  (no source info available)
+V  [jvm.dll+0x877933]  (no source info available)
+V  [jvm.dll+0x27fd76]  (no source info available)
+V  [jvm.dll+0x6de915]  (no source info available)
+V  [jvm.dll+0x6d341a]  (no source info available)
+V  [jvm.dll+0x3589da]  (no source info available)
+V  [jvm.dll+0x360f06]  (no source info available)
+V  [jvm.dll+0x3b3e2e]  (no source info available)
+V  [jvm.dll+0x3b40d8]  (no source info available)
+V  [jvm.dll+0x32c59c]  (no source info available)
+V  [jvm.dll+0x32d158]  (no source info available)
+V  [jvm.dll+0x83ccdc]  (no source info available)
+V  [jvm.dll+0x3c0d71]  (no source info available)
+V  [jvm.dll+0x825ccc]  (no source info available)
+V  [jvm.dll+0x45b8fe]  (no source info available)
+V  [jvm.dll+0x45d781]  (no source info available)
+C  [jli.dll+0x52a3]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [KERNEL32.DLL+0x1259d]  (no source info available)
+C  [ntdll.dll+0x5af38]  (no source info available)
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffebf7ab1c8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x00000209c9663c70 WorkerThread "GC Thread#0"                     [id=18588, stack(0x0000000b76500000,0x0000000b76600000) (1024K)]
+  0x00000209c9674b20 ConcurrentGCThread "G1 Main Marker"            [id=27668, stack(0x0000000b76600000,0x0000000b76700000) (1024K)]
+  0x00000209c9675630 WorkerThread "G1 Conc#0"                       [id=10836, stack(0x0000000b76700000,0x0000000b76800000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffebeeff367]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffebf82bcb8] Heap_lock - owner thread: 0x00000209c735fc10
+
+Heap address: 0x0000000703600000, size: 4042 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total reserved 4139008K, committed 0K, used 0K [0x0000000703600000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffebf2fe429]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.037 Loaded shared library C:\Program Files\Java\jdk-22\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+ZGC Phase Switch (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff75f840000 - 0x00007ff75f850000 	C:\Program Files\Java\jdk-22\bin\java.exe
+0x00007fff1dbb0000 - 0x00007fff1ddc7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fff1d0a0000 - 0x00007fff1d164000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fff1b2e0000 - 0x00007fff1b699000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fff1afd0000 - 0x00007fff1b0e1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fff139f0000 - 0x00007fff13a07000 	C:\Program Files\Java\jdk-22\bin\jli.dll
+0x00007fff1da00000 - 0x00007fff1dab2000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fff1dac0000 - 0x00007fff1db67000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fff1cbe0000 - 0x00007fff1cc87000 	C:\WINDOWS\System32\sechost.dll
+0x00007fff1b2b0000 - 0x00007fff1b2d8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fff1ba10000 - 0x00007fff1bb24000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fff1ce40000 - 0x00007fff1cfee000 	C:\WINDOWS\System32\USER32.dll
+0x00007fff1af20000 - 0x00007fff1af46000 	C:\WINDOWS\System32\win32u.dll
+0x00007fff1c970000 - 0x00007fff1c999000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fff1b190000 - 0x00007fff1b2ab000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fff1b0f0000 - 0x00007fff1b18a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fff0d210000 - 0x00007fff0d22b000 	C:\Program Files\Java\jdk-22\bin\VCRUNTIME140.dll
+0x00007fff00960000 - 0x00007fff00bf2000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96\COMCTL32.dll
+0x00007fff0e910000 - 0x00007fff0e91a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fff1cba0000 - 0x00007fff1cbd1000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fff15d20000 - 0x00007fff15d2c000 	C:\Program Files\Java\jdk-22\bin\vcruntime140_1.dll
+0x00007fff00fc0000 - 0x00007fff0104e000 	C:\Program Files\Java\jdk-22\bin\msvcp140.dll
+0x00007ffebebc0000 - 0x00007ffebf907000 	C:\Program Files\Java\jdk-22\bin\server\jvm.dll
+0x00007fff1d170000 - 0x00007fff1d1e1000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fff19d40000 - 0x00007fff19d8d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fff15160000 - 0x00007fff15194000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fff19d20000 - 0x00007fff19d33000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007fff19fe0000 - 0x00007fff19ff8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fff151f0000 - 0x00007fff151fa000 	C:\Program Files\Java\jdk-22\bin\jimage.dll
+0x00007fff18270000 - 0x00007fff184a2000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fff1d1f0000 - 0x00007fff1d57f000 	C:\WINDOWS\System32\combase.dll
+0x00007fff1b930000 - 0x00007fff1ba07000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fff0dee0000 - 0x00007fff0df12000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fff1af50000 - 0x00007fff1afcb000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fff14d40000 - 0x00007fff14d4f000 	C:\Program Files\Java\jdk-22\bin\instrument.dll
+0x00007fff02780000 - 0x00007fff0279e000 	C:\Program Files\Java\jdk-22\bin\java.dll
+0x00007fff1c0f0000 - 0x00007fff1c966000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007fff1cc90000 - 0x00007fff1ce35000 	C:\WINDOWS\System32\ole32.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-22\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96;C:\Program Files\Java\jdk-22\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -Dmanagement.endpoints.jmx.exposure.include=* -javaagent:C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.1\lib\idea_rt.jar=59186:C:\Program Files\JetBrains\IntelliJ IDEA 2024.1.1\bin -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 
+java_command: com.hutech.easylearning.EasylearningApplication
+java_class_path (initial): D:\EasyLearning-JAVA\EasyLearning-BackEnd\easylearning\target\classes;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-data-jpa\3.2.7\spring-boot-starter-data-jpa-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-aop\3.2.7\spring-boot-starter-aop-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\spring-aop\6.1.10\spring-aop-6.1.10.jar;C:\Users\trant\.m2\repository\org\aspectj\aspectjweaver\1.9.22\aspectjweaver-1.9.22.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-jdbc\3.2.7\spring-boot-starter-jdbc-3.2.7.jar;C:\Users\trant\.m2\repository\com\zaxxer\HikariCP\5.0.1\HikariCP-5.0.1.jar;C:\Users\trant\.m2\repository\org\springframework\spring-jdbc\6.1.10\spring-jdbc-6.1.10.jar;C:\Users\trant\.m2\repository\org\hibernate\orm\hibernate-core\6.4.9.Final\hibernate-core-6.4.9.Final.jar;C:\Users\trant\.m2\repository\jakarta\transaction\jakarta.transaction-api\2.0.1\jakarta.transaction-api-2.0.1.jar;C:\Users\trant\.m2\repository\org\jboss\logging\jboss-logging\3.5.3.Final\jboss-logging-3.5.3.Final.jar;C:\Users\trant\.m2\repository\org\hibernate\common\hibernate-commons-annotations\6.0.6.Final\hibernate-commons-annotations-6.0.6.Final.jar;C:\Users\trant\.m2\repository\io\smallrye\jandex\3.1.2\jandex-3.1.2.jar;C:\Users\trant\.m2\repository\com\fasterxml\classmate\1.6.0\classmate-1.6.0.jar;C:\Users\trant\.m2\repository\net\bytebuddy\byte-buddy\1.14.17\byte-buddy-1.14.17.jar;C:\Users\trant\.m2\repository\org\glassfish\jaxb\jaxb-runtime\4.0.5\jaxb-runtime-4.0.5.jar;C:\Users\trant\.m2\repository\org\glassfish\jaxb\jaxb-core\4.0.5\jaxb-core-4.0.5.jar;C:\Users\trant\.m2\repository\org\eclipse\angus\angus-activation\2.0.2\angus-activation-2.0.2.jar;C:\Users\trant\.m2\repository\org\glassfish\jaxb\txw2\4.0.5\txw2-4.0.5.jar;C:\Users\trant\.m2\repository\com\sun\istack\istack-commons-runtime\4.1.2\istack-commons-runtime-4.1.2.jar;C:\Users\trant\.m2\repository\jakarta\inject\jakarta.inject-api\2.0.1\jakarta.inject-api-2.0.1.jar;C:\Users\trant\.m2\repository\org\antlr\antlr4-runtime\4.13.0\antlr4-runtime-4.13.0.jar;C:\Users\trant\.m2\repository\org\springframework\data\spring-data-jpa\3.2.7\spring-data-jpa-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\data\spring-data-commons\3.2.7\spring-data-commons-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\spring-orm\6.1.10\spring-orm-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\spring-context\6.1.10\spring-context-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\spring-tx\6.1.10\spring-tx-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\spring-beans\6.1.10\spring-beans-6.1.10.jar;C:\Users\trant\.m2\repository\jakarta\annotation\jakarta.annotation-api\2.1.1\jakarta.annotation-api-2.1.1.jar;C:\Users\trant\.m2\repository\org\springframework\spring-aspects\6.1.10\spring-aspects-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-web\3.2.7\spring-boot-starter-web-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter\3.2.7\spring-boot-starter-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot\3.2.7\spring-boot-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-autoconfigure\3.2.7\spring-boot-autoconfigure-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-logging\3.2.7\spring-boot-starter-logging-3.2.7.jar;C:\Users\trant\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\trant\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;C:\Users\trant\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.21.1\log4j-to-slf4j-2.21.1.jar;C:\Users\trant\.m2\repository\org\apache\logging\log4j\log4j-api\2.21.1\log4j-api-2.21.1.jar;C:\Users\trant\.m2\repository\org\slf4j\jul-to-slf4j\2.0.13\jul-to-slf4j-2.0.13.jar;C:\Users\trant\.m2\repository\org\yaml\snakeyaml\2.2\snakeyaml-2.2.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-json\3.2.7\spring-boot-starter-json-3.2.7.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.15.4\jackson-databind-2.15.4.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.15.4\jackson-annotations-2.15.4.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.15.4\jackson-core-2.15.4.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.15.4\jackson-datatype-jdk8-2.15.4.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.15.4\jackson-datatype-jsr310-2.15.4.jar;C:\Users\trant\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.15.4\jackson-module-parameter-names-2.15.4.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-tomcat\3.2.7\spring-boot-starter-tomcat-3.2.7.jar;C:\Users\trant\.m2\repository\org\apache\tomcat\embed\tomcat-embed-core\10.1.25\tomcat-embed-core-10.1.25.jar;C:\Users\trant\.m2\repository\org\apache\tomcat\embed\tomcat-embed-websocket\10.1.25\tomcat-embed-websocket-10.1.25.jar;C:\Users\trant\.m2\repository\org\springframework\spring-web\6.1.10\spring-web-6.1.10.jar;C:\Users\trant\.m2\repository\io\micrometer\micrometer-observation\1.12.7\micrometer-observation-1.12.7.jar;C:\Users\trant\.m2\repository\io\micrometer\micrometer-commons\1.12.7\micrometer-commons-1.12.7.jar;C:\Users\trant\.m2\repository\org\springframework\spring-webmvc\6.1.10\spring-webmvc-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\spring-expression\6.1.10\spring-expression-6.1.10.jar;C:\Users\trant\.m2\repository\com\mysql\mysql-connector-j\8.3.0\mysql-connector-j-8.3.0.jar;C:\Users\trant\.m2\repository\jakarta\xml\bind\jakarta.xml.bind-api\4.0.2\jakarta.xml.bind-api-4.0.2.jar;C:\Users\trant\.m2\repository\jakarta\activation\jakarta.activation-api\2.1.3\jakarta.activation-api-2.1.3.jar;C:\Users\trant\.m2\repository\org\springframework\spring-core\6.1.10\spring-core-6.1.10.jar;C:\Users\trant\.m2\repository\org\springframework\spring-jcl\6.1.10\spring-jcl-6.1.10.jar;C:\Users\trant\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.1.0\jakarta.persistence-api-3.1.0.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-validation\3.2.7\spring-boot-starter-validation-3.2.7.jar;C:\Users\trant\.m2\repository\org\apache\tomcat\embed\tomcat-embed-el\10.1.25\tomcat-embed-el-10.1.25.jar;C:\Users\trant\.m2\repository\org\hibernate\validator\hibernate-validator\8.0.1.Final\hibernate-validator-8.0.1.Final.jar;C:\Users\trant\.m2\repository\jakarta\validation\jakarta.validation-api\3.0.2\jakarta.validation-api-3.0.2.jar;C:\Users\trant\.m2\repository\org\projectlombok\lombok\1.18.32\lombok-1.18.32.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-crypto\6.2.5\spring-security-crypto-6.2.5.jar;C:\Users\trant\.m2\repository\com\nimbusds\nimbus-jose-jwt\9.30.1\nimbus-jose-jwt-9.30.1.jar;C:\Users\trant\.m2\repository\com\github\stephenc\jcip\jcip-annotations\1.0-1\jcip-annotations-1.0-1.jar;C:\Users\trant\.m2\repository\org\springframework\boot\spring-boot-starter-oauth2-resource-server\3.2.7\spring-boot-starter-oauth2-resource-server-3.2.7.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-config\6.2.5\spring-security-config-6.2.5.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-core\6.2.5\spring-security-core-6.2.5.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-oauth2-resource-server\6.2.5\spring-security-oauth2-resource-server-6.2.5.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-oauth2-core\6.2.5\spring-security-oauth2-core-6.2.5.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-web\6.2.5\spring-security-web-6.2.5.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-oauth2-jose\6.2.5\spring-security-oauth2-jose-6.2.5.jar;C:\Users\trant\.m2\repository\org\mapstruct\mapstruct\1.5.2.Final\mapstruct-1.5.2.Final.jar;C:\Users\trant\.m2\repository\org\mapstruct\mapstruct-processor\1.5.2.Final\mapstruct-processor-1.5.2.Final.jar;C:\Users\trant\.m2\repository\org\json\json\20210307\json-20210307.jar;C:\Users\trant\.m2\repository\com\sun\mail\javax.mail\1.6.2\javax.mail-1.6.2.jar;C:\Users\trant\.m2\repository\javax\activation\activation\1.1\activation-1.1.jar;C:\Users\trant\.m2\repository\com\cloudinary\cloudinary-http44\1.29.0\cloudinary-http44-1.29.0.jar;C:\Users\trant\.m2\repository\com\cloudinary\cloudinary-core\1.29.0\cloudinary-core-1.29.0.jar;C:\Users\trant\.m2\repository\org\apache\commons\commons-lang3\3.13.0\commons-lang3-3.13.0.jar;C:\Users\trant\.m2\repository\org\apache\httpcomponents\httpclient\4.4\httpclient-4.4.jar;C:\Users\trant\.m2\repository\org\apache\httpcomponents\httpcore\4.4.16\httpcore-4.4.16.jar;C:\Users\trant\.m2\repository\commons-logging\commons-logging\1.2\commons-logging-1.2.jar;C:\Users\trant\.m2\repository\commons-codec\commons-codec\1.16.1\commons-codec-1.16.1.jar;C:\Users\trant\.m2\repository\org\apache\httpcomponents\httpmime\4.4\httpmime-4.4.jar;C:\Users\trant\.m2\repository\io\github\openfeign\feign-core\11.10\feign-core-11.10.jar;C:\Users\trant\.m2\repository\org\springframework\cloud\spring-cloud-starter-openfeign\3.1.7\spring-cloud-starter-openfeign-3.1.7.jar;C:\Users\trant\.m2\repository\org\springframework\cloud\spring-cloud-starter\3.1.6\spring-cloud-starter-3.1.6.jar;C:\Users\trant\.m2\repository\org\springframework\cloud\spring-cloud-context\3.1.6\spring-cloud-context-3.1.6.jar;C:\Users\trant\.m2\repository\org\springframework\security\spring-security-rsa\1.0.11.RELEASE\spring-security-rsa-1.0.11.RELEASE.jar;C:\Users\trant\.m2\repository\org\springframework\cloud\spring-cloud-openfeign-core\3.1.7\spring-cloud-openfeign-core-3.1.7.jar;C:\Users\trant\.m2\repository\io\github\openfeign\form\feign-form-spring\3.8.0\feign-form-spring-3.8.0.jar;C:\Users\trant\.m2\repository\io\github\openfeign\form\feign-form\3.8.0\feign-form-3.8.0.jar;C:\Users\trant\.m2\repository\commons-fileupload\commons-fileupload\1.4\commons-fileupload-1.4.jar;C:\Users\trant\.m2\repository\org\springframework\cloud\spring-cloud-commons\3.1.6\spring-cloud-commons-3.1.6.jar;C:\Users\trant\.m2\repository\io\github\openfeign\feign-slf4j\11.10\feign-slf4j-11.10.jar;C:\Users\trant\.m2\repository\com\itextpdf\barcodes\7.2.3\barcodes-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\font-asian\7.2.3\font-asian-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\forms\7.2.3\forms-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\hyph\7.2.3\hyph-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\io\7.2.3\io-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\commons\7.2.3\commons-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\pdfa\7.2.3\pdfa-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\sign\7.2.3\sign-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\styled-xml-parser\7.2.3\styled-xml-parser-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\svg\7.2.3\svg-7.2.3.jar;C:\Users\trant\.m2\repository\com\itextpdf\kernel\7.2.5\kernel-7.2.5.jar;C:\Users\trant\.m2\repository\org\bouncycastle\bcpkix-jdk15on\1.70\bcpkix-jdk15on-1.70.jar;C:\Users\trant\.m2\repository\org\bouncycastle\bcutil-jdk15on\1.70\bcutil-jdk15on-1.70.jar;C:\Users\trant\.m2\repository\org\bouncycastle\bcprov-jdk15on\1.70\bcprov-jdk15on-1.70.jar;C:\Users\trant\.m2\repository\org\slf4j\slf4j-api\2.0.13\slf4j-api-2.0.13.jar;C:\Users\trant\.m2\repository\com\itextpdf\layout\7.2.5\layout-7.2.5.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 4                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 2                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 8                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 266338304                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 4238344192                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 4096                                   {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 0                                      {pd product} {ergonomic}
+     bool ProfileInterpreter                       = false                                  {pd product} {command line}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4238344192                             {manageable} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Microsoft MPI\Bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\Tools\Binn\;C:\Program Files\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files\Git\cmd;C:\Program Files (x86)\Dev-Cpp\MinGW64\bin;C:\Program Files\nodejs\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Docker\Docker\resources\bin;C:\Users\trant\AppData\Local\Microsoft\WindowsApps;C:\Users\trant\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Users\trant\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2023.3.2\bin;;C:\Users\trant\AppData\Roaming\npm;C:\Flutter\src\flutter\bin;
+USERNAME=trant
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\trant\AppData\Local\Temp
+TEMP=C:\Users\trant\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 4 days 8:20 hours
+Hyper-V role detected
+
+CPU: total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0xb6, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ibt, cet_ss, avx512_ifma
+Processor Information for processor 0
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 1
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 2
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 3
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 4
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 5
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+Processor Information for processor 6
+  Max Mhz: 2803, Current Mhz: 1201, Mhz Limit: 2803
+Processor Information for processor 7
+  Max Mhz: 2803, Current Mhz: 2803, Mhz Limit: 2803
+
+Memory: 4k page, system-wide physical 16167M (4153M free)
+TotalPageFile size 44980M (AvailPageFile size 94M)
+current process WorkingSet (physical memory assigned to process): 11M, peak: 11M
+current process commit charge ("private bytes"): 56M, peak: 309M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (22.0.1+8-16) for windows-amd64 JRE (22.0.1+8-16), built on 2024-03-12T10:33:16Z by "mach5one" with MS VC++ 17.6 (VS2022)
+
+END.

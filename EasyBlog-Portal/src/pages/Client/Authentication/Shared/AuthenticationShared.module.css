@@ -1,0 +1,219 @@
+.menu .app_brand.admin {
+  height: 64px;
+}
+
+.dark_style .menu .app_brand.admin {
+  height: 64px;
+}
+
+.app_brand {
+  display        : flex;
+  justify-content: center;
+}
+
+.app_brand_logo.admin svg {
+  width : 30px;
+  height: 24px;
+}
+
+.app_brand_text.admin {
+  font-size: 1.25rem;
+}
+
+.layout_navbar_fixed .layout_wrapper:not(.layout_without_menu) .layout_page {
+  padding-top: 64px !important;
+}
+
+.content_wrapper .navbar {
+  z-index: auto;
+}
+
+.admin_blocks>* {
+  display: block !important;
+}
+
+.admin_inline_spacing>* {
+  margin: 1rem 0.375rem 0 0 !important;
+}
+
+.admin_vertical_spacing>* {
+  margin-top   : 1.25rem !important;
+  margin-bottom: 0 !important;
+}
+
+.admin_vertical_spacing.admin_only_element> :first_child {
+  margin-top: 0 !important;
+}
+
+.admin_vertical_spacing_lg>* {
+  margin-top   : 1.875rem !important;
+  margin-bottom: 0 !important;
+}
+
+.admin_vertical_spacing_lg.admin_only_element> :first_child {
+  margin-top: 0 !important;
+}
+
+.admin_vertical_spacing_xl>* {
+  margin-top   : 5rem !important;
+  margin-bottom: 0 !important;
+}
+
+.admin_vertical_spacing_xl.admin_only_element> :first_child {
+  margin-top: 0 !important;
+}
+
+.rtl_only {
+  display   : none !important;
+  text-align: left !important;
+  direction : ltr !important;
+}
+
+.app_bar_link {
+  display        : flex;
+  justify-content: center;
+  margin-bottom  : 12px;
+}
+
+[dir="rtl"] .rtl_only {
+  display: block !important;
+}
+
+/* Dropdown buttons going out of small screens */
+@media (max-width: 576px) {
+  #dropdown_variation_admin .btn_group .text_truncate {
+    width   : 300px;
+    position: relative;
+  }
+
+  #dropdown_variation_admin .btn_group .text_truncate::after {
+    position: absolute;
+    top     : 45%;
+    right   : 0.65rem;
+  }
+}
+
+.layout_admin_wrapper {
+  display              : _webkit_box;
+  display              : _ms_flexbox;
+  display              : flex;
+  -webkit-box-align    : center;
+  -ms-flex-align       : center;
+  align-items          : center;
+  -webkit-box-orient   : vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction   : column;
+  flex-direction       : column;
+  margin-top           : 1.25rem;
+}
+
+.layout_admin_placeholder img {
+  width: 900px;
+}
+
+.layout_admin_info {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.authentication_wrapper {
+  display   : flex;
+  flex-basis: 100%;
+  min-height: 100vh;
+  width     : 100%;
+}
+
+.authentication_wrapper .authentication_inner {
+  width: 100%;
+}
+
+.authentication_wrapper.authentication_basic {
+  align-items    : center;
+  justify-content: center;
+}
+
+.authentication_wrapper .auth_cover-illustration {
+  z-index        : 1;
+  max-inline-size: 38rem;
+}
+
+.authentication_wrapper .authentication_image_object_left {
+  position: absolute;
+  bottom  : 6%;
+  left    : 4%;
+}
+
+.authentication_wrapper .authentication_image_object_right {
+  position: absolute;
+  bottom  : 7%;
+  right   : 4%;
+}
+
+.authentication_wrapper .authentication_image {
+  z-index           : -1;
+  inline-size       : 100%;
+  position          : absolute;
+  inset-inline-start: 0;
+  bottom            : 0;
+}
+
+.authentication_wrapper .authentication_image_model {
+  width: 768px;
+}
+
+.authentication_wrapper.authentication_cover {
+  align-items: flex-start;
+}
+
+.authentication_wrapper.authentication_cover .authentication_inner {
+  min-height: 100vh;
+  position  : relative;
+}
+
+.authentication_wrapper.authentication_cover .authentication_image {
+  inset-inline-start: unset;
+}
+
+.authentication_wrapper.authentication_cover .authentication_image_tree {
+  position: absolute;
+  bottom  : 3rem;
+  left    : 3rem;
+}
+
+.authentication_wrapper.authentication_basic .authentication_inner {
+  max-width: 450px;
+}
+
+.authentication_wrapper .auth_input-wrapper .auth_input {
+  max-width    : 50px;
+  padding-left : 0.4rem;
+  padding-right: 0.4rem;
+  font-size    : 150%;
+}
+
+@media (max-width: 575.98px) {
+  .authentication_wrapper .auth_input-wrapper .auth_input {
+    font-size: 1.25rem;
+  }
+}
+
+.light_style .authentication_wrapper .authentication_bg {
+  background-color: #fff;
+}
+
+.container_p_y:not([class^="pt-"]):not([class*=" pt-"]) {
+  padding-top: 1.5rem !important;
+}
+
+.container_p_y:not([class^="pb-"]):not([class*=" pb-"]) {
+  padding-bottom: 1.5rem !important;
+}
+
+.text_heading {
+  --bs-text-opacity: 1;
+  color            : #544f5a !important;
+}
+
+.fw-semibold {
+  font-weight: 600 !important;
+}

@@ -1,0 +1,25 @@
+.card-comment {
+    padding: 2px;
+
+}
+
+.card-comment img {
+    width: 30px;
+}
+
+.card-comment span {
+    font-weight: bold;
+    color      : #06bbcc;
+}
+
+.card-comment small {
+    font-size: 12px;
+}
+
+.section_comment {
+    border-radius: 12px;
+}
+
+.comments{
+    margin-left: 38px;
+}
