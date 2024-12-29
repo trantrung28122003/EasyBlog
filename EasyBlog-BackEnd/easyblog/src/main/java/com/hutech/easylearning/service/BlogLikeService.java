@@ -61,7 +61,12 @@ public class BlogLikeService {
                 .dateCreate(blog.getDateCreate())
                 .statusLikeByUser(islike)
                 .build();
-
+        String destination ="/topic/blog/like";
+        try {
+            simpMessagingTemplate.convertAndSend(destination, blogResponse);
+        } catch (Exception e) {
+            System.err.println("Không thể gửi qua WebSocket: " + e.getMessage());
+        }
         notificationService.addNotificationByLikeBlog(blogId);
         return blogResponse;
     }

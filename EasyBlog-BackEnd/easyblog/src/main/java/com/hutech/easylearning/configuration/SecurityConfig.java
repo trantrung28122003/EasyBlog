@@ -26,16 +26,16 @@ import java.util.List;
 public class SecurityConfig {
 
 
-        private final String[] PUBLIC_POST_ENDPOINTS = {"/users",
-                "/auth/login",
-                "/auth/introspect",
-                "/auth/register",
-                "/auth/loginWithGoogle",
-                "/ws/**",
-                "/email/sendVerificationCode",
-                "/email/verifyCode",
-                "customer/resetPassword"
-        };
+    private final String[] PUBLIC_POST_ENDPOINTS = {"/users",
+            "/auth/login",
+            "/auth/introspect",
+            "/auth/register",
+            "/auth/loginWithGoogle",
+            "/ws/**",
+            "/email/sendVerificationCode",
+            "/email/verifyCode",
+            "customer/resetPassword"
+    };
 
     private final String[] PUBLIC_GET_ENDPOINTS = {
             "/topFourMostRegisteredCourses",
@@ -67,7 +67,7 @@ public class SecurityConfig {
 
         httpSecurity.oauth2ResourceServer(oauth2 ->
                 oauth2.jwt(jwtConfigurer -> jwtConfigurer.decoder(customJwtDecoder)
-                        .jwtAuthenticationConverter(jwtAuthenticationConverter()))
+                                .jwtAuthenticationConverter(jwtAuthenticationConverter()))
                         .authenticationEntryPoint(new JwtAuthenticationEntryPoint())
         );
 
@@ -95,8 +95,8 @@ public class SecurityConfig {
 
     @Bean
     JwtAuthenticationConverter jwtAuthenticationConverter() {
-       JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
-       jwtGrantedAuthoritiesConverter.setAuthorityPrefix("ROLE_");
+        JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
+        jwtGrantedAuthoritiesConverter.setAuthorityPrefix("ROLE_");
         JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
         jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(jwtGrantedAuthoritiesConverter);
         return jwtAuthenticationConverter;

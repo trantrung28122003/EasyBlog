@@ -208,9 +208,9 @@ const Home: React.FC = () => {
   }, [selectedBlogId]);
   useEffect(() => {
     if (isLogin) {
-      FetchNotificationByUser();
-      doCallGetBlog();
     }
+    FetchNotificationByUser();
+    doCallGetBlog();
     setCurrentUser(getUserInfo());
     const handleClickOutside = (event: MouseEvent) => {
       if (
