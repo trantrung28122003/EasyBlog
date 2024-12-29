@@ -69,6 +69,10 @@ public class User {
     @JsonManagedReference
     Set<Blog> blogs;
 
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    Set<BlogLike> blogLikes;
+
     public boolean getIsDeleted() {
         return isDeleted;
     }

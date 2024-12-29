@@ -13,6 +13,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -28,8 +29,10 @@ public class CommentService {
     final CommentRepository commentRepository;
     final ReplyRepository replyRepository;
     final UserRepository userRepository;
+    private final SimpMessagingTemplate simpMessagingTemplate;
+    private final NotificationService notificationService;
 
-    public List<CommentResponse> getCommentsByTrainingPartId(String trainingPartId) {
+    public List<CommentResponse> getCommentsByBlogId(String trainingPartId) {
         List<CommentResponse> commentResponseList = new ArrayList<>();
 
         List<Comment> comments = commentRepository.findAllByBlogId(trainingPartId);
@@ -70,7 +73,7 @@ public class CommentService {
         var userById = userRepository.findById(request.getUserId());
         Comment comment = new Comment().builder()
                 .content(request.getCommentContent())
-                .blogId(request.getTrainingPartId())
+                .blogId(request.getBlogId())
                 .userId(request.getUserId())
                 .dateCreate(LocalDateTime.now())
                 .dateChange(LocalDateTime.now())
@@ -86,7 +89,7 @@ public class CommentService {
                .dateCreate(comment.getDateCreate())
                .replies(new ArrayList<>())
                .build();
-
+        notificationService.addNotificationByComment(request.getUserId(), comment.getId());
         return commentResponse;
     }
 
@@ -104,7 +107,6 @@ public class CommentService {
                 .build();
         replyRepository.save(reply);
 
-
         ReplyResponse replyResponse = new ReplyResponse().builder()
                 .id(reply.getId())
                 .commentId(reply.getCommentId())
@@ -114,6 +116,10 @@ public class CommentService {
                 .userImageUrl(userById.get().getImageUrl())
                 .dateCreate(reply.getDateCreate())
                 .build();
+//        if(request.getParentReplyUserId() != null) {
+//            notificationService.addNotificationByComment(request);
+//        }
+        notificationService.addNotificationByReply(request);
         return replyResponse;
     }
 }

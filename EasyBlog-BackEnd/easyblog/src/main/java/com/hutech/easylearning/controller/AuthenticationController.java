@@ -75,7 +75,6 @@ public class AuthenticationController {
     ApiResponse<AuthenticationResponse> authenticate (@RequestBody RefreshRequest request) throws ParseException, JOSEException
     {
         var result = authenticationService.refreshToken(request);
-
         return ApiResponse.<AuthenticationResponse>builder()
                 .result(result)
                 .build();

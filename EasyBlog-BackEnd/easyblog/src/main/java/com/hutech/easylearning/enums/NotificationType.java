@@ -2,9 +2,7 @@ package com.hutech.easylearning.enums;
 
 public enum NotificationType {
     COMMENT,
-    PAYMENT,
-    PROMOTION,
+    BLOG,
     SYSTEM_ALERT,
-    CERTIFICATION,
     REMINDER,
 }

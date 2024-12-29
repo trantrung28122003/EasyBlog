@@ -10,7 +10,7 @@ import lombok.experimental.FieldDefaults;
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class CommentRequest {
-    String trainingPartId;
+    String blogId;
     String commentContent;
     String userId;
 }

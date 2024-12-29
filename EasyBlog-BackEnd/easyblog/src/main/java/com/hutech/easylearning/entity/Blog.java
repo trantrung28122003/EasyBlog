@@ -25,18 +25,22 @@ public class Blog {
     @Column(name ="id", columnDefinition = "VARCHAR(36)")
     String id;
 
-    @Column(name = "title", nullable = false)
-    String title;
-
     @Column(name = "content", columnDefinition = "TEXT")
     String content;
 
-    @Column(name = "imageUrl",nullable = false)
+    @Column(name = "imageUrl", nullable = true)
     String imageUrl;
+    @Column(name = "date_create")
+    LocalDateTime dateCreate;
 
-    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JsonManagedReference
-    Set<Comment> comments;
+    @Column(name = "date_change")
+    LocalDateTime dateChange;
+
+    @Column(name = "changed_by")
+    String changedBy;
+
+    @Column(name = "is_deleted")
+    boolean isDeleted;
 
     @Column(name = "user_id")
     String userId;
@@ -44,4 +48,12 @@ public class Blog {
     @JoinColumn(name = "user_id", referencedColumnName = "id", insertable = false, updatable = false)
     @JsonBackReference
     User user;
+
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    Set<Comment> comments;
+
+    @OneToMany(mappedBy = "blog", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
+    Set<BlogLike> blogLikes;
 }
