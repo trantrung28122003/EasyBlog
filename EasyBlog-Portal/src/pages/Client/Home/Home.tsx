@@ -199,11 +199,10 @@ const Home: React.FC = () => {
   const blogRefs = useRef<{ [key: string]: HTMLElement | null }>({});
   const [selectedBlogId, setSelectedBlogId] = useState<string | null>(null);
   useEffect(() => {
-    // Kiểm tra xem phần tử có tồn tại và cuộn tới không
     if (selectedBlogId && blogRefs.current[selectedBlogId]) {
       blogRefs.current[selectedBlogId]?.scrollIntoView({
         behavior: "smooth",
-        block: "start", // Cuộn tới đầu phần tử
+        block: "start",
       });
     }
   }, [selectedBlogId]);
