@@ -223,12 +223,23 @@ const Home: React.FC = () => {
     };
     document.addEventListener("mousedown", handleClickOutside);
     client.onConnect = () => {
-      client.subscribe("/topic/notificattions", (content) => {
+      client.subscribe("/topic/notifications", (content) => {
         const newNotification = JSON.parse(content.body);
-        setNotifications((prevNotifications) => [
-          ...prevNotifications,
-          newNotification,
-        ]);
+        setNotifications((prevNotifications) => {
+          const updatedNotifiCation = [...prevNotifications, newNotification];
+          updatedNotifiCation.sort((a, b) => {
+            const dateA = new Date(a.dateCreate).getTime();
+            const dateB = new Date(b.dateCreate).getTime();
+
+            if (isNaN(dateA) || isNaN(dateB)) {
+              console.error("Invalid date:", a.dateCreate, b.dateCreate);
+              return 0;
+            }
+            return dateB - dateA;
+          });
+
+          return updatedNotifiCation;
+        });
       });
 
       client.subscribe("/topic/blogs", (content) => {
@@ -273,10 +284,21 @@ const Home: React.FC = () => {
       if (currentUser?.id) {
         client.subscribe(`/user/${currentUser.id}/notifications`, (content) => {
           const newNotification = JSON.parse(content.body);
-          setNotifications((prevNotifications) => [
-            ...prevNotifications,
-            newNotification,
-          ]);
+          setNotifications((prevNotifications) => {
+            const updatedNotifiCation = [...prevNotifications, newNotification];
+            updatedNotifiCation.sort((a, b) => {
+              const dateA = new Date(a.dateCreate).getTime();
+              const dateB = new Date(b.dateCreate).getTime();
+
+              if (isNaN(dateA) || isNaN(dateB)) {
+                console.error("Invalid date:", a.dateCreate, b.dateCreate);
+                return 0;
+              }
+              return dateB - dateA;
+            });
+
+            return updatedNotifiCation;
+          });
         });
       }
     };

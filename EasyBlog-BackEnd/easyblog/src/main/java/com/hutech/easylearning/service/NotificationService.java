@@ -47,7 +47,7 @@ public class NotificationService {
                     .build();
             notificationResponseList.add(notificationResponse);
         }
-
+        notificationResponseList.sort((notification1, notification2) -> notification2.getDateCreate().compareTo(notification1.getDateCreate()));
         return  notificationResponseList;
     }
 
@@ -121,7 +121,7 @@ public class NotificationService {
         var contentNotificationByPostBlog = currentUser.getFullName() + " vừa thích bài viết của bạn kìa ! ";
         if(likeCount > 1)
         {
-            contentNotificationByPostBlog = currentUser.getFullName() +" và " + (likeCount > 2 ? likeCount - 1 : likeCount )+" người khác đã thích bài viết của bạn kìaaa";
+            contentNotificationByPostBlog = currentUser.getFullName() +" và " + (likeCount >= 2 ? likeCount - 1 : likeCount )+" người khác đã thích bài viết của bạn kìaaa";
         }
         if(!currentUser.getId().equals( blogById.getUserId())) {
             var notificationResponse = createAndSaveNotification(contentNotificationByPostBlog, NotificationType.COMMENT, blogById.getUserId(), blogId);
