@@ -108,7 +108,7 @@ public class NotificationService {
         var contentNotificationByPostBlog = currentUser.getFullName() + " vừa đăng  bài viết mới kìa! ";
         var userList = userService.getUsers();
         for(var user : userList) {
-            if(user.getId() != currentUser.getId()) {
+            if(!user.getId().equals(currentUser.getId())) {
                 var notificationResponse = createAndSaveNotification(contentNotificationByPostBlog, NotificationType.COMMENT, user.getId(), blogId);
                 sendNotification(user.getId(), notificationResponse);
             }
@@ -121,9 +121,9 @@ public class NotificationService {
         var contentNotificationByPostBlog = currentUser.getFullName() + " vừa thích bài viết của bạn kìa ! ";
         if(likeCount > 1)
         {
-            contentNotificationByPostBlog = currentUser.getFullName() +" và " + likeCount +"đã thích bài viết của bạn kìaaa";
+            contentNotificationByPostBlog = currentUser.getFullName() +" và " + likeCount +" người khác đã thích bài viết của bạn kìaaa";
         }
-        if(currentUser.getId() != blogById.getUserId()) {
+        if(!currentUser.getId().equals( blogById.getUserId())) {
             var notificationResponse = createAndSaveNotification(contentNotificationByPostBlog, NotificationType.COMMENT, blogById.getUserId(), blogId);
             sendNotification(blogById.getUserId(), notificationResponse);
         }

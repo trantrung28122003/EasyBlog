@@ -46,26 +46,21 @@ public class EmailService {
         properties.put("mail.smtp.auth", "true");
         properties.put("mail.smtp.starttls.enable", "true");
 
-
         Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
         });
 
-
         Message msg = new MimeMessage(session);
         msg.setFrom(new InternetAddress(fromEmail));
         msg.setRecipients(Message.RecipientType.TO, InternetAddress.parse(toEmail));
         msg.setSubject(subject);
         msg.setContent(emailBody, "text/html; charset=utf-8");
-
-
         Transport.send(msg);
         System.out.println("Email sent successfully.");
     }
     public static String formatCurrency(BigDecimal totalAmount) {
-
         NumberFormat numberFormat = NumberFormat.getNumberInstance(new Locale("vi", "VN"));
         numberFormat.setMaximumFractionDigits(0);
         return numberFormat.format(totalAmount);
