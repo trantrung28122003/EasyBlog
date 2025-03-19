@@ -1,0 +1,12 @@
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\bin\Debug\net8.0\PostApi.Domain.deps.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\bin\Debug\net8.0\PostApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\bin\Debug\net8.0\PostApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.AssemblyInfoInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.AssemblyInfo.cs
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.csproj.CoreCompileInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.sourcelink.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\refint\PostApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\PostApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Domain\obj\Debug\net8.0\ref\PostApi.Domain.dll

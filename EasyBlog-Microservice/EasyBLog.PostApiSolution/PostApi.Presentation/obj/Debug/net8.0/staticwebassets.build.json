@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "CPQilUJJMFv1vUPoGl3MxaCQsbs/XFDY/yNZyozUxqE=",
+  "Source": "PostApi.Presentation",
+  "BasePath": "_content/PostApi.Presentation",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\PostApi.Presentation.props" />
+</Project>
