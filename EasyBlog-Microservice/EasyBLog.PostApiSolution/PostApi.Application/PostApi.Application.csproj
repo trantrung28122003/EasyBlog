@@ -11,4 +11,8 @@
     <ProjectReference Include="..\PostApi.Domain\PostApi.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DependencyInjection\" />
+  </ItemGroup>
+
 </Project>

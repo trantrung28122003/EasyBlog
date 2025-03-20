@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "B5TTBZ7AIijqYnteiiX4q5o7ni/GS+OAS+i3E0uQUHk=",
+  "Source": "Authentication.Presentation",
+  "BasePath": "_content/Authentication.Presentation",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

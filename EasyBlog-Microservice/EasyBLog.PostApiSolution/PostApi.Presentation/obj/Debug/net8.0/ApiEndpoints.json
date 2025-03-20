@@ -1,8 +1,8 @@
 [
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "GetAllActive",
-    "RelativePath": "api/Post/active",
+    "RelativePath": "api/Posts/active",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -10,9 +10,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "GetAll",
-    "RelativePath": "api/Post/all",
+    "RelativePath": "api/Posts/all",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -20,9 +20,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "Create",
-    "RelativePath": "api/Post/create",
+    "RelativePath": "api/Posts/create",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -36,9 +36,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "Delete",
-    "RelativePath": "api/Post/delete",
+    "RelativePath": "api/Posts/delete",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
@@ -52,9 +52,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "GetById",
-    "RelativePath": "api/Post/id",
+    "RelativePath": "api/Posts/id",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -68,9 +68,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "SoftDelete",
-    "RelativePath": "api/Post/soft/{id}",
+    "RelativePath": "api/Posts/soft/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
@@ -84,9 +84,9 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "PostApi.Presentation.Controllers.PostController",
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "Update",
-    "RelativePath": "api/Post/update",
+    "RelativePath": "api/Posts/update",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,

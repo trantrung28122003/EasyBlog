@@ -1,0 +1,12 @@
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\bin\Debug\net8.0\CommentApi.Domain.deps.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\bin\Debug\net8.0\CommentApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\bin\Debug\net8.0\CommentApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.AssemblyInfoInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.AssemblyInfo.cs
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.csproj.CoreCompileInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.sourcelink.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\refint\CommentApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\CommentApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Domain\obj\Debug\net8.0\ref\CommentApi.Domain.dll

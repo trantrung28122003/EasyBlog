@@ -5,10 +5,10 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Post/all": {
+    "/api/Posts/all": {
       "get": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "responses": {
           "200": {
@@ -17,10 +17,10 @@
         }
       }
     },
-    "/api/Post/active": {
+    "/api/Posts/active": {
       "get": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "responses": {
           "200": {
@@ -29,10 +29,10 @@
         }
       }
     },
-    "/api/Post/id": {
+    "/api/Posts/id": {
       "get": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "parameters": [
           {
@@ -50,10 +50,10 @@
         }
       }
     },
-    "/api/Post/create": {
+    "/api/Posts/create": {
       "post": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "requestBody": {
           "content": {
@@ -81,10 +81,10 @@
         }
       }
     },
-    "/api/Post/update": {
+    "/api/Posts/update": {
       "put": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "requestBody": {
           "content": {
@@ -112,10 +112,10 @@
         }
       }
     },
-    "/api/Post/delete": {
+    "/api/Posts/delete": {
       "delete": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "requestBody": {
           "content": {
@@ -143,10 +143,10 @@
         }
       }
     },
-    "/api/Post/soft/{id}": {
+    "/api/Posts/soft/{id}": {
       "put": {
         "tags": [
-          "Post"
+          "Posts"
         ],
         "parameters": [
           {

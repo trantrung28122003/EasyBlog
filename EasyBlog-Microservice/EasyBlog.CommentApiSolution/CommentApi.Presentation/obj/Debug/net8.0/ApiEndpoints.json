@@ -1,0 +1,50 @@
+[
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "GetCommentsByPostId",
+    "RelativePath": "api/Comments/commentsByPostId/{postId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "postId",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "Create",
+    "RelativePath": "api/Comments/create",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "commentDTO",
+        "Type": "CommentApi.Application.DTOs.CommentDTO",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "GetById",
+    "RelativePath": "api/Comments/id",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

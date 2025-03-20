@@ -1,0 +1,11 @@
+2025-03-20 15:52:04.400 +07:00 [INF] Unable to resolve service for type 'CommentApi.Application.Interfaces.ICommentService' while attempting to activate 'CommentApi.Presentation.Controllers.CommentsController'.
+2025-03-20 15:52:04.442 +07:00 [WRN] Unable to resolve service for type 'CommentApi.Application.Interfaces.ICommentService' while attempting to activate 'CommentApi.Presentation.Controllers.CommentsController'.
+2025-03-20 15:52:08.788 +07:00 [INF] Unable to resolve service for type 'CommentApi.Application.Interfaces.ICommentService' while attempting to activate 'CommentApi.Presentation.Controllers.CommentsController'.
+2025-03-20 15:52:08.793 +07:00 [WRN] Unable to resolve service for type 'CommentApi.Application.Interfaces.ICommentService' while attempting to activate 'CommentApi.Presentation.Controllers.CommentsController'.
+2025-03-20 15:55:30.068 +07:00 [WRN] OnRetry, Attempt: 0 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2025-03-20 15:55:31.774 +07:00 [WRN] OnRetry, Attempt: 1 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2025-03-20 15:55:33.384 +07:00 [WRN] OnRetry, Attempt: 2 Outcome: The request was canceled due to the configured HttpClient.Timeout of 1 seconds elapsing.
+2025-03-20 16:21:24.089 +07:00 [INF] The SSL connection could not be established, see inner exception.
+2025-03-20 16:21:24.139 +07:00 [WRN] The SSL connection could not be established, see inner exception.
+2025-03-20 16:22:03.201 +07:00 [INF] The SSL connection could not be established, see inner exception.
+2025-03-20 16:22:03.205 +07:00 [WRN] The SSL connection could not be established, see inner exception.

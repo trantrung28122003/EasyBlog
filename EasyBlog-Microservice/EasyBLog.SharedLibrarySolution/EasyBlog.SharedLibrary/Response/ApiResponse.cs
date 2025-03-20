@@ -20,5 +20,6 @@ namespace EasyBlog.SharedLibrary.Response
             Data = data;
             Errors = errors;
         }
+       
     }
 }

@@ -1,0 +1,12 @@
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\bin\Debug\net8.0\AuthenticationApi.Domain.deps.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\bin\Debug\net8.0\AuthenticationApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\bin\Debug\net8.0\AuthenticationApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.AssemblyInfoInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.AssemblyInfo.cs
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.csproj.CoreCompileInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.sourcelink.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\refint\AuthenticationApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\AuthenticationApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\AuthenticationApi.Domain\obj\Debug\net8.0\ref\AuthenticationApi.Domain.dll
