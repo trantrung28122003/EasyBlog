@@ -11,7 +11,7 @@ using PostApi.Infrastructure.Data;
 
 namespace PostApi.Infrastructure.Repositories
 {
-    public class PostRepository : IPost
+    public class PostRepository : IPostRepository
     {
         private readonly PostDBContext _context;
 
@@ -19,78 +19,14 @@ namespace PostApi.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<ApiResponse> CreateAsync(Post post)
+        public async Task<List<Post>> GetAllAsync()
         {
-            try
-            {
-                var addedPost = _context.Posts.Add(post).Entity;
-                await _context.SaveChangesAsync();
-                if (addedPost is null)
-                {
-                    return new ApiResponse(false, "Failed to add post to database");
-                }
-                return new ApiResponse(true, $"{post} added to database successfully");
-
-            }
-            catch (Exception ex) 
-            { 
-                LogException.LogExceptions(ex);
-                return new ApiResponse(false, "Error occured adding new product");
-            }
+            return await _context.Posts
+                .AsNoTracking()
+                .ToListAsync();
         }
 
-
-        public async Task<ApiResponse> UpdateAsync(Post post)
-        {
-            try
-            {
-                var existingPost = await _context.Posts.FindAsync(post.Id);
-                if (existingPost is null)
-                {
-                    return new ApiResponse(false, "Post not found");
-                }
-
-                existingPost.Title = post.Title;
-                existingPost.Content = post.Content;
-                existingPost.ImageUrls = post.ImageUrls;
-                existingPost.DateChange = DateTime.UtcNow;
-
-                await _context.SaveChangesAsync();
-                return new ApiResponse(true, "Post updated successfully");
-            }
-            catch (Exception ex)
-            {
-                LogException.LogExceptions(ex);
-                return new ApiResponse(false, "Error occurred while updating the post");
-            }
-        }
-
-
-
-        public async Task<ApiResponse> DeleteAsync(Post post)
-        {
-            try
-            {
-                var existingPost = await _context.Posts.FindAsync(post.Id);
-                if (existingPost is null)
-                {
-                    return new ApiResponse(false, "Post not found");
-                }
-
-                existingPost.IsDeleted = true;
-                existingPost.DateChange = DateTime.UtcNow;
-
-                await _context.SaveChangesAsync();
-                return new ApiResponse(true, "Post deleted successfully");
-            }
-            catch (Exception ex)
-            {
-                LogException.LogExceptions(ex);
-                return new ApiResponse(false, "Error occurred while deleting the post");
-            }
-        }
-
-        public async Task<IEnumerable<Post>> GetAllAsync()
+        public async Task<List<Post>> GetAllActiveAsync()
         {
             return await _context.Posts
                 .Where(p => !p.IsDeleted)
@@ -98,22 +34,61 @@ namespace PostApi.Infrastructure.Repositories
                 .ToListAsync();
         }
 
-        public async Task<Post?> GetByAsync(Expression<Func<Post, bool>> predicate)
+        public async Task<List<Post>> FindByConditionAsync(Expression<Func<Post, bool>> predicate)
         {
             return await _context.Posts
-                .Where(p => !p.IsDeleted)
+                .Where(predicate)
                 .AsNoTracking()
-                .FirstOrDefaultAsync(predicate);
+                .ToListAsync();
         }
 
-        public async Task<Post?> GetByIdAsync(string id)
+        public async Task<Post?> GetByIdAsync(Guid id)
         {
             return await _context.Posts
-                .Where(p => !p.IsDeleted && p.Id == id)
+                .Where(p => p.Id == id)
                 .AsNoTracking()
                 .FirstOrDefaultAsync();
         }
 
-        
+        public async Task CreateAsync(Post post)
+        {
+            _context.Posts.Add(post);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task UpdateAsync(Post post)
+        {
+            var existingPost = await _context.Posts.FindAsync(post.Id);
+            if (existingPost is null) throw new Exception("Post not found");
+
+            existingPost.Title = post.Title;
+            existingPost.Content = post.Content;
+            existingPost.ImageUrls = post.ImageUrls;
+            existingPost.DateChange = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteAsync(Post post)
+        {
+            var existingPost = await _context.Posts.FindAsync(post.Id);
+            if (existingPost is null) throw new Exception("Post not found");
+
+            _context.Posts.Remove(existingPost);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task SoftDeleteAsync(Guid id)
+        {
+            var existingPost = await _context.Posts.FindAsync(id);
+            if (existingPost is null) throw new Exception("Post not found");
+
+            existingPost.IsDeleted = true;
+            existingPost.DateChange = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+        }
+
+
     }
 }

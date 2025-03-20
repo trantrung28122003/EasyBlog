@@ -12,6 +12,7 @@ namespace PostApi.Application.DTOs.Conversions
     {
         public static Post ToEntity(PostDTO postDTO, string userId) => new()
         {
+
             Id = Guid.NewGuid(),
             Title = postDTO.Title,
             Content = postDTO.Content,

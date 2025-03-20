@@ -8,7 +8,7 @@ namespace PostApi.Domain.Entities
 {
     public class Post
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string Title { get; set; }            
         public string Content { get; set; }         
         public string AuthorId { get; set; }

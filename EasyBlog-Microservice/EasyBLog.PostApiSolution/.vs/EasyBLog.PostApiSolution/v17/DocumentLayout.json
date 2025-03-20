@@ -3,31 +3,16 @@
   "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.application\\postapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|solutionrelative:postapi.application\\postapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\interface\\igenericinterface.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.application\\interfaces\\ipost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|solutionrelative:postapi.application\\interfaces\\ipost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\controllers\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\postapi-20250320.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\postapi-20250320.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -39,8 +24,41 @@
       "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\middleware\\listentoonlyapigateway.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\logs\\logexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\interfaces\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15AAD612-672C-41E1-950E-558EE4AC0ED5}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\dependencyinjection\\jwtauthenticationscheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.application\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E443E10-025A-4875-AE24-3B2B6ED38DF7}|PostApi.Application\\PostApi.Application.csproj|solutionrelative:postapi.application\\services\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\repositories\\postrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DE6C73A4-C1CD-4606-B11B-842108B90DD3}|PostApi.Presentation\\PostApi.Presentation.csproj|solutionrelative:postapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\data\\migrations\\postdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\data\\migrations\\postdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\data\\migrations\\20250320024956_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\data\\migrations\\20250320024956_first.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.postapisolution\\postapi.infrastructure\\data\\postdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58249D23-6368-4FBE-96F6-FD5CFEB86092}|PostApi.Infrastructure\\PostApi.Infrastructure.csproj|solutionrelative:postapi.infrastructure\\data\\postdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,47 +68,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 45,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostApi.Application",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\PostApi.Application.csproj",
-              "RelativeDocumentMoniker": "PostApi.Application\\PostApi.Application.csproj",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\PostApi.Application.csproj",
-              "RelativeToolTip": "PostApi.Application\\PostApi.Application.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-19T10:56:06.035Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IPost.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\Interfaces\\IPost.cs",
-              "RelativeDocumentMoniker": "PostApi.Application\\Interfaces\\IPost.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\Interfaces\\IPost.cs",
-              "RelativeToolTip": "PostApi.Application\\Interfaces\\IPost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:53:11.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IGenericInterface.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interface\\IGenericInterface.cs",
-              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interface\\IGenericInterface.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interface\\IGenericInterface.cs",
-              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interface\\IGenericInterface.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwA8AAAAoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:44:33.52Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
@@ -110,105 +89,209 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "PostRepository.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Repositories\\PostRepository.cs",
-              "RelativeDocumentMoniker": "PostApi.Infrastructure\\Repositories\\PostRepository.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Repositories\\PostRepository.cs",
-              "RelativeToolTip": "PostApi.Infrastructure\\Repositories\\PostRepository.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAwwBwAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:43:59.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PostController.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Controllers\\PostController.cs",
-              "RelativeDocumentMoniker": "PostApi.Presentation\\Controllers\\PostController.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Controllers\\PostController.cs",
-              "RelativeToolTip": "PostApi.Presentation\\Controllers\\PostController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:41:37.802Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "PostApi.Presentation\\Program.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Program.cs",
-              "RelativeToolTip": "PostApi.Presentation\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:38:38.974Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
               "Title": "SharedServiceContainer.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
               "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
               "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAYwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:35:44.487Z",
+              "WhenOpened": "2025-03-20T02:29:14.698Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "GlobalException.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
-              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
-              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interfaces\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interfaces\\IGenericRepository.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interfaces\\IGenericRepository.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Interfaces\\IGenericRepository.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:35:38.353Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ListenToOnlyApiGateway.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
-              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
-              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T10:35:35.751Z",
+              "WhenOpened": "2025-03-20T02:58:17.109Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "PostApi.Presentation\\appsettings.json",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\appsettings.json",
-              "RelativeToolTip": "PostApi.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-19T10:32:37.939Z",
+              "Title": "LogException.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Logs\\LogException.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Logs\\LogException.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Logs\\LogException.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Logs\\LogException.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:58:15.986Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GlobalException.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\GlobalException.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:58:19.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Controllers\\PostController.cs",
+              "RelativeDocumentMoniker": "PostApi.Presentation\\Controllers\\PostController.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Controllers\\PostController.cs",
+              "RelativeToolTip": "PostApi.Presentation\\Controllers\\PostController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAQwB4AAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:29:52.186Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "PostApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "PostApi.Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAqwCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:23:24.812Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostApi-20250320.txt",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\PostApi-20250320.txt",
+              "RelativeDocumentMoniker": "PostApi.Presentation\\PostApi-20250320.txt",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\PostApi-20250320.txt",
+              "RelativeToolTip": "PostApi.Presentation\\PostApi-20250320.txt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-03-20T03:15:24.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JWTAuthenticationScheme.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T03:02:00.516Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ListenToOnlyApiGateway.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Middleware\\ListenToOnlyApiGateway.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:59:02.28Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PostService.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\Services\\PostService.cs",
+              "RelativeDocumentMoniker": "PostApi.Application\\Services\\PostService.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Application\\Services\\PostService.cs",
+              "RelativeToolTip": "PostApi.Application\\Services\\PostService.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T03:01:26.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "PostApi.Presentation\\Program.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Program.cs",
+              "RelativeToolTip": "PostApi.Presentation\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAoAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:34:59.929Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "PostApi.Presentation\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\Properties\\launchSettings.json",
-              "RelativeToolTip": "PostApi.Presentation\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "Title": "PostRepository.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Repositories\\PostRepository.cs",
+              "RelativeDocumentMoniker": "PostApi.Infrastructure\\Repositories\\PostRepository.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Repositories\\PostRepository.cs",
+              "RelativeToolTip": "PostApi.Infrastructure\\Repositories\\PostRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T03:07:25.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "PostApi.Presentation\\appsettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Presentation\\appsettings.json",
+              "RelativeToolTip": "PostApi.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAQwA8AAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-19T10:31:47.027Z",
+              "WhenOpened": "2025-03-20T02:29:53.481Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PostDBContextModelSnapshot.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\Migrations\\PostDBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "PostApi.Infrastructure\\Data\\Migrations\\PostDBContextModelSnapshot.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\Migrations\\PostDBContextModelSnapshot.cs",
+              "RelativeToolTip": "PostApi.Infrastructure\\Data\\Migrations\\PostDBContextModelSnapshot.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:51:02.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "20250320024956_First.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\Migrations\\20250320024956_First.cs",
+              "RelativeDocumentMoniker": "PostApi.Infrastructure\\Data\\Migrations\\20250320024956_First.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\Migrations\\20250320024956_First.cs",
+              "RelativeToolTip": "PostApi.Infrastructure\\Data\\Migrations\\20250320024956_First.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:49:57.105Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PostDBContext.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\PostDBContext.cs",
+              "RelativeDocumentMoniker": "PostApi.Infrastructure\\Data\\PostDBContext.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\Data\\PostDBContext.cs",
+              "RelativeToolTip": "PostApi.Infrastructure\\Data\\PostDBContext.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAwBoAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:22:35.685Z",
               "EditorCaption": ""
             }
           ]

@@ -1,0 +1,2 @@
+2025-03-20 10:14:21.400 +07:00 [INF] Unable to resolve service for type 'PostApi.Application.Interfaces.IPostService' while attempting to activate 'PostApi.Presentation.Controllers.PostController'.
+2025-03-20 10:14:21.429 +07:00 [WRN] Unable to resolve service for type 'PostApi.Application.Interfaces.IPostService' while attempting to activate 'PostApi.Presentation.Controllers.PostController'.

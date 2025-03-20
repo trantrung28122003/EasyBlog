@@ -8,7 +8,7 @@ using PostApi.Domain.Entities;
 
 namespace PostApi.Application.Interfaces
 {
-    public interface IPost : IGenericInterface<Post>
+    public interface IPostRepository : IGenericRepository<Post>
     {
     }
 }

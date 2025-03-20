@@ -18,3 +18,5 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructur
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructure\obj\Debug\net8.0\refint\PostApi.Infrastructure.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructure\obj\Debug\net8.0\PostApi.Infrastructure.pdb
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructure\obj\Debug\net8.0\ref\PostApi.Infrastructure.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructure\bin\Debug\net8.0\PostApi.Infrastructure.runtimeconfig.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Infrastructure\obj\Debug\net8.0\PostApi.Infrastructure.genruntimeconfig.cache

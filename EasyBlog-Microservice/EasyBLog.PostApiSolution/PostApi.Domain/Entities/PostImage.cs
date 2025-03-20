@@ -8,9 +8,9 @@ namespace PostApi.Domain.Entities
 {
     public class PostImage
     {
-        public string Id { get; set; } = Guid.NewGuid().ToString();
+        public Guid Id { get; set; } = Guid.NewGuid();
         public string ImageUrl { get; set; }
-        public string PostId { get; set; }
+        public Guid PostId { get; set; }
         public Post? Post { get; set; }
     }
 }
