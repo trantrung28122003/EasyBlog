@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommentApi.Presentation")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2a2b5682c70dc8010de970bed7ed542bbd22d0b8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+37b2917403131cf2551d6b82ca417076946401c6")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommentApi.Presentation")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommentApi.Presentation")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

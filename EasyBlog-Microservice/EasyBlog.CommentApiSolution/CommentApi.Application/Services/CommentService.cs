@@ -45,7 +45,7 @@ namespace CommentApi.Application.Services
 
         public async Task<UserDTO> GetUserSafeAsync(string userId)
         {
-            var getUser = await _httpClient.GetAsync($"http://localhost:5000/api/users/{userId}");
+            var getUser = await _httpClient.GetAsync($"/api/authentication/{userId}");
             if (!getUser.IsSuccessStatusCode)
             {
                 return null!;

@@ -28,7 +28,6 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Present
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.CommentApi.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.CommentApi.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\staticwebassets.pack.json
-D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\CommentA.91744BB4.Up2Date
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\CommentApi.Presentation.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\refint\CommentApi.Presentation.dll

@@ -1,5 +1,6 @@
 ﻿using CommentApi.Application.DTOs;
 using CommentApi.Application.Interfaces;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,6 +8,7 @@ namespace CommentApi.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class CommentsController : ControllerBase
     {
         private readonly ICommentService _commentService;
