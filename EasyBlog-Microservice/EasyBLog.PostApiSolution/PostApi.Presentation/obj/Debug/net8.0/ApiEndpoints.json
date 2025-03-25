@@ -1,9 +1,9 @@
 [
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetAllActive",
-    "RelativePath": "api/Posts/active",
-    "HttpMethod": "GET",
+    "Method": "GetAll",
+    "RelativePath": "api/Posts",
+    "HttpMethod": "",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -11,8 +11,24 @@
   },
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetAll",
-    "RelativePath": "api/Posts/all",
+    "Method": "GetById",
+    "RelativePath": "api/Posts/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
+    "Method": "GetAllActive",
+    "RelativePath": "api/Posts/active",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -47,22 +63,6 @@
         "Name": "post",
         "Type": "PostApi.Domain.Entities.Post",
         "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetById",
-    "RelativePath": "api/Posts/id",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "Id",
-        "Type": "System.String",
-        "IsRequired": false
       }
     ],
     "ReturnTypes": []

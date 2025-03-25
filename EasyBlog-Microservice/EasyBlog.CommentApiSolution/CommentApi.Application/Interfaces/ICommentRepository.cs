@@ -10,5 +10,6 @@ namespace CommentApi.Application.Interfaces
 {
     public interface ICommentRepository : IGenericRepository<Comment>
     {
+
     }
 }

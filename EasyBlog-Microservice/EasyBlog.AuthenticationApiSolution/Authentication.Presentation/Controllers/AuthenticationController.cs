@@ -1,6 +1,7 @@
 ﻿using AuthenticationApi.Application.DTOs;
 using AuthenticationApi.Application.Interfaces;
 using EasyBlog.SharedLibrary.Response;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -8,6 +9,7 @@ namespace Authentication.Presentation.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class AuthenticationController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -53,8 +55,7 @@ namespace Authentication.Presentation.Controllers
 
             return Unauthorized(response); 
         }
-
-
+        [Authorize]
         [HttpGet("{userId}")]
         public async Task<IActionResult> GetUserAsync(string userId)
         {

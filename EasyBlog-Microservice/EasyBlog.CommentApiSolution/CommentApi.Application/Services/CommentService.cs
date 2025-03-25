@@ -97,8 +97,8 @@ namespace CommentApi.Application.Services
 
         public async Task<ApiResponse<bool>> CreateAsync(CommentDTO commentDTO)
         {
-            //try
-            //{
+            try
+            {
                 var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
                 var postDTO = await retryPipeline.ExecuteAsync(async _ => await GetPostAsync(commentDTO.PostId));
                 if (postDTO == null)
@@ -108,11 +108,11 @@ namespace CommentApi.Application.Services
                 var comment = CommentConversion.ToEntity(commentDTO, "123213");
                 await _commentRepository.CreateAsync(comment);
                 return new ApiResponse<bool>(true, "Thêm bình luận vào bài viết thành công", true);
-            //}
-            ////catch (Exception ex)
-            ////{
-            ////    return new ApiResponse<bool>(false, "Lỗi khi thêm bình luận vào bài viết", false, new List<string> { ex.Message });
-            ////}
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<bool>(false, "Lỗi khi thêm bình luận vào bài viết", false, new List<string> { ex.Message });
+            }
         }
 
         public async Task<ApiResponse<CommentDTO?>> GetByIdAsync(string id)

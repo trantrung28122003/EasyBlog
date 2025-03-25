@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
+    "Method": "GetFileMetadataById",
+    "RelativePath": "api/FileMetadata/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
+    "Method": "UploadFile",
+    "RelativePath": "api/FileMetadata/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

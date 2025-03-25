@@ -3,34 +3,59 @@
   "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authentication.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|solutionrelative:authentication.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authentication.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|solutionrelative:authentication.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{43CE5972-0EE4-490C-946C-B3B1CCC24FC1}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\easyblog.sharedlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{43CE5972-0EE4-490C-946C-B3B1CCC24FC1}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\response\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\dtos\\applicationuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\dtos\\applicationuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\dtos\\getuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\dtos\\getuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFF08CE-2C8F-410A-8DEF-242FC337DFE2}|AuthenticationApi.Domain\\AuthenticationApi.Domain.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFF08CE-2C8F-410A-8DEF-242FC337DFE2}|AuthenticationApi.Domain\\AuthenticationApi.Domain.csproj|solutionrelative:authenticationapi.domain\\entities\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\authenticationapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\authenticationapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authentication.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|solutionrelative:authentication.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authentication.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|solutionrelative:authentication.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authentication.presentation\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7E404AFE-8D31-44DE-B327-9266A6BDC453}|Authentication.Presentation\\Authentication.Presentation.csproj|solutionrelative:authentication.presentation\\controllers\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{43CE5972-0EE4-490C-946C-B3B1CCC24FC1}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{29744DDB-94C1-443A-845F-C8EE6B9A2DC5}|AuthenticationApi.Application\\AuthenticationApi.Application.csproj|solutionrelative:authenticationapi.application\\interfaces\\iuserservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{658698CF-B66A-40EB-BC9A-1628D8833F79}|AuthenticationApi.Infrastructure\\AuthenticationApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.infrastructure\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{658698CF-B66A-40EB-BC9A-1628D8833F79}|AuthenticationApi.Infrastructure\\AuthenticationApi.Infrastructure.csproj|solutionrelative:authenticationapi.infrastructure\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AAFF08CE-2C8F-410A-8DEF-242FC337DFE2}|AuthenticationApi.Domain\\AuthenticationApi.Domain.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AAFF08CE-2C8F-410A-8DEF-242FC337DFE2}|AuthenticationApi.Domain\\AuthenticationApi.Domain.csproj|solutionrelative:authenticationapi.domain\\enums\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{658698CF-B66A-40EB-BC9A-1628D8833F79}|AuthenticationApi.Infrastructure\\AuthenticationApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.authenticationapisolution\\authenticationapi.infrastructure\\data\\migrations\\20250323072634_updateroletoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{658698CF-B66A-40EB-BC9A-1628D8833F79}|AuthenticationApi.Infrastructure\\AuthenticationApi.Infrastructure.csproj|solutionrelative:authenticationapi.infrastructure\\data\\migrations\\20250323072634_updateroletoenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -40,7 +65,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 45,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -60,107 +85,174 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\appsettings.json",
-              "RelativeDocumentMoniker": "Authentication.Presentation\\appsettings.json",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\appsettings.json",
-              "RelativeToolTip": "Authentication.Presentation\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwBAAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-20T11:24:02.747Z",
+              "DocumentIndex": 2,
+              "Title": "ApplicationUserDTO.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\ApplicationUserDTO.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Application\\DTOs\\ApplicationUserDTO.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\ApplicationUserDTO.cs",
+              "RelativeToolTip": "AuthenticationApi.Application\\DTOs\\ApplicationUserDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T02:30:25.039Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Program.cs",
-              "RelativeDocumentMoniker": "Authentication.Presentation\\Program.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Program.cs",
-              "RelativeToolTip": "Authentication.Presentation\\Program.cs",
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Application\\DTOs\\LoginDTO.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "AuthenticationApi.Application\\DTOs\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T11:24:00.937Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EasyBlog.SharedLibrary",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj",
-              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj",
-              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-20T11:23:58.434Z",
+              "WhenOpened": "2025-03-24T02:30:24.188Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "ApiResponse.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Response\\ApiResponse.cs",
-              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Response\\ApiResponse.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Response\\ApiResponse.cs",
-              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\Response\\ApiResponse.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAA8wBYAAAAHAAAAAAAAAA==",
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Domain\\Entities\\ApplicationUser.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Domain\\Entities\\ApplicationUser.cs",
+              "RelativeToolTip": "AuthenticationApi.Domain\\Entities\\ApplicationUser.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA1wBEAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:53:55.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T02:10:04.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Authentication.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Authentication.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T13:16:27.5Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Authentication.Presentation\\appsettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\appsettings.json",
+              "RelativeToolTip": "Authentication.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T13:16:19.081Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "GetUserDTO.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\GetUserDTO.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Application\\DTOs\\GetUserDTO.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\DTOs\\GetUserDTO.cs",
+              "RelativeToolTip": "AuthenticationApi.Application\\DTOs\\GetUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:24:17.364Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "UserService.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Services\\UserService.cs",
               "RelativeDocumentMoniker": "AuthenticationApi.Application\\Services\\UserService.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Services\\UserService.cs",
               "RelativeToolTip": "AuthenticationApi.Application\\Services\\UserService.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAcwEkAAABFAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAzwGAAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:46:53.37Z",
+              "WhenOpened": "2025-03-23T07:24:11.859Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "IUserService.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Interfaces\\IUserService.cs",
-              "RelativeDocumentMoniker": "AuthenticationApi.Application\\Interfaces\\IUserService.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Interfaces\\IUserService.cs",
-              "RelativeToolTip": "AuthenticationApi.Application\\Interfaces\\IUserService.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA4AAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:46:42.583Z",
-              "EditorCaption": ""
+              "Title": "AuthenticationApi.Application.csproj",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\AuthenticationApi.Application.csproj",
+              "RelativeDocumentMoniker": "AuthenticationApi.Application\\AuthenticationApi.Application.csproj",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\AuthenticationApi.Application.csproj",
+              "RelativeToolTip": "AuthenticationApi.Application\\AuthenticationApi.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-24T02:07:06.975Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
+              "Title": "SharedServiceContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T11:59:52.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "AuthenticationController.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Controllers\\AuthenticationController.cs",
               "RelativeDocumentMoniker": "Authentication.Presentation\\Controllers\\AuthenticationController.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\Authentication.Presentation\\Controllers\\AuthenticationController.cs",
               "RelativeToolTip": "Authentication.Presentation\\Controllers\\AuthenticationController.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAYwC4AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAYwBQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:46:21.542Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T07:47:54.477Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "20250320104344_First.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs",
-              "RelativeDocumentMoniker": "AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs",
-              "RelativeToolTip": "AuthenticationApi.Infrastructure\\Data\\Migrations\\20250320104344_First.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "IUserService.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Interfaces\\IUserService.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Application\\Interfaces\\IUserService.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Application\\Interfaces\\IUserService.cs",
+              "RelativeToolTip": "AuthenticationApi.Application\\Interfaces\\IUserService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T10:43:44.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T07:47:43.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ServerContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "RelativeToolTip": "AuthenticationApi.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:47:40.435Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Domain\\Enums\\UserRole.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Domain\\Enums\\UserRole.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Domain\\Enums\\UserRole.cs",
+              "RelativeToolTip": "AuthenticationApi.Domain\\Enums\\UserRole.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAYwAoAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:29:15.852Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "20250323072634_UpdateRoleToEnum.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\Data\\Migrations\\20250323072634_UpdateRoleToEnum.cs",
+              "RelativeDocumentMoniker": "AuthenticationApi.Infrastructure\\Data\\Migrations\\20250323072634_UpdateRoleToEnum.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.AuthenticationApiSolution\\AuthenticationApi.Infrastructure\\Data\\Migrations\\20250323072634_UpdateRoleToEnum.cs",
+              "RelativeToolTip": "AuthenticationApi.Infrastructure\\Data\\Migrations\\20250323072634_UpdateRoleToEnum.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T07:26:34.566Z"
             }
           ]
         }

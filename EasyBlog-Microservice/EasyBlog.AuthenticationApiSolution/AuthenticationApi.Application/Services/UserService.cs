@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using AuthenticationApi.Application.DTOs;
 using AuthenticationApi.Application.Interfaces;
 using AuthenticationApi.Domain.Entities;
+using AuthenticationApi.Domain.Enums;
 using EasyBlog.SharedLibrary.Response;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
@@ -40,7 +41,7 @@ namespace AuthenticationApi.Application.Services
                 Email = user.Email,
                 PhoneNumber = user.PhoneNumber,
                 Address = user.Address,
-                Role = user.Role
+                Role = user.Role.ToString()
             };
 
             return new ApiResponse<GetUserDTO>(true, "User retrieved successfully", userDto);
@@ -60,7 +61,7 @@ namespace AuthenticationApi.Application.Services
                 Email = applicationUserDTO.Email,
                 PhoneNumber = applicationUserDTO.PhoneNumber,
                 Address = applicationUserDTO.Address,
-                Role = applicationUserDTO.Role,
+                Role = Enum.Parse<UserRole>(applicationUserDTO.Role, true),
                 PasswordHash = BCrypt.Net.BCrypt.HashPassword(applicationUserDTO.Password)
             };
 
@@ -90,13 +91,14 @@ namespace AuthenticationApi.Application.Services
 
             var claims = new List<Claim>
             {
+                new(ClaimTypes.NameIdentifier, user.Id.ToString()),
                 new(ClaimTypes.Name, user.FullName!),
                 new(ClaimTypes.Email, user.Email!)
             };
 
-            if (!string.IsNullOrEmpty(user.Role))
+            if (!string.IsNullOrEmpty(user.Role.ToString()))
             {
-                claims.Add(new Claim(ClaimTypes.Role, user.Role));
+                claims.Add(new Claim(ClaimTypes.Role, user.Role.ToString()));
             }
 
             var token = new JwtSecurityToken(

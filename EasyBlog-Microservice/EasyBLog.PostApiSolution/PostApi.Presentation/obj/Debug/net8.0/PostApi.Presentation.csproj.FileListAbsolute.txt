@@ -158,10 +158,10 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.PostApi.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.PostApi.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets.pack.json
-D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi..27E13E62.Up2Date
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi.Presentation.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\refint\PostApi.Presentation.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi.Presentation.pdb
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi.Presentation.genruntimeconfig.cache
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\ref\PostApi.Presentation.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

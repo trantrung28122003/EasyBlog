@@ -1,0 +1,12 @@
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\bin\Debug\net8.0\UploadApi.Domain.deps.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\bin\Debug\net8.0\UploadApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\bin\Debug\net8.0\UploadApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.AssemblyInfoInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.AssemblyInfo.cs
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.csproj.CoreCompileInputs.cache
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.sourcelink.json
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\refint\UploadApi.Domain.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\UploadApi.Domain.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Domain\obj\Debug\net8.0\ref\UploadApi.Domain.dll

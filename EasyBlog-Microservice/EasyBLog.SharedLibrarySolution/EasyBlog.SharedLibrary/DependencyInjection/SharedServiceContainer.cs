@@ -18,18 +18,15 @@ namespace EasyBlog.SharedLibrary.DependencyInjection
                 config.GetConnectionString("eBlogConnection"), sqlserverOption => sqlserverOption.EnableRetryOnFailure()));
 
             Log.Logger = new LoggerConfiguration()
-     .MinimumLevel.Information()
-     .WriteTo.Debug()
-     .WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
-     .WriteTo.File(
-         path: Path.Combine(AppContext.BaseDirectory, "logs", "log-.txt"),
-         restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
-         outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
-         rollingInterval: RollingInterval.Day)
-     .CreateLogger();
-
-
-
+             .MinimumLevel.Information()
+             .WriteTo.Debug()
+             .WriteTo.Console(outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}")
+             .WriteTo.File(
+                 path: Path.Combine(AppContext.BaseDirectory, "logs", "log-.txt"),
+                 restrictedToMinimumLevel: Serilog.Events.LogEventLevel.Information,
+                 outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] {Message:lj}{NewLine}{Exception}",
+                 rollingInterval: RollingInterval.Day)
+                .CreateLogger();
 
             JWTAuthenticationScheme.AddJWTAuthenticationScheme(services, config);
             return services;
@@ -39,7 +36,7 @@ namespace EasyBlog.SharedLibrary.DependencyInjection
         {
             app.UseMiddleware<GlobalException>();
 
-            //app.UseMiddleware<ListenToOnlyApiGateway>();
+            app.UseMiddleware<ListenToOnlyApiGateway>();
 
             return app;
         }

@@ -1,5 +1,6 @@
 ﻿using System.Runtime.InteropServices;
 using Azure;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PostApi.Application.DTOs;
@@ -11,6 +12,7 @@ namespace PostApi.Presentation.Controllers
 {
     [Route("api/[controller]")] 
     [ApiController]
+    [AllowAnonymous]
     public class PostsController : ControllerBase
     {
         private readonly IPostService _postService;
@@ -20,7 +22,6 @@ namespace PostApi.Presentation.Controllers
             _postService = postService;
         }
 
-        [HttpGet("all")]
         public async Task<IActionResult> GetAll()
         {
             var response = await _postService.GetAllAsync();
@@ -34,7 +35,7 @@ namespace PostApi.Presentation.Controllers
             return Ok(response);
         }
 
-        [HttpGet("id")]
+        [HttpGet("{id}")]
         public async Task<IActionResult> GetById(string Id)
         {
             var response = await _postService.GetByIdAsync(Id);

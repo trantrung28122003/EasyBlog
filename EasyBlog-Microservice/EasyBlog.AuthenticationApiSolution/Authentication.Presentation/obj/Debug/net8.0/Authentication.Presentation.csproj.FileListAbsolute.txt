@@ -28,7 +28,6 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authenticat
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Authentication.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Authentication.Presentation.props
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\staticwebassets.pack.json
-D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\Authenti.1DA3E9EA.Up2Date
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\Authentication.Presentation.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.AuthenticationApiSolution\Authentication.Presentation\obj\Debug\net8.0\refint\Authentication.Presentation.dll

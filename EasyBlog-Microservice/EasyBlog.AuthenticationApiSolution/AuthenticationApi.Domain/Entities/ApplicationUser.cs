@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AuthenticationApi.Domain.Enums;
 
 namespace AuthenticationApi.Domain.Entities
 {
@@ -14,7 +15,7 @@ namespace AuthenticationApi.Domain.Entities
         public string? PhoneNumber { get; set; }
         public string Address { get; set; }
         public string PasswordHash { get; set; }
-        public string Role { get; set; }
+        public UserRole Role { get; set; } = UserRole.User;
         public DateTime DateCreate { get; set; }
         public DateTime? DateChange { get; set; }
         public bool IsDeleted { get; set; }
