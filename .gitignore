@@ -1,11 +1,41 @@
 # Editor directories and files
-.vscode/*
+# ========================
+# 🔹 BỎ QUA THƯ MỤC CỦA EDITOR (VSCode, JetBrains, v.v.)
+# ========================
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
+.idea/
+.DS_Store  
+
+
+# ========================
+# 🔹 BỎ QUA FILE CẤU HÌNH CÁ NHÂN
+# ========================
+*.suo  
+*.user  
 *.ntvs*
 *.njsproj
-*.sln
 *.sw?
+*.cache
+
+
+# ========================
+# 🔹 BỎ QUA THƯ MỤC BUILD
+# ========================
+bin/
+obj/
+out/
+
+
+# ========================
+# 🔹 BỎ QUA NODE MODULES 
+# ========================
 node_modules/
+
+
+# ========================
+# 🔹 BỎ QUA FILE LOG, TEMP, CACHE
+# ========================
+*.log
+*.tmp
+*.cache
