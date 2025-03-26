@@ -19,6 +19,14 @@ namespace PostApi.Infrastructure.Repositories
         {
             _context = context;
         }
+        public async Task<List<Post>> GetPagedAsync(int offset, int limit)
+        {
+            return await _context.Posts
+                .OrderByDescending(p => p.DateCreate)
+                .Skip(offset)
+                .Take(limit)
+                .ToListAsync();
+        }
         public async Task<List<Post>> GetAllAsync()
         {
             return await _context.Posts

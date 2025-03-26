@@ -40,5 +40,19 @@ namespace AuthenticationApi.Infrastructure.DependencyInjection
             SharedServiceContainer.UseSharedPolicies(app);
             return app;
         }
+
+        public static async Task SeedDataAsync(this IServiceProvider serviceProvider)
+        {
+            using var scope = serviceProvider.CreateScope();
+            var scopedProvider = scope.ServiceProvider;
+            try
+            {
+                await DataSeeder.SeedAsync(scopedProvider);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"[Seed Data] Lỗi khi seed dữ liệu: {ex.Message}");
+            }
+        }
     }
 }

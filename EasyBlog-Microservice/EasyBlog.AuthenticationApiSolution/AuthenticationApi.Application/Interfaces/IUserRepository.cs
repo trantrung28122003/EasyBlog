@@ -8,9 +8,10 @@ namespace AuthenticationApi.Application.Interfaces
 {
     public interface IUserRepository
     {
-        Task<ApplicationUser> GetUserByIdAsync(string userId);
-        Task<ApplicationUser> GetUserByEmailAsync(string email);
-        Task<ApplicationUser> CreateUserAsync(ApplicationUser user);
+        Task<ApplicationUser?> GetUserByIdAsync(string userId);
+        Task<ApplicationUser?> GetUserByEmailAsync(string email);
+        Task<ApplicationUser?> CreateUserAsync(ApplicationUser user);
+        Task<List<ApplicationUser>?> GetUsersByIdsAsync(List<Guid> id);
     }
 
 }

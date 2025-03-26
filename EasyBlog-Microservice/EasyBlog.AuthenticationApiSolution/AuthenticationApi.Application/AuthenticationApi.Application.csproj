@@ -8,6 +8,8 @@
 
   <ItemGroup>
     <PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
+    <PackageReference Include="Polly.Core" Version="8.5.2" />
+    <PackageReference Include="Polly.Extensions" Version="8.5.2" />
   </ItemGroup>
 
   <ItemGroup>

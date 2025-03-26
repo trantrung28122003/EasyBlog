@@ -1,5 +1,8 @@
 import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import AuthenticationShared from "./Shared/AuthenticationShared";
+import styles from "./Shared/AuthenticationShared.module.css";
+import { useGoogleLogin } from "@react-oauth/google";
 import {
   DoCallAPIWithOutToken,
   DoCallAPIWithToken,
@@ -9,46 +12,45 @@ import {
   LOGIN_URL,
   LOGIN_WITH_GOOGLE,
 } from "../../../constants/API";
-import * as yup from "yup";
-import { Field, Form, Formik } from "formik";
-import { useNavigate } from "react-router-dom";
 import { HTTP_OK } from "../../../constants/HTTPCode";
 import { LoginRequest } from "../../../model/Authentication";
-import { useGoogleLogin } from "@react-oauth/google";
+import * as yup from "yup";
+import { Field, Form, Formik } from "formik";
+import DataLoader from "../../../components/lazyLoadComponent/DataLoader";
 
 const Login: React.FC = () => {
-  const [loginError, setLoginError] = useState<string | null>(null); // State lưu lỗi đăng nhập
   const navigate = useNavigate();
-
+  const [loginError, setLoginError] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
   const schema = yup.object().shape({
-    userName: yup
+    email: yup
       .string()
-      .min(8, "Tên ài khoản phải có ít nhất 8 ký tự")
-      .max(30, "Tên tài khoản tối đa 24 ký tự")
-      .required("Tên tài khoản không được để trống"),
-    password: yup.string().required("Mật khẩu không được để trống"),
+      .email("Email không hợp lệ")
+      .required("Email không được để trống"),
+    password: yup.string().required("Mật khẩu không được để trống"),
   });
 
   const doLogin = (user: LoginRequest) => {
+    console.log("Login attempt with:", user);
+    setIsLoading(true);
     DoCallAPIWithOutToken<LoginRequest>(LOGIN_URL, "post", user)
       .then((res) => {
-        if (res.status === HTTP_OK) {
-          localStorage.setItem(
-            "authentication",
-            JSON.stringify(res.data.result)
-          );
+        if (res.status === HTTP_OK && res.data.results) {
+          const authData = { token: res.data.results };
+          localStorage.setItem("authentication", JSON.stringify(authData));
           fetchCurrentUser();
         } else {
+          console.log("Login failed with status:", res.status);
           setLoginError("Tài khoản hoặc mật khẩu không đúng.");
         }
       })
-
       .catch((err) => {
+        console.error("Login error:", err);
         if (
           err.response &&
           (err.response.status === 404 || err.response.status === 500)
         ) {
-          console.log(err.response.status);
+          console.log("Login error status:", err.response.status);
           setLoginError("Tài khoản hoặc mật khẩu không đúng.");
         } else {
           setLoginError("Đăng nhập thất bại. Vui lòng thử lại sau.");
@@ -58,8 +60,6 @@ const Login: React.FC = () => {
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
-      console.log("Google Login Success:", tokenResponse);
-      console.log("tokenResponse", tokenResponse.access_token);
       try {
         const res = await DoCallAPIWithOutToken(LOGIN_WITH_GOOGLE, "POST", {
           access_token: tokenResponse.access_token,
@@ -67,8 +67,9 @@ const Login: React.FC = () => {
         if (res.status === 200) {
           localStorage.setItem(
             "authentication",
-            JSON.stringify(res.data.result)
+            JSON.stringify(res.data.results)
           );
+          console.log("Authentication stored:", res.data.results);
           fetchCurrentUser();
         } else {
           setLoginError("Đăng nhập không thành công");
@@ -81,20 +82,33 @@ const Login: React.FC = () => {
   });
 
   const fetchCurrentUser = () => {
-    DoCallAPIWithToken(GET_USER_INFO_URL, "get").then((res) => {
-      if (res.status === HTTP_OK) {
-        localStorage.setItem("user_info", JSON.stringify(res.data.result));
-        navigate("/", { replace: true });
-      } else {
+    console.log("Fetching current user...");
+    setIsLoading(true);
+    DoCallAPIWithToken(GET_USER_INFO_URL, "GET")
+      .then((res) => {
+        console.log("User info response:", res);
+        if (res.status === HTTP_OK) {
+          localStorage.setItem("user_info", JSON.stringify(res.data.results));
+          navigate("/", { replace: true });
+        } else {
+          console.log("Failed to fetch user info:", res.status);
+          navigate("/login-fail");
+        }
+      })
+      .catch((err) => {
+        console.error("Error fetching user info:", err);
         navigate("/login-fail");
-      }
-    });
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
   };
 
   const handleRegister = () => {
     localStorage.clear();
     navigate("/register");
   };
+
   const handleForgetPassword = () => {
     localStorage.clear();
     navigate("/forgetPassword");
@@ -102,113 +116,122 @@ const Login: React.FC = () => {
 
   return (
     <AuthenticationShared>
+      <DataLoader isLoading={isLoading} />
       <Formik
-        initialValues={{ userName: "", password: "" }}
+        initialValues={{ email: "", password: "" }}
         validationSchema={schema}
         onSubmit={(values: LoginRequest) => {
+          console.log("Form submitted with values:", values);
           setLoginError(null);
           doLogin(values);
         }}
         validateOnChange
       >
-        {({ touched, errors }) => (
-          <div className="container">
-            <div className="form-floating form-floating-outline mb-3">
-              <Form>
-                <div className="form-floating form-floating-outline mb-3">
-                  <Field
-                    name="userName"
-                    className="form-control"
-                    type="text"
-                    style={{ borderColor: "#06BBCC" }}
-                    id="userName"
-                    placeholder="Nhập Tài Khoản"
-                  />
-                  <label style={{ color: "#06BBCC" }} htmlFor="userName">
-                    Tài Khoản
-                  </label>
-                  {errors.userName && touched.userName ? (
-                    <div className="text-danger">{errors.userName}</div>
-                  ) : null}
-                </div>
-                <div className="form-floating form-floating-outline mb-3">
-                  <Field
-                    style={{ borderColor: "#06BBCC" }}
-                    type="password"
-                    id="password"
-                    className="form-control"
-                    name="password"
-                    placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                    aria-describedby="password"
-                  />
-                  <label style={{ color: "#06BBCC" }} htmlFor="password">
-                    Mật Khẩu
-                  </label>
-                  {errors.password && touched.password ? (
-                    <div className="text-danger">{errors.password}</div>
-                  ) : null}
-                </div>
+        {({ touched, errors, handleSubmit }) => (
+          <Form className={styles.auth_form} onSubmit={handleSubmit}>
+            {loginError && (
+              <div className={styles.form_error_message}>{loginError}</div>
+            )}
+            <div className={styles.form_group}>
+              <Field
+                type="email"
+                id="email"
+                name="email"
+                className={styles.form_control}
+                placeholder="Nhập email của bạn"
+                autoComplete="email"
+              />
+              <label htmlFor="email" className={styles.form_label}>
+                Email
+              </label>
+              {errors.email && touched.email && (
+                <div className={styles.error_message}>{errors.email}</div>
+              )}
+            </div>
 
-                {/* Hiển thị thông báo lỗi nếu có */}
-                {loginError && (
-                  <div className="text-danger text-center mb-3">
-                    {loginError}
-                  </div>
-                )}
+            <div className={styles.form_group}>
+              <Field
+                type="password"
+                id="password"
+                name="password"
+                className={styles.form_control}
+                placeholder="Nhập mật khẩu của bạn"
+                autoComplete="current-password"
+              />
+              <label htmlFor="password" className={styles.form_label}>
+                Mật khẩu
+              </label>
+              {errors.password && touched.password && (
+                <div className={styles.error_message}>{errors.password}</div>
+              )}
+            </div>
 
-                <button
-                  style={{
-                    backgroundColor: "#06BBCC",
-                    borderColor: "#06BBCC",
-                  }}
-                  type="submit"
-                  className="btn btn-primary d-grid w-100"
-                >
-                  ĐĂNG NHẬP
-                </button>
-
-                <p
-                  className="text-center"
-                  style={{ marginTop: "10px", color: "red" }}
-                >
-                  <a
-                    style={{
-                      textDecoration: "underline",
-                      color: "#06BBCC",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleForgetPassword}
-                  >
-                    Bạn quên mật khẩu?
-                  </a>
-                </p>
-
-                <p className="text-center">
-                  <span>Chưa có tài khoản ?</span>
-                  <a
-                    style={{
-                      padding: "0.5rem",
-                      color: "#06BBCC",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleRegister}
-                  >
-                    Đăng ký
-                  </a>
-                </p>
-              </Form>
-              <button
-                style={{
-                  backgroundColor: "#06BBCC",
-                  borderColor: "#06BBCC",
-                }}
-                onClick={() => googleLogin()}
-                className="btn btn-primary d-grid w-100"
+            {loginError && (
+              <div
+                className={styles.error_message}
+                style={{ textAlign: "center", marginBottom: "1rem" }}
               >
-                ĐĂNG NHẬP VỚI GOOGLE
+                {loginError}
+              </div>
+            )}
+
+            <div className={styles.form_group}>
+              <button
+                type="submit"
+                className={`${styles.btn} ${styles.btn_primary}`}
+              >
+                Đăng nhập
               </button>
             </div>
-          </div>
+
+            <div className={styles.form_group}>
+              <Link
+                to="/forget-password"
+                className={styles.auth_link}
+                onClick={handleForgetPassword}
+              >
+                Bạn quên mật khẩu?
+              </Link>
+            </div>
+
+            <div className={styles.divider}>
+              <span>hoặc</span>
+            </div>
+
+            <div className={styles.social_buttons}>
+              <button
+                type="button"
+                className={`${styles.btn_social} ${styles.btn_google}`}
+                onClick={() => googleLogin()}
+              >
+                <i className={`fab fa-google ${styles.social_icon}`}></i>
+                Google
+              </button>
+              <button
+                type="button"
+                className={`${styles.btn_social} ${styles.btn_facebook}`}
+                onClick={() => {
+                  /* Facebook login handler */
+                }}
+              >
+                <i className={`fab fa-facebook-f ${styles.social_icon}`}></i>
+                Facebook
+              </button>
+            </div>
+
+            <div className={styles.form_group} style={{ textAlign: "center" }}>
+              <p>
+                Chưa có tài khoản?{" "}
+                <Link
+                  to="/register"
+                  className={styles.auth_link}
+                  onClick={handleRegister}
+                >
+                  Đăng ký ngay
+                </Link>
+              </p>
+            </div>
+          </Form>
         )}
       </Formik>
     </AuthenticationShared>

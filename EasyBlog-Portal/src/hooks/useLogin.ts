@@ -2,26 +2,35 @@ import { LoginResponse } from "../model/Authentication";
 import { User } from "../model/User";
 
 const isUserLogin = (): boolean => {
-  if (localStorage.getItem("authentication") != null) {
-    const authenticationInfo: LoginResponse = JSON.parse(
-      localStorage.getItem("authentication") || ""
-    );
-    return authenticationInfo.authenticated || false;
-  } else {
+  const storedAuth = localStorage.getItem("authentication");
+  if (!storedAuth) return false;
+
+  try {
+    const authData: { token: string } = JSON.parse(storedAuth);
+    return !!authData.token; 
+  } catch (error) {
+    console.error("Lỗi parse JSON:", error);
     return false;
   }
 };
 
+
 const getCredentials = (): string => {
-  if (localStorage.getItem("authentication") != null) {
-    const authenticationInfo: LoginResponse = JSON.parse(
-      localStorage.getItem("authentication") || ""
-    );
-    return authenticationInfo.token || "";
-  } else {
+  const storedAuth = localStorage.getItem("authentication");
+  console.log("storedAuth", storedAuth);
+  if (!storedAuth) return "";
+
+  try {
+    const authData = JSON.parse(storedAuth);
+    console.log("authData", authData.token);
+    return authData.token || "";
+
+  } catch (error) {
+    console.error("Lỗi parse JSON:", error);
     return "";
   }
 };
+
 
 const getUserInfo = () => {
   if (localStorage.getItem("user_info") != null) {
@@ -33,10 +42,14 @@ const getUserInfo = () => {
 };
 
 const hasAdminRole = () => {
-  if (localStorage.getItem("user_info") != null) {
-    const res: User = JSON.parse(localStorage.getItem("user_info") || "");
-    return res.roles.some((role) => role.name === "ADMIN");
-  } else {
+  const storedUser = localStorage.getItem("user_info");
+  if (!storedUser) return false; 
+
+  try {
+    const user: User = JSON.parse(storedUser);
+    return user.role === "Admin"; 
+  } catch (error) {
+    console.error("Lỗi parse JSON:", error);
     return false;
   }
 };

@@ -11,6 +11,16 @@ import { HTTP_OK } from "../../constants/HTTPCode";
 import { getTimeAgo } from "../../hooks/useTime";
 import { getWebSocketClient } from "../../hooks/websocket";
 import { User } from "../../model/User";
+import {
+  FaBell,
+  FaSignOutAlt,
+  FaUserEdit,
+  FaBook,
+  FaInfoCircle,
+  FaGlobe,
+} from "react-icons/fa";
+import { IoNotificationsOutline } from "react-icons/io5";
+import { BiLogIn, BiUserPlus } from "react-icons/bi";
 
 interface Notification {
   id: string;
@@ -271,43 +281,73 @@ const Navbar: React.FC = () => {
                 </div>
                 <div className="user-menu">
                   <div className="user-menu-header">
-                    <img className="avatar-img" src={currentUser?.imageUrl} />
+                    <img
+                      className="avatar-img"
+                      src={currentUser?.imageUrl}
+                      alt={currentUser?.fullName}
+                    />
                     <div className="user-info">
                       <h4>{currentUser?.fullName}</h4>
                       <p>{currentUser?.email}</p>
                     </div>
                   </div>
                   <ul className="user-menu-list">
-                    <li onClick={() => navigate("/ ")}>Danh sách bài viết</li>
+                    <li onClick={() => navigate("/ ")}>
+                      <FaBook className="menu-icon" />
+                      Danh sách bài viết
+                    </li>
                   </ul>
                   <ul
                     className="user-menu-list"
                     onClick={() => setIsNotificationOpen(true)}
                   >
-                    <li>Thông báo</li>
+                    <li>
+                      <IoNotificationsOutline className="menu-icon" />
+                      Thông báo
+                    </li>
                   </ul>
                   <ul className="user-menu-list">
                     <li onClick={() => navigate("/userProfile")}>
+                      <FaUserEdit className="menu-icon" />
                       Hồ sơ tài khoản
                     </li>
-                    <li>Thông tin về easyBloggg</li>
+                    <li>
+                      <FaInfoCircle className="menu-icon" />
+                      Thông tin về easyBloggg
+                    </li>
                   </ul>
                   <ul className="user-menu-list">
-                    <li onClick={handleLogout}>Đăng xuất tài khoản</li>
+                    <li onClick={handleLogout}>
+                      <FaSignOutAlt className="menu-icon" />
+                      Đăng xuất tài khoản
+                    </li>
                   </ul>
                   <div className="user-menu-footer">
                     <span>Ngôn ngữ</span>
-                    <span>Tiếng Việt &#127760;</span>
+                    <span>
+                      <FaGlobe />
+                      Tiếng Việt
+                    </span>
                   </div>
                 </div>
               </div>
             ) : (
-              <button
-                className="btn btn-primary py-4 px-lg-5 d-none d-lg-block"
-                onClick={handleLogin}
-              >
-                Tham Gia Ngay<i className="fa fa-arrow-right ms-3"></i>
-              </button>
+              <div className="auth-buttons">
+                <button
+                  className="btn btn-outline-primary"
+                  onClick={() => navigate("/login")}
+                >
+                  <BiLogIn className="btn-icon" />
+                  Đăng nhập
+                </button>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => navigate("/register")}
+                >
+                  <BiUserPlus className="btn-icon" />
+                  Đăng ký
+                </button>
+              </div>
             )}
           </div>
         </div>

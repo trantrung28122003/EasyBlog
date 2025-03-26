@@ -18,7 +18,6 @@ const DoCallAPIWithToken = async <T>(
     method: method,
     url: url,
     data: requestBody,
-    
     headers: headers,
   });
 };

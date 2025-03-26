@@ -14,8 +14,13 @@ namespace EasyBlog.SharedLibrary.DependencyInjection
         public static IServiceCollection AddShareServices<TContext>(this IServiceCollection services, 
             IConfiguration config, string filename) where TContext :DbContext
         {
-            services.AddDbContext<TContext>(option => option.UseSqlServer(
-                config.GetConnectionString("eBlogConnection"), sqlserverOption => sqlserverOption.EnableRetryOnFailure()));
+            services.AddDbContext<TContext>(option => 
+                option.UseSqlServer(
+                    config.GetConnectionString("eBlogConnection"), 
+                    sqlserverOption => sqlserverOption
+                        .EnableRetryOnFailure()
+                        .MigrationsHistoryTable("__EFMigrationsHistory_" + typeof(TContext).Name)
+                    ));
 
             Log.Logger = new LoggerConfiguration()
              .MinimumLevel.Information()

@@ -1,8 +1,9 @@
-﻿using AuthenticationApi.Application.DTOs;
+﻿using AuthenticationApi.Application.DTOs.Requests;
 using AuthenticationApi.Application.Interfaces;
 using EasyBlog.SharedLibrary.Response;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Authentication.Presentation.Controllers
@@ -20,14 +21,14 @@ namespace Authentication.Presentation.Controllers
         }
 
         [HttpPost("register")]
-        public async Task<IActionResult> RegisterAsync([FromBody] ApplicationUserDTO applicationUserDTO)
+        public async Task<IActionResult> RegisterAsync([FromForm] UserRegisterRequest request, IFormFile? avatar)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(new ApiResponse<string>(false, "Invalid model", null));
             }
 
-            var response = await _userService.Register(applicationUserDTO);
+            var response = await _userService.Register(request, avatar!);
 
             if (response.IsSuccess)
             {
@@ -37,16 +38,16 @@ namespace Authentication.Presentation.Controllers
             return BadRequest(response); 
         }
 
-        // Đăng nhập người dùng
+
         [HttpPost("login")]
-        public async Task<IActionResult> LoginAsync([FromBody] LoginDTO loginDTO)
+        public async Task<IActionResult> LoginAsync([FromBody] UserLoginRequest request)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(new ApiResponse<string>(false, "Invalid model", null));
             }
 
-            var response = await _userService.Login(loginDTO);
+            var response = await _userService.Login(request);
 
             if (response.IsSuccess)
             {
@@ -55,18 +56,9 @@ namespace Authentication.Presentation.Controllers
 
             return Unauthorized(response); 
         }
-        [Authorize]
-        [HttpGet("{userId}")]
-        public async Task<IActionResult> GetUserAsync(string userId)
-        {
-            var response = await _userService.GetUserByIdAsync(userId);
 
-            if (response.IsSuccess)
-            {
-                return Ok(response); 
-            }
+        
 
-            return NotFound(response);  
-        }
+        
     }
 }

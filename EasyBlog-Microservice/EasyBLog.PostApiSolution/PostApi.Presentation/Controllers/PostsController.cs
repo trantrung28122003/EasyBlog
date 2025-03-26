@@ -29,9 +29,9 @@ namespace PostApi.Presentation.Controllers
         }
 
         [HttpGet("active")]
-        public async Task<IActionResult> GetAllActive()
+        public async Task<IActionResult> GetAll([FromQuery] int offset = 0, [FromQuery] int limit = 5)
         {
-            var response = await _postService.GetAllActiveAsync();
+            var response = await _postService.GetAllPagedAsync(offset, limit);
             return Ok(response);
         }
 

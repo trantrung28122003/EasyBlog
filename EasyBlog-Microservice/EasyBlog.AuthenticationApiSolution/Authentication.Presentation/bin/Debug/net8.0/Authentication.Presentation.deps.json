@@ -684,6 +684,27 @@
           }
         }
       },
+      "Polly.Core/8.5.2": {
+        "runtime": {
+          "lib/net8.0/Polly.Core.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.2.4319"
+          }
+        }
+      },
+      "Polly.Extensions/8.5.2": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.2",
+          "Microsoft.Extensions.Options": "8.0.2",
+          "Polly.Core": "8.5.2"
+        },
+        "runtime": {
+          "lib/net8.0/Polly.Extensions.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.5.2.4319"
+          }
+        }
+      },
       "Serilog/3.1.1": {
         "runtime": {
           "lib/net7.0/Serilog.dll": {
@@ -1086,7 +1107,9 @@
         "dependencies": {
           "AuthenticationApi.Domain": "1.0.0",
           "BCrypt.Net-Next": "4.0.3",
-          "EasyBlog.SharedLibrary": "1.0.0"
+          "EasyBlog.SharedLibrary": "1.0.0",
+          "Polly.Core": "8.5.2",
+          "Polly.Extensions": "8.5.2"
         },
         "runtime": {
           "AuthenticationApi.Application.dll": {
@@ -1465,6 +1488,20 @@
       "sha512": "sha512-KZYeKBET/2Z0gY1WlTAK7+RHTl7GSbtvTLDXEZZojUdAPqpQNDL6tHv7VUpqfX5VEOh+uRGKaZXkuD253nEOBQ==",
       "path": "mono.texttemplating/2.2.1",
       "hashPath": "mono.texttemplating.2.2.1.nupkg.sha512"
+    },
+    "Polly.Core/8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MJKdxv4zwDmiWvYvVN24DsrWUfgQ4F83voH8bhbtLMdPuGy8CfTUzsgQhvyrl1a7hrM6f/ydwLVdVUI0xooUw==",
+      "path": "polly.core/8.5.2",
+      "hashPath": "polly.core.8.5.2.nupkg.sha512"
+    },
+    "Polly.Extensions/8.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NcUEkeMB7LMsLBXzY9PuuKP7ylXngUEuhmaWxCrlXqYLbVQQzG1ulAnaEQ2LM1zlSoxRftAjCuhPIH40qeWAlg==",
+      "path": "polly.extensions/8.5.2",
+      "hashPath": "polly.extensions.8.5.2.nupkg.sha512"
     },
     "Serilog/3.1.1": {
       "type": "package",

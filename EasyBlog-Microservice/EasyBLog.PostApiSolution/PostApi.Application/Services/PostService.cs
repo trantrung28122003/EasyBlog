@@ -6,6 +6,8 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using EasyBlog.SharedLibrary.Response;
+using PostApi.Application.DTOs.Conversions;
+using PostApi.Application.DTOs.Responses;
 using PostApi.Application.Interfaces;
 using PostApi.Domain.Entities;
 namespace PostApi.Application.Services
@@ -13,11 +15,22 @@ namespace PostApi.Application.Services
     public class PostService : IPostService
     {
         private readonly IPostRepository _postRepository;
+        private readonly HttpClient _httpClient;
+        private readonly ResiliencePipelineProvider<string> _resiliencePipeline;
 
         public PostService(IPostRepository postRepository)
         {
             _postRepository = postRepository;
         }
+
+        public async Task<ApiResponse<List<PostResponse>>> GetAllPagedAsync(int offset, int limit)
+        {
+            var posts = await _postRepository.GetAllPagedAsync(offset, limit);
+            var 
+            var postResponses = posts.Select(post => PostConversion.ToResponse(post)).ToList();
+            return new ApiResponse<List<PostResponse>>(true, "Lấy danh sách bài viết thành công", postResponses);
+        }
+
 
         public async Task<ApiResponse<List<Post>>> GetAllAsync()
         {
@@ -55,6 +68,7 @@ namespace PostApi.Application.Services
             try
             {
                 await _postRepository.CreateAsync(post);
+
                 return new ApiResponse<bool>(true, "Thêm bài viết thành công", true);
             }
             catch (Exception ex)

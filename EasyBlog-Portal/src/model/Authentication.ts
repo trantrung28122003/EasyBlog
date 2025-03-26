@@ -1,5 +1,5 @@
 export interface LoginRequest {
-  userName: string;
+  email: string;
   password: string;
 }
 
@@ -9,10 +9,8 @@ export interface LoginResponse {
 }
 
 export interface APIRegisterRequest {
-  userName: string;
   email: string;
   fullName: string;
-  dayOfBirth: string | null;
   file: File | null;
   password: string;
 }

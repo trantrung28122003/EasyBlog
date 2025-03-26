@@ -1,9 +1,9 @@
 // const BASE_URL = "https://sd75skpq-8080.asse.devtunnels.ms";
-const BASE_URL = "http://localhost:8080";
+const BASE_URL = "https://localhost:5000";
 /* 
   authentication
 */
-const BASE_URL_AUTH = BASE_URL + "/auth";
+const BASE_URL_AUTH = BASE_URL + "/api/authentication";
 const LOGIN_URL = BASE_URL_AUTH + "/login";
 const LOGIN_WITH_GOOGLE = BASE_URL_AUTH + "/loginWithGoogle"
 const REGISTER_URL = BASE_URL_AUTH + "/register";
@@ -20,8 +20,8 @@ const REGISTER_URL = BASE_URL_AUTH + "/register";
   user
 */
 
-const BASE_URL_USER = BASE_URL + "/users";
-const GET_USER_INFO_URL = BASE_URL_USER + "/myInfo";
+const BASE_URL_USER = BASE_URL + "/api/users";
+const GET_USER_INFO_URL = BASE_URL_USER + "/profile";
 const UPDATE_PROFILE_USER = BASE_URL + "/customer/updateProfile"
 const CHANGE_PASSWORD_BY_USER = BASE_URL + "/customer/changePassword"
 const FORGOT_PASSWORD_URL = BASE_URL + "/email/sendVerificationCode"

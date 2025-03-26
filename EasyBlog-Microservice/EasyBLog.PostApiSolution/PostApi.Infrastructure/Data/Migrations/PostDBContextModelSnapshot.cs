@@ -60,7 +60,7 @@ namespace PostApi.Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("FileMeatadataId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

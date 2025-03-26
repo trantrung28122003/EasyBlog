@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v8.0": {
       "PostApi.Presentation/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "8.0.14",
           "Microsoft.EntityFrameworkCore.Tools": "8.0.14",
           "PostApi.Infrastructure": "1.0.0",
           "Swashbuckle.AspNetCore": "6.6.2"

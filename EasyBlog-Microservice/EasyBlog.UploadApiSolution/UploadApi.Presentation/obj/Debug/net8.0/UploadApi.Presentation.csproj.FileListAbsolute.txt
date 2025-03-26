@@ -166,3 +166,4 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Presentat
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Presentation\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Presentation\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Presentation\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.UploadApiSolution\UploadApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

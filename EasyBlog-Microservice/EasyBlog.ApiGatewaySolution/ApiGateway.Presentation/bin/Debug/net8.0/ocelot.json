@@ -17,8 +17,42 @@
                 "ClientWhitelist": [],
                 "EnableRateLimiting": true,
                 "Period": "60s",
-                "Limit": 1,
-                "PeriodTimespan": 10
+                "Limit": 50,
+                "ClientIdHeader": "X-Forwarded-For"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/users/profile",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/profile",
+            "UpstreamHttpMethod": [ "GET" ]
+            //"AuthenticationOptions": {
+            //    "AuthenticationProviderKey": "Bearer",
+            //    "AllowedScopes": []
+            //}
+        },
+
+        {
+            "DownstreamPathTemplate": "/api/users/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5001
+                }
+            ],
+            "UpstreamPathTemplate": "/api/users/{everything}",
+            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
             }
         },
 
@@ -163,7 +197,7 @@
             "DownstreamHostAndPorts": [
                 {
                     "Host": "localhost",
-                    "Port": 5003
+                    "Port": 5004
                 }
             ],
             "UpstreamPathTemplate": "/api/fileMetadata/{id}",

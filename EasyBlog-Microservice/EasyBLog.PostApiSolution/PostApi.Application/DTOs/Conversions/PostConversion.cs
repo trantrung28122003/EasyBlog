@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
+using PostApi.Application.DTOs.Responses;
 using PostApi.Domain.Entities;
 
 namespace PostApi.Application.DTOs.Conversions
@@ -22,20 +23,33 @@ namespace PostApi.Application.DTOs.Conversions
             ImageUrls = postDTO.ImageUrls?.Select(url => new PostImage
             {
                 Id = Guid.NewGuid(),
-                ImageUrl = url
+                FileMeatadataId = "123",
+                PostId = Guid.NewGuid()
             }).ToList() ?? new List<PostImage>()
         };
 
 
-        public static (PostDTO?, IEnumerable<PostDTO>?) FormEntity(Post? post, IEnumerable<Post>? posts)
+        public static PostResponse FromEntityToPostRespone(
+            Post post, string authorName, 
+            string authorAvatar, 
+            List<string> imageUrls,
+            int likeCount = 0, 
+            int commentCount = 0)
         {
-            if (post is not null && posts is null)
-                return (ConvertToPostDTO(post), null);
-
-            if (posts is not null && post is null)
-                return (null, posts.Select(ConvertToPostDTO));
-
-            return (null, null);
+            return new PostResponse
+            {
+                Title = post.Title,
+                Content = post.Content,
+                Author = new AuthorResponse
+                {
+                    Id = post.AuthorId,
+                    FullName = authorName,
+                    Avatar = authorAvatar
+                },
+                ImageUrls = imageUrls,
+                LikeCount = likeCount,
+                CommentCount = commentCount
+            };
         }
 
         private static PostDTO ConvertToPostDTO(Post post) => new()
@@ -44,7 +58,7 @@ namespace PostApi.Application.DTOs.Conversions
             Title = post.Title,
             Content = post.Content,
             AuthorId = post.AuthorId,
-            ImageUrls = post.ImageUrls?.Select(img => img.ImageUrl).ToList() ?? new()
+            ImageUrls = post.ImageUrls?.Select(img => img.FileMeatadataId).ToList() ?? new()
         };
 
 

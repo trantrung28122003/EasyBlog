@@ -39,6 +39,7 @@
     "react-toastify": "^10.0.6",
     "s1mple-commerce": "file:",
     "sockjs-client": "^1.6.1",
+    "update": "^0.7.4",
     "yarn": "^1.22.22",
     "yup": "^1.4.0"
   },

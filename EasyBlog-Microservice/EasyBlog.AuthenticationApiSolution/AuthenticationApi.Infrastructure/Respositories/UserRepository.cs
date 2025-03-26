@@ -21,13 +21,13 @@ namespace AuthenticationApi.Infrastructure.Respositories
             _context = context;
         }
 
-        public async Task<ApplicationUser> GetUserByIdAsync(string userId)
+        public async Task<ApplicationUser?> GetUserByIdAsync(string userId)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(p => p.Id.ToString() == userId);
         }
 
-        public async Task<ApplicationUser> GetUserByEmailAsync(string email)
+        public async Task<ApplicationUser?> GetUserByEmailAsync(string email)
         {
             return await _context.Users
                 .FirstOrDefaultAsync(p => p.Email == email);
@@ -38,6 +38,12 @@ namespace AuthenticationApi.Infrastructure.Respositories
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
             return user;
+        }
+        public async Task<List<ApplicationUser>?> GetUsersByIdsAsync(List<Guid> ids)
+        {
+            return await _context.Users
+                .Where(p => ids.Contains(p.Id))
+                .ToListAsync();
         }
     }
 }

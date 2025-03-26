@@ -6,7 +6,7 @@ export interface User {
   fullName: string;
   dayOfBirth: any;
   imageUrl: any;
-  roles: Role[];
+  role: string;
   dateCreate: string;
   dateChange: string;
   changedBy: string;

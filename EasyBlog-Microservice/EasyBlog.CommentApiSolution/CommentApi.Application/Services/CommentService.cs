@@ -30,18 +30,6 @@ namespace CommentApi.Application.Services
         }
 
 
-        public async Task<PostDTO> GetPostAsync(string postId)
-        {
-            var getPost = await _httpClient.GetAsync($"/api/posts/{postId}");
-            if (!getPost.IsSuccessStatusCode)
-            {
-                return null!;
-            }
-            var post = await getPost.Content.ReadFromJsonAsync<PostDTO>();
-            return post!;
-
-
-        }
 
         public async Task<UserDTO> GetUserSafeAsync(string userId)
         {
@@ -52,7 +40,6 @@ namespace CommentApi.Application.Services
             }
             var user = await getUser.Content.ReadFromJsonAsync<UserDTO>();
             return user!;
-
         }
 
         public async Task<ApiResponse<List<CommentDTO>>> GetCommentsByPostIdAsync(string postId)
@@ -61,17 +48,15 @@ namespace CommentApi.Application.Services
             {
                 var comments = await _commentRepository.FindByConditionAsync(c => c.PostId.ToString() == postId);
                 if (!comments.Any())
-                    return new ApiResponse<List<CommentDTO>>(false, "Không có bình luận nào");
+                    return new ApiResponse<List<CommentDTO>>(false, "Không có bình luận nào", []);
 
                 var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
 
-                // Lấy thông tin bài viết để tìm chủ bài viết
-                //var postDTO = await retryPipeline.ExecuteAsync(async _ => await GetPostAsync(postId));
-                //if (postDTO == null)
-                //    return new ApiResponse<List<CommentDTO>>(false, "Không tìm thấy bài viết");
 
-                // Lấy danh sách userId từ comments để tránh gọi API quá nhiều lần
-                var userIds = comments.Select(c => c.AuthorId).Distinct().ToList();
+              
+
+                //Lấy danh sách userId từ comments để tránh gọi API quá nhiều lần
+               var userIds = comments.Select(c => c.AuthorId).Distinct().ToList();
                 var userResponses = await Task.WhenAll(userIds.Select(async userId =>
                     new { UserId = userId, User = await retryPipeline.ExecuteAsync(async _ => await GetUserSafeAsync(userId)) }
                 ));

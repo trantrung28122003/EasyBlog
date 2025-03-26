@@ -63,6 +63,14 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.3, )"
+            },
+            "Polly.Core": {
+              "target": "Package",
+              "version": "[8.5.2, )"
+            },
+            "Polly.Extensions": {
+              "target": "Package",
+              "version": "[8.5.2, )"
             }
           },
           "imports": [

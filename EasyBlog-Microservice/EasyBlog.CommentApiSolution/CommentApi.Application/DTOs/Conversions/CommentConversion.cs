@@ -2,7 +2,7 @@
 using CommentApi.Domain.Entities;
 namespace CommentApi.Application.DTOs.Conversions
 {
-    public class CommentConversion
+    public static class CommentConversion
     {
         public static Comment ToEntity(CommentDTO commentDTO, string userId) => new()
         {

@@ -10,14 +10,14 @@ namespace EasyBlog.SharedLibrary.Response
     {
         public bool IsSuccess { get; set; }  
         public string Message { get; set; }
-        public T? Data { get; set; }    
+        public T? Results { get; set; }    
         public List<string>? Errors { get; set; } 
 
-        public ApiResponse(bool isSuccess, string message, T? data = default, List<string>? errors = null)
+        public ApiResponse(bool isSuccess, string message, T? results = default, List<string>? errors = null)
         {
             IsSuccess = isSuccess;
             Message = message;
-            Data = data;
+            Results = results;
             Errors = errors;
         }
        

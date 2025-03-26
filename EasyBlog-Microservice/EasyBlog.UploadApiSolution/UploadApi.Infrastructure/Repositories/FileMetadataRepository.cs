@@ -28,5 +28,13 @@ namespace UploadApi.Infrastructure.Repositories
         {
             return await _context.FileMetadatas.FindAsync(id);
         }
+
+        public async Task<List<FileMetadata>?> GetFilesMetadataByIdsAsync(List<Guid> ids)
+        {
+            return await _context.FileMetadatas
+                .Where(f => ids.Contains(f.Id))
+                .ToListAsync();
+        }
+
     }
 }

@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FCC23665-CB8C-4197-B9C7-2C127B5E8832}|CommentApi.Domain\\CommentApi.Domain.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FCC23665-CB8C-4197-B9C7-2C127B5E8832}|CommentApi.Domain\\CommentApi.Domain.csproj|solutionrelative:commentapi.domain\\entities\\comment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB8423D-DB10-446E-B116-2AEF16708DE9}|CommentApi.Presentation\\CommentApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6AB8423D-DB10-446E-B116-2AEF16708DE9}|CommentApi.Presentation\\CommentApi.Presentation.csproj|solutionrelative:commentapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6AB8423D-DB10-446E-B116-2AEF16708DE9}|CommentApi.Presentation\\CommentApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6AB8423D-DB10-446E-B116-2AEF16708DE9}|CommentApi.Presentation\\CommentApi.Presentation.csproj|solutionrelative:commentapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|solutionrelative:commentapi.application\\services\\commentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.application\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|solutionrelative:commentapi.application\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.application\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|solutionrelative:commentapi.application\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6AB8423D-DB10-446E-B116-2AEF16708DE9}|CommentApi.Presentation\\CommentApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.presentation\\controllers\\commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,16 +35,8 @@
       "RelativeMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|solutionrelative:commentapi.application\\interfaces\\icommentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.application\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7CE947B4-388F-44DF-8832-DE6F149757A9}|CommentApi.Application\\CommentApi.Application.csproj|solutionrelative:commentapi.application\\interfaces\\icommentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{1CC1CCCA-1908-48D9-93FD-C8379E05320A}|CommentApi.Infrastructure\\CommentApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.infrastructure\\data\\commentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1CC1CCCA-1908-48D9-93FD-C8379E05320A}|CommentApi.Infrastructure\\CommentApi.Infrastructure.csproj|solutionrelative:commentapi.infrastructure\\data\\commentdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1CC1CCCA-1908-48D9-93FD-C8379E05320A}|CommentApi.Infrastructure\\CommentApi.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.commentapisolution\\commentapi.infrastructure\\data\\migrations\\commentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1CC1CCCA-1908-48D9-93FD-C8379E05320A}|CommentApi.Infrastructure\\CommentApi.Infrastructure.csproj|solutionrelative:commentapi.infrastructure\\data\\migrations\\commentdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,32 +67,84 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Comment.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Domain\\Entities\\Comment.cs",
+              "RelativeDocumentMoniker": "CommentApi.Domain\\Entities\\Comment.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Domain\\Entities\\Comment.cs*",
+              "RelativeToolTip": "CommentApi.Domain\\Entities\\Comment.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T12:04:58.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CommentService.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\Services\\CommentService.cs",
+              "RelativeDocumentMoniker": "CommentApi.Application\\Services\\CommentService.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\Services\\CommentService.cs*",
+              "RelativeToolTip": "CommentApi.Application\\Services\\CommentService.cs*",
+              "ViewState": "AgIAADkAAAAAAAAAAAA6wEQAAABmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T01:57:29.575Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "CommentApi.Presentation\\appsettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\appsettings.json",
+              "RelativeToolTip": "CommentApi.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-26T01:57:25.678Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "CommentApi.Presentation\\Program.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\Program.cs",
               "RelativeToolTip": "CommentApi.Presentation\\Program.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T09:21:14.636Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
+              "Title": "ServerContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "RelativeDocumentMoniker": "CommentApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "RelativeToolTip": "CommentApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T02:04:30.198Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "CommentsController.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\Controllers\\CommentsController.cs",
               "RelativeDocumentMoniker": "CommentApi.Presentation\\Controllers\\CommentsController.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Presentation\\Controllers\\CommentsController.cs",
               "RelativeToolTip": "CommentApi.Presentation\\Controllers\\CommentsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T09:18:25.766Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "ICommentService.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\Interfaces\\ICommentService.cs",
               "RelativeDocumentMoniker": "CommentApi.Application\\Interfaces\\ICommentService.cs",
@@ -88,12 +152,11 @@
               "RelativeToolTip": "CommentApi.Application\\Interfaces\\ICommentService.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T08:39:10.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T08:39:10.037Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ICommentRepository.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Application\\Interfaces\\ICommentRepository.cs",
               "RelativeDocumentMoniker": "CommentApi.Application\\Interfaces\\ICommentRepository.cs",
@@ -106,7 +169,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "CommentDbContext.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Infrastructure\\Data\\CommentDbContext.cs",
               "RelativeDocumentMoniker": "CommentApi.Infrastructure\\Data\\CommentDbContext.cs",
@@ -114,21 +177,7 @@
               "RelativeToolTip": "CommentApi.Infrastructure\\Data\\CommentDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T07:59:08.629Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CommentDbContextModelSnapshot.cs",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Infrastructure\\Data\\Migrations\\CommentDbContextModelSnapshot.cs",
-              "RelativeDocumentMoniker": "CommentApi.Infrastructure\\Data\\Migrations\\CommentDbContextModelSnapshot.cs",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.CommentApiSolution\\CommentApi.Infrastructure\\Data\\Migrations\\CommentDbContextModelSnapshot.cs",
-              "RelativeToolTip": "CommentApi.Infrastructure\\Data\\Migrations\\CommentDbContextModelSnapshot.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T07:59:07.831Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-24T07:59:08.629Z"
             }
           ]
         }
