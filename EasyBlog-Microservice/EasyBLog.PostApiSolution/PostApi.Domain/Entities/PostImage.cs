@@ -10,10 +10,10 @@ namespace PostApi.Domain.Entities
     public class PostImage
     {
         public Guid Id { get; set; } = Guid.NewGuid();
-        public required string FileMeatadataId { get; set; }
-        public required Guid PostId { get; set; }
+        public required string FileMetadataId { get; set; }
+        public Guid PostId { get; set; }
 
         [ForeignKey("PostId")]
-        public Post? Post { get; set; }
+        public Post Post { get; set; } = null!;
     }
 }

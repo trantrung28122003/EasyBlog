@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AuthenticationApi.Application.DTOs.Reponses;
+using AuthenticationApi.Application.DTOs.Request;
 using AuthenticationApi.Application.DTOs.Requests;
 using EasyBlog.SharedLibrary.Response;
 using Microsoft.AspNetCore.Http;
@@ -17,7 +18,7 @@ namespace AuthenticationApi.Application.Interfaces
         Task<ApiResponse<UserResponse>> GetCurrentUserAsync();
         Task<ApiResponse<string>> Register(UserRegisterRequest request, IFormFile avatar);
         Task<ApiResponse<string>> Login(UserLoginRequest request);
-        Task<ApiResponse<List<UserResponse>>> GetUsersByIdsAsync(List<string> userIds);
+        Task<ApiResponse<List<UserResponse>>> GetUsersByIdsAsync(UserIdsRequest request);
     }
 
 }

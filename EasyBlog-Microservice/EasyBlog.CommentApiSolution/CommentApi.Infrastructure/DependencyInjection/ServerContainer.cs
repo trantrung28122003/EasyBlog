@@ -12,7 +12,7 @@ namespace CommentApi.Infrastructure.DependencyInjection
 {
     public static class ServerContainer
     {
-        public static IServiceCollection addInfrastructureService(this IServiceCollection services, IConfiguration config)
+        public static IServiceCollection AddInfrastructureService(this IServiceCollection services, IConfiguration config)
         {
             var logFileName = config["MySerilog:Filename"];
             if (string.IsNullOrEmpty(logFileName))

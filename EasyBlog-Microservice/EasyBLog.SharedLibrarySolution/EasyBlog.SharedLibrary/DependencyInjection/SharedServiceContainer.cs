@@ -1,5 +1,6 @@
 ﻿
 
+using EasyBlog.SharedLibrary.HttpClients;
 using EasyBlog.SharedLibrary.Middleware;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
@@ -34,6 +35,11 @@ namespace EasyBlog.SharedLibrary.DependencyInjection
                 .CreateLogger();
 
             JWTAuthenticationScheme.AddJWTAuthenticationScheme(services, config);
+
+            services.AddHttpContextAccessor();  // Để lấy token từ request
+
+            // Đăng ký AuthHttpMessageHandler
+            services.AddTransient<AuthHttpMessageHandler>();
             return services;
         }
 

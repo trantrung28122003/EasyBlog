@@ -11,7 +11,6 @@ namespace PostApi.Application.Interfaces
 {
     public interface IPostRepository : IGenericRepository<Post>
     {
-        Task<List<PostResponse>> GetAllPagedAsync(int offset, int limit);
-       
+        Task<List<Post>> GetPostsByPageAsync(int offset, int limit);
     }
 }

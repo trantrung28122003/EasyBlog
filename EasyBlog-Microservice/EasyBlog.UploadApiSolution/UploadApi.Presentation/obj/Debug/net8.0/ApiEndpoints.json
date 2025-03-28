@@ -1,15 +1,15 @@
 [
   {
     "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
-    "Method": "GetAvatarsByIds",
-    "RelativePath": "api/FileMetadata/getFilesMetadataByIds",
-    "HttpMethod": "POST",
+    "Method": "GetFileById",
+    "RelativePath": "api/FileMetadata/{id}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "fileIds",
-        "Type": "System.Collections.Generic.List\u00601[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "Name": "id",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -17,15 +17,72 @@
   },
   {
     "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
-    "Method": "UploadFile",
+    "Method": "GetFilesByIds",
+    "RelativePath": "api/FileMetadata/getFilesMetadataByIds",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "UploadApi.Application.DTOs.Requests.FileMetadataIdsRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
+    "Method": "UploadSingleFile",
     "RelativePath": "api/FileMetadata/upload",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "file",
-        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "UploadApi.Presentation.Controllers.FileMetadataController",
+    "Method": "UploadMutipleFile",
+    "RelativePath": "api/FileMetadata/upload-multiple",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "files",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
         "IsRequired": false
       }
     ],

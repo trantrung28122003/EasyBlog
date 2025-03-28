@@ -31,11 +31,11 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/users/profile",
-            "UpstreamHttpMethod": [ "GET" ]
-            //"AuthenticationOptions": {
-            //    "AuthenticationProviderKey": "Bearer",
-            //    "AllowedScopes": []
-            //}
+            "UpstreamHttpMethod": [ "GET" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
         },
 
         {
@@ -68,12 +68,12 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts",
-            "UpstreamHttpMethod": [ "GET" ],
-            "FileCacheOptions": {
-                "TtlSeconds": 60,
-                "Region": "default",
-                "Header": "eBlog-Cacching-Control"
-            }
+            "UpstreamHttpMethod": ["GET"]
+            //"FileCacheOptions": {
+            //    "TtlSeconds": 60,
+            //    "Region": "default",
+            //    "Header": "eBlog-Caching-Control"
+            //}
         },
         //Post API
         //GET Post by ID
@@ -106,7 +106,7 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts/{everything}",
-            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+            "UpstreamHttpMethod": ["POST","PUT","DELETE"],
             "AuthenticationOptions": {
                 "AuthenticationProviderKey": "Bearer",
                 "AllowedScopes": []
@@ -134,7 +134,7 @@
             }
         },
 
-        //Post API
+        //comment API
         //GET Post by ID
         {
             "DownstreamPathTemplate": "/api/comments/{id}",
@@ -153,8 +153,42 @@
                 "Header": "eBlog-Cacching-Control"
             }
         },
+        {
+            "DownstreamPathTemplate": "/api/commentsByPostId/{postId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/commentsByPostId/{postId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/comments/commentsByPostIds",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/comments/commentsByPostIds",
+            "UpstreamHttpMethod": [ "POST" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
+            }
+        },
 
-        //Post => POST, PUT, DELETE -> ALL
+        
         {
             "DownstreamPathTemplate": "/api/comments/{everything}",
             "DownstreamScheme": "http",

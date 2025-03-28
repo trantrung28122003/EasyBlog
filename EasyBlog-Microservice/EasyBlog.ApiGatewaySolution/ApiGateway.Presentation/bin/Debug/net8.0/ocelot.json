@@ -31,11 +31,11 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/users/profile",
-            "UpstreamHttpMethod": [ "GET" ]
-            //"AuthenticationOptions": {
-            //    "AuthenticationProviderKey": "Bearer",
-            //    "AllowedScopes": []
-            //}
+            "UpstreamHttpMethod": [ "GET" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
         },
 
         {
@@ -68,11 +68,11 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts",
-            "UpstreamHttpMethod": [ "GET" ],
+            "UpstreamHttpMethod": ["GET"],
             "FileCacheOptions": {
                 "TtlSeconds": 60,
                 "Region": "default",
-                "Header": "eBlog-Cacching-Control"
+                "Header": "eBlog-Caching-Control"
             }
         },
         //Post API
@@ -106,7 +106,7 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts/{everything}",
-            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+            "UpstreamHttpMethod": ["POST","PUT","DELETE"],
             "AuthenticationOptions": {
                 "AuthenticationProviderKey": "Bearer",
                 "AllowedScopes": []
@@ -147,6 +147,40 @@
             ],
             "UpstreamPathTemplate": "/api/comments/{id}",
             "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/commentsByPostId/{postId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/commentsByPostId/{postId}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/commentsByPostIds",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/api/commentsByPostIds",
+            "UpstreamHttpMethod": [ "POST" ],
             "FileCacheOptions": {
                 "TtlSeconds": 60,
                 "Region": "default",

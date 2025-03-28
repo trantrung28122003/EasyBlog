@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using UploadApi.Application.DTOs.Requests;
 using UploadApi.Application.DTOs.Responses;
 using UploadApi.Application.Interfaces;
 using UploadApi.Domain.Entites;
@@ -20,13 +21,15 @@ namespace UploadApi.Presentation.Controllers
             _fileMetadataService = fileMetadataService;
         }
 
-        [HttpPost("upload")]
-        public async Task<IActionResult> UploadFile(IFormFile file)
-        {
-            if (file == null || file.Length == 0)
-                return BadRequest(new ApiResponse<FileMetadataResponse>(false, "File không hợp lệ", null));
 
-            var response = await _fileMetadataService.UploadAndSaveFileMetadataAsync(file);
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetFileById(string id)
+        {
+            if (string.IsNullOrWhiteSpace(id)) 
+                return BadRequest(new ApiResponse<List<FileMetadataResponse>>(false, "ID không hợp lệ", null));
+
+            var response = await _fileMetadataService.GetFileMetadataByIdAsync(id);
 
             if (!response.IsSuccess)
                 return BadRequest(response);
@@ -35,18 +38,53 @@ namespace UploadApi.Presentation.Controllers
         }
 
         [HttpPost("getFilesMetadataByIds")]
-        public async Task<IActionResult> GetAvatarsByIds([FromBody] List<string> fileIds)
+        public async Task<IActionResult> GetFilesByIds([FromBody] FileMetadataIdsRequest request)
         {
-            if (fileIds == null || !fileIds.Any())
+            if (request.FileIds == null || !request.FileIds.Any())
                 return BadRequest(new ApiResponse<List<FileMetadataResponse>>(false, "Danh sách ID không hợp lệ", null));
 
-            var response = await _fileMetadataService.GetFilesMetadataByIdsAsync(fileIds);
+            var response = await _fileMetadataService.GetFilesMetadataByIdsAsync(request.FileIds);
 
             if (!response.IsSuccess)
                 return BadRequest(response);
 
             return Ok(response);
         }
+
+
+
+        [HttpPost("upload")]
+        public async Task<IActionResult> UploadSingleFile([FromForm] IFormFile file)
+        {
+            if (file == null || file.Length == 0)
+                return BadRequest(new ApiResponse<FileMetadataResponse>(false, "File không hợp lệ", null));
+
+            var response = await _fileMetadataService.UploadSingleFileAsync(file);
+
+            if (!response.IsSuccess)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+        [Authorize]
+        [HttpPost("upload-multiple")]
+        public async Task<IActionResult> UploadMutipleFile([FromForm]List<IFormFile> files)
+        {
+            if (files == null || files.Count == 0)
+                return BadRequest(new ApiResponse<List<FileMetadataResponse>>(false, "File không hợp lệ", null));
+
+            var response = await _fileMetadataService.UploadMultipleFilesAsync(files);
+
+            if (!response.IsSuccess)
+                return BadRequest(response);
+
+            return Ok(response);
+        }
+
+
+
+        
 
     }
 }

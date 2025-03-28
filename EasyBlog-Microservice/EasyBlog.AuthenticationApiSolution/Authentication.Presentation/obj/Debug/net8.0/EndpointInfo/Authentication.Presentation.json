@@ -87,43 +87,21 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
+                "$ref": "#/components/schemas/UserLoginRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
+                "$ref": "#/components/schemas/UserLoginRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/LoginDTO"
+                "$ref": "#/components/schemas/UserLoginRequest"
               }
             }
           }
         },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Authentication/{userId}": {
-      "get": {
-        "tags": [
-          "Authentication"
-        ],
-        "parameters": [
-          {
-            "name": "userId",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
         "responses": {
           "200": {
             "description": "OK"
@@ -152,17 +130,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetUsersByIdsRequest"
+                "$ref": "#/components/schemas/UserIdsRequest"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/GetUsersByIdsRequest"
+                "$ref": "#/components/schemas/UserIdsRequest"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/GetUsersByIdsRequest"
+                "$ref": "#/components/schemas/UserIdsRequest"
               }
             }
           }
@@ -173,11 +151,33 @@
           }
         }
       }
+    },
+    "/api/Users/{userId}": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "GetUsersByIdsRequest": {
+      "UserIdsRequest": {
         "type": "object",
         "properties": {
           "userIds": {
@@ -190,7 +190,7 @@
         },
         "additionalProperties": false
       },
-      "LoginDTO": {
+      "UserLoginRequest": {
         "required": [
           "email",
           "password"

@@ -9,7 +9,7 @@ namespace UploadApi.Domain.Entites
 {
     public class FileMetadata
     {
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Guid Id { get; set; }
         public string? FileName { get; set; }
         public required string FileUrl { get; set; }
         public long? FileSize { get; set; }

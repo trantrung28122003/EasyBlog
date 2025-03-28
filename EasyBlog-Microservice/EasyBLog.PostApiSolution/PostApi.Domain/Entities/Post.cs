@@ -12,7 +12,7 @@ namespace PostApi.Domain.Entities
         public string? Title { get; set; }            
         public string? Content { get; set; }         
         public required string AuthorId { get; set; }
-        public List<PostImage> ImageUrls { get; set; } = new();
+        public List<PostImage> Images { get; set; } = new();
         public DateTime DateCreate { get; set; }      
         public DateTime? DateChange { get; set; }    
         public bool IsDeleted { get; set; }

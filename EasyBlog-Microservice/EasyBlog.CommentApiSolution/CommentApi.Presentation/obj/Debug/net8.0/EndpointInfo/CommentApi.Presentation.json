@@ -5,7 +5,7 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/Comments/id": {
+    "/api/Comments/{Id}": {
       "get": {
         "tags": [
           "Comments"
@@ -13,43 +13,13 @@
         "parameters": [
           {
             "name": "Id",
-            "in": "query",
+            "in": "path",
+            "required": true,
             "schema": {
               "type": "string"
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/Comments/create": {
-      "post": {
-        "tags": [
-          "Comments"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/CommentDTO"
-              }
-            }
-          }
-        },
         "responses": {
           "200": {
             "description": "OK"
@@ -78,30 +48,167 @@
           }
         }
       }
+    },
+    "/api/Comments/commentsByPostIds": {
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIdsRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIdsRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/PostIdsRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments/create": {
+      "post": {
+        "tags": [
+          "Comments"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/CreateCommentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments/update/{id}": {
+      "put": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/UpdateCommentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments/soft/{id}": {
+      "put": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Comments/{id}": {
+      "delete": {
+        "tags": [
+          "Comments"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {
     "schemas": {
-      "CommentDTO": {
+      "CreateCommentRequest": {
         "required": [
-          "author",
-          "commentId",
           "content",
-          "dateCreate",
           "postId"
         ],
         "type": "object",
         "properties": {
-          "commentId": {
-            "type": "string",
-            "format": "uuid"
-          },
           "postId": {
             "type": "string",
             "nullable": true
-          },
-          "author": {
-            "$ref": "#/components/schemas/UserDTO"
           },
           "content": {
             "type": "string",
@@ -110,30 +217,30 @@
           "parentId": {
             "type": "string",
             "nullable": true
-          },
-          "dateCreate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "dateChange": {
-            "type": "string",
-            "format": "date-time",
+          }
+        },
+        "additionalProperties": false
+      },
+      "PostIdsRequest": {
+        "type": "object",
+        "properties": {
+          "postIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
             "nullable": true
           }
         },
         "additionalProperties": false
       },
-      "UserDTO": {
+      "UpdateCommentRequest": {
         "required": [
-          "fullName"
+          "content"
         ],
         "type": "object",
         "properties": {
-          "fullName": {
-            "type": "string",
-            "nullable": true
-          },
-          "avatar": {
+          "content": {
             "type": "string",
             "nullable": true
           }

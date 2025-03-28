@@ -12,11 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="DependencyInjection\" />
-    <Folder Include="DTOs\Requests\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Polly.Core" Version="8.5.2" />
     <PackageReference Include="Polly.Extensions" Version="8.5.2" />
   </ItemGroup>

@@ -1,6 +1,38 @@
 [
   {
     "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "Delete",
+    "RelativePath": "api/Comments/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "GetById",
+    "RelativePath": "api/Comments/{Id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "Id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
     "Method": "GetCommentsByPostId",
     "RelativePath": "api/Comments/commentsByPostId/{postId}",
     "HttpMethod": "GET",
@@ -17,15 +49,15 @@
   },
   {
     "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
-    "Method": "Create",
-    "RelativePath": "api/Comments/create",
+    "Method": "GetCommentsByPostIds",
+    "RelativePath": "api/Comments/commentsByPostIds",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "commentDTO",
-        "Type": "CommentApi.Application.DTOs.CommentDTO",
+        "Name": "request",
+        "Type": "CommentApi.Application.DTOs.Resquest.PostIdsRequest",
         "IsRequired": true
       }
     ],
@@ -33,16 +65,53 @@
   },
   {
     "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
-    "Method": "GetById",
-    "RelativePath": "api/Comments/id",
-    "HttpMethod": "GET",
+    "Method": "Create",
+    "RelativePath": "api/Comments/create",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "Id",
+        "Name": "request",
+        "Type": "CommentApi.Application.DTOs.Resquest.CreateCommentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "SoftDelete",
+    "RelativePath": "api/Comments/soft/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
         "Type": "System.String",
-        "IsRequired": false
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CommentApi.Presentation.Controllers.CommentsController",
+    "Method": "Update",
+    "RelativePath": "api/Comments/update/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "CommentApi.Application.DTOs.Resquest.UpdateCommentRequest",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

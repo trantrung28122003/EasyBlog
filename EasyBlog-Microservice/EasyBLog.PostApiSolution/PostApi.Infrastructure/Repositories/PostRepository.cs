@@ -19,9 +19,10 @@ namespace PostApi.Infrastructure.Repositories
         {
             _context = context;
         }
-        public async Task<List<Post>> GetPagedAsync(int offset, int limit)
+        public async Task<List<Post>> GetPostsByPageAsync(int offset, int limit)
         {
             return await _context.Posts
+                .Where(p => !p.IsDeleted)
                 .OrderByDescending(p => p.DateCreate)
                 .Skip(offset)
                 .Take(limit)
@@ -71,15 +72,15 @@ namespace PostApi.Infrastructure.Repositories
 
             existingPost.Title = post.Title;
             existingPost.Content = post.Content;
-            existingPost.ImageUrls = post.ImageUrls;
+            existingPost.Images = post.Images;
             existingPost.DateChange = DateTime.UtcNow;
 
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Post post)
+        public async Task DeleteAsync(Guid id)
         {
-            var existingPost = await _context.Posts.FindAsync(post.Id);
+            var existingPost = await _context.Posts.FindAsync(id);
             if (existingPost is null) throw new Exception("Post not found");
 
             _context.Posts.Remove(existingPost);

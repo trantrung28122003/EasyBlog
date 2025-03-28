@@ -33,7 +33,6 @@ namespace PostApi.Infrastructure.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Content")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DateChange")
@@ -46,7 +45,6 @@ namespace PostApi.Infrastructure.Data.Migrations
                         .HasColumnType("bit");
 
                     b.Property<string>("Title")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
@@ -60,7 +58,7 @@ namespace PostApi.Infrastructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("FileMeatadataId")
+                    b.Property<string>("FileMetadataId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -77,7 +75,7 @@ namespace PostApi.Infrastructure.Data.Migrations
             modelBuilder.Entity("PostApi.Domain.Entities.PostImage", b =>
                 {
                     b.HasOne("PostApi.Domain.Entities.Post", "Post")
-                        .WithMany("ImageUrls")
+                        .WithMany("Images")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -87,7 +85,7 @@ namespace PostApi.Infrastructure.Data.Migrations
 
             modelBuilder.Entity("PostApi.Domain.Entities.Post", b =>
                 {
-                    b.Navigation("ImageUrls");
+                    b.Navigation("Images");
                 });
 #pragma warning restore 612, 618
         }

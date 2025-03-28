@@ -3894,8 +3894,8 @@
     },
     "EasyBlog.SharedLibrary/1.0.0": {
       "type": "project",
-      "path": "C:\\Users\\trant\\Desktop\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj",
-      "msbuildProject": "C:\\Users\\trant\\Desktop\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj"
+      "path": "../../EasyBLog.SharedLibrarySolution/EasyBlog.SharedLibrary/EasyBlog.SharedLibrary.csproj",
+      "msbuildProject": "../../EasyBLog.SharedLibrarySolution/EasyBlog.SharedLibrary/EasyBlog.SharedLibrary.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -3941,8 +3941,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\trant\\Desktop\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj": {
-              "projectPath": "C:\\Users\\trant\\Desktop\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj"
+            "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj": {
+              "projectPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj"
             }
           }
         }

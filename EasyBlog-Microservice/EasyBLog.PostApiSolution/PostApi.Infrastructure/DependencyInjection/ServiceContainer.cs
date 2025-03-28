@@ -30,7 +30,7 @@ namespace PostApi.Infrastructure.DependencyInjection
 
             services.AddScoped<IPostRepository, PostRepository>();
 
-            services.AddScoped<IPostService, PostService>();
+           
 
             return services;
         }   

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "UYL/fmGeQa4=",
+  "dgSpecHash": "l9XskzIlcpY=",
   "success": true,
   "projectFilePath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.PostApiSolution\\PostApi.Infrastructure\\PostApi.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -48,6 +48,7 @@
     "C:\\Users\\trant\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\polly.core\\8.5.2\\polly.core.8.5.2.nupkg.sha512",
+    "C:\\Users\\trant\\.nuget\\packages\\polly.extensions\\8.5.2\\polly.extensions.8.5.2.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\serilog\\3.1.1\\serilog.3.1.1.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\serilog.aspnetcore\\8.0.2\\serilog.aspnetcore.8.0.2.nupkg.sha512",
     "C:\\Users\\trant\\.nuget\\packages\\serilog.extensions.hosting\\8.0.0\\serilog.extensions.hosting.8.0.0.nupkg.sha512",

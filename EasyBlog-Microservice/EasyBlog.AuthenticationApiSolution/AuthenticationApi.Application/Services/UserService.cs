@@ -9,6 +9,7 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using AuthenticationApi.Application.DTOs.Conversions;
 using AuthenticationApi.Application.DTOs.Reponses;
+using AuthenticationApi.Application.DTOs.Request;
 using AuthenticationApi.Application.DTOs.Requests;
 using AuthenticationApi.Application.Interfaces;
 using AuthenticationApi.Domain.Entities;
@@ -72,7 +73,7 @@ namespace AuthenticationApi.Application.Services
             }
             var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
 
-            string avatarId = "f18f20b6-db9c-40ed-a6d8-008e7a1cad65"; 
+            string avatarId = "4278876e-1458-4f05-9941-f9dda054f640"; 
 
             if (avatar != null)
             {
@@ -82,7 +83,6 @@ namespace AuthenticationApi.Application.Services
                     avatarId = fileMetadata.Id; 
                 }
             }
-
 
             var newUser = new ApplicationUser
             {
@@ -174,6 +174,8 @@ namespace AuthenticationApi.Application.Services
             fileContent.Headers.ContentType = new System.Net.Http.Headers.MediaTypeHeaderValue(file.ContentType);
             content.Add(fileContent, "file", file.FileName);
 
+            
+            Console.WriteLine($"Content-Type: {content.Headers.ContentType}");
             var response = await _httpClient.PostAsync("/api/filemetadata/upload", content);
 
             if (!response.IsSuccessStatusCode)
@@ -202,7 +204,7 @@ namespace AuthenticationApi.Application.Services
             return fileMetadataReponse?.Results;
         }
 
-        public async Task<List<FileMetadataReponse>?> GetFilesMetadataByUsers(List<ApplicationUser> users)
+        private async Task<List<FileMetadataReponse>?> GetFilesMetadataByUsers(List<ApplicationUser> users)
         {
 
             var fileIds = users
@@ -211,7 +213,9 @@ namespace AuthenticationApi.Application.Services
                 .Distinct()
                 .ToList();
 
-            var response = await _httpClient.PostAsJsonAsync("/api/filemetadata/getFilesMetadataByIds", fileIds);
+            var request = new FileMetadataIdsRequest { FileIds = fileIds };
+
+            var response = await _httpClient.PostAsJsonAsync("/api/filemetadata/getFilesMetadataByIds", request);
 
             if (!response.IsSuccessStatusCode)
                 return null;
@@ -226,13 +230,13 @@ namespace AuthenticationApi.Application.Services
         }
 
 
-        public async Task<ApiResponse<List<UserResponse>>> GetUsersByIdsAsync(List<string> userIds)
+        public async Task<ApiResponse<List<UserResponse>>> GetUsersByIdsAsync(UserIdsRequest request)
         {
-            if (userIds == null || !userIds.Any())
+            if (request.UserIds == null || !request.UserIds.Any())
             {
                 return new ApiResponse<List<UserResponse>>(false, "Danh sách userId không hợp lệ", null);
             }
-            var guidUserIds = userIds.Where(id => Guid.TryParse(id, out _))
+            var guidUserIds = request.UserIds.Where(id => Guid.TryParse(id, out _))
                             .Select(Guid.Parse)
                             .ToList();
             var users = await _userRepository.GetUsersByIdsAsync(guidUserIds);

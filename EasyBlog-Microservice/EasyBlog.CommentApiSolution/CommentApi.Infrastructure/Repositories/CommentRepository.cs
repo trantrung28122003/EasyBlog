@@ -68,9 +68,9 @@ namespace CommentApi.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
-        public async Task DeleteAsync(Comment comment)
+        public async Task DeleteAsync(Guid id)
         {
-            var existingPost = await _context.Comments.FindAsync(comment.Id);
+            var existingPost = await _context.Comments.FindAsync(id);
             if (existingPost is null) throw new Exception("Post not found");
 
             _context.Comments.Remove(existingPost);

@@ -6,6 +6,7 @@ using Polly;
 using EasyBlog.SharedLibrary.Logs;
 using AuthenticationApi.Application.Interfaces;
 using AuthenticationApi.Application.Services;
+using EasyBlog.SharedLibrary.HttpClients;
 
 namespace AuthenticationApi.Application.DependencyInjection
 {
@@ -13,12 +14,14 @@ namespace AuthenticationApi.Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration config)
         {
+
+            services.AddTransient<AuthHttpMessageHandler>();
             // Đăng ký dịch vụ HttpClient với Dependency Injection
             services.AddHttpClient<IUserService, UserService>(options =>
             {
                 options.BaseAddress = new Uri(config["ApiGateway:BaseAddress"]!);
                 options.Timeout = TimeSpan.FromSeconds(10);
-            });
+            }).AddHttpMessageHandler<AuthHttpMessageHandler>();
 
             // Tạo chiến lược retry
             var retryStrategy = new RetryStrategyOptions
@@ -42,9 +45,6 @@ namespace AuthenticationApi.Application.DependencyInjection
             {
                 builder.AddRetry(retryStrategy);
             });
-
-           
-
             return services;
         }
     }

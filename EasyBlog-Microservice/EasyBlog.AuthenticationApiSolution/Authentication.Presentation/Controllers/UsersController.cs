@@ -29,11 +29,11 @@ namespace Authentication.Presentation.Controllers
             return BadRequest(response);
         }
 
-        //[Authorize]
+       
         [HttpPost("getUsersByIds")]
         public async Task<IActionResult> GetUsersByIds([FromBody] UserIdsRequest request)
         {
-            var response = await _userService.GetUsersByIdsAsync(request.UserIds);
+            var response = await _userService.GetUsersByIdsAsync(request);
             if (response.IsSuccess)
             {
                 return Ok(response);

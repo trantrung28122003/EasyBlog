@@ -164,4 +164,6 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi.Presentation.pdb
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\PostApi.Presentation.genruntimeconfig.cache
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\ref\PostApi.Presentation.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\bin\Debug\net8.0\Polly.Core.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\bin\Debug\net8.0\Polly.Extensions.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBLog.PostApiSolution\PostApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

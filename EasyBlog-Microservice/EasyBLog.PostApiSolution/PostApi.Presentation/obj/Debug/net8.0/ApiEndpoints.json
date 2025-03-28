@@ -1,9 +1,9 @@
 [
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetAll",
+    "Method": "GetAllPosts",
     "RelativePath": "api/Posts",
-    "HttpMethod": "",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -27,16 +27,6 @@
   },
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetAllActive",
-    "RelativePath": "api/Posts/active",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "Create",
     "RelativePath": "api/Posts/create",
     "HttpMethod": "POST",
@@ -44,9 +34,14 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "postDTO",
-        "Type": "PostApi.Application.DTOs.PostDTO",
-        "IsRequired": true
+        "Name": "Content",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "files",
+        "Type": "System.Collections.Generic.List\u00601[[Microsoft.AspNetCore.Http.IFormFile, Microsoft.AspNetCore.Http.Features, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60]]",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -60,9 +55,30 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "post",
-        "Type": "PostApi.Domain.Entities.Post",
-        "IsRequired": true
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
+    "Method": "GetPostspaged",
+    "RelativePath": "api/Posts/paged",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "offset",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "limit",
+        "Type": "System.Int32",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -86,14 +102,19 @@
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
     "Method": "Update",
-    "RelativePath": "api/Posts/update",
+    "RelativePath": "api/Posts/update/{id}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "post",
-        "Type": "PostApi.Domain.Entities.Post",
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "PostApi.Application.DTOs.Requests.UpdatePostRequest",
         "IsRequired": true
       }
     ],

@@ -17,7 +17,7 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();
-await app.Services.SeedDataAsync();
 
+await app.Services.SeedDataAsync();
 
 app.Run();

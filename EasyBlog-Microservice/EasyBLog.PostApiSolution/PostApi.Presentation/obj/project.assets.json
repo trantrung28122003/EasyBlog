@@ -994,6 +994,24 @@
           }
         }
       },
+      "Polly.Extensions/8.5.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Options": "8.0.0",
+          "Polly.Core": "8.5.2"
+        },
+        "compile": {
+          "lib/net8.0/Polly.Extensions.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Polly.Extensions.dll": {
+            "related": ".pdb;.xml"
+          }
+        }
+      },
       "Serilog/3.1.1": {
         "type": "package",
         "compile": {
@@ -1816,6 +1834,7 @@
         "dependencies": {
           "EasyBlog.SharedLibrary": "1.0.0",
           "Polly.Core": "8.5.2",
+          "Polly.Extensions": "8.5.2",
           "PostApi.Domain": "1.0.0"
         },
         "compile": {
@@ -3572,6 +3591,34 @@
         "package-readme.md",
         "polly.core.8.5.2.nupkg.sha512",
         "polly.core.nuspec"
+      ]
+    },
+    "Polly.Extensions/8.5.2": {
+      "sha512": "NcUEkeMB7LMsLBXzY9PuuKP7ylXngUEuhmaWxCrlXqYLbVQQzG1ulAnaEQ2LM1zlSoxRftAjCuhPIH40qeWAlg==",
+      "type": "package",
+      "path": "polly.extensions/8.5.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net462/Polly.Extensions.dll",
+        "lib/net462/Polly.Extensions.pdb",
+        "lib/net462/Polly.Extensions.xml",
+        "lib/net472/Polly.Extensions.dll",
+        "lib/net472/Polly.Extensions.pdb",
+        "lib/net472/Polly.Extensions.xml",
+        "lib/net6.0/Polly.Extensions.dll",
+        "lib/net6.0/Polly.Extensions.pdb",
+        "lib/net6.0/Polly.Extensions.xml",
+        "lib/net8.0/Polly.Extensions.dll",
+        "lib/net8.0/Polly.Extensions.pdb",
+        "lib/net8.0/Polly.Extensions.xml",
+        "lib/netstandard2.0/Polly.Extensions.dll",
+        "lib/netstandard2.0/Polly.Extensions.pdb",
+        "lib/netstandard2.0/Polly.Extensions.xml",
+        "package-icon.png",
+        "package-readme.md",
+        "polly.extensions.8.5.2.nupkg.sha512",
+        "polly.extensions.nuspec"
       ]
     },
     "Serilog/3.1.1": {

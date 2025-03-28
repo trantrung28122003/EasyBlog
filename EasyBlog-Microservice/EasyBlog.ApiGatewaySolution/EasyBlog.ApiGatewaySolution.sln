@@ -5,7 +5,7 @@ VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiGateway.Presentation", "ApiGateway.Presentation\ApiGateway.Presentation.csproj", "{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.SharedLibrary", "C:\Users\trant\Desktop\EasyBLog.SharedLibrarySolution\EasyBlog.SharedLibrary\EasyBlog.SharedLibrary.csproj", "{F7618B83-7E9D-4BA8-BA1B-E641827FC22F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.SharedLibrary", "..\EasyBLog.SharedLibrarySolution\EasyBlog.SharedLibrary\EasyBlog.SharedLibrary.csproj", "{5048B44C-2931-42C3-A4D9-03B3026C2C3E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F7618B83-7E9D-4BA8-BA1B-E641827FC22F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F7618B83-7E9D-4BA8-BA1B-E641827FC22F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F7618B83-7E9D-4BA8-BA1B-E641827FC22F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F7618B83-7E9D-4BA8-BA1B-E641827FC22F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5048B44C-2931-42C3-A4D9-03B3026C2C3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5048B44C-2931-42C3-A4D9-03B3026C2C3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5048B44C-2931-42C3-A4D9-03B3026C2C3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5048B44C-2931-42C3-A4D9-03B3026C2C3E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

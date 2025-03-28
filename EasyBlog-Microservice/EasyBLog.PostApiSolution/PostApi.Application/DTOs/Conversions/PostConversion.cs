@@ -20,32 +20,29 @@ namespace PostApi.Application.DTOs.Conversions
             AuthorId = userId,
             DateCreate = DateTime.UtcNow,
             IsDeleted = false,
-            ImageUrls = postDTO.ImageUrls?.Select(url => new PostImage
+            Images = postDTO.ImageUrls?.Select(url => new PostImage
             {
-                Id = Guid.NewGuid(),
-                FileMeatadataId = "123",
+                FileMetadataId = "123",
                 PostId = Guid.NewGuid()
             }).ToList() ?? new List<PostImage>()
         };
 
 
         public static PostResponse FromEntityToPostRespone(
-            Post post, string authorName, 
-            string authorAvatar, 
+            Post post, 
+            AuthorResponse authorResponse,
             List<string> imageUrls,
+            List<CommentResponse> commentsResponse,
             int likeCount = 0, 
             int commentCount = 0)
         {
             return new PostResponse
             {
+                Id = post.Id.ToString(),
                 Title = post.Title,
                 Content = post.Content,
-                Author = new AuthorResponse
-                {
-                    Id = post.AuthorId,
-                    FullName = authorName,
-                    Avatar = authorAvatar
-                },
+                Author = authorResponse,
+                CommentsResponse = commentsResponse,
                 ImageUrls = imageUrls,
                 LikeCount = likeCount,
                 CommentCount = commentCount
@@ -58,7 +55,7 @@ namespace PostApi.Application.DTOs.Conversions
             Title = post.Title,
             Content = post.Content,
             AuthorId = post.AuthorId,
-            ImageUrls = post.ImageUrls?.Select(img => img.FileMeatadataId).ToList() ?? new()
+            ImageUrls = post.Images?.Select(img => img.FileMetadataId).ToList() ?? new()
         };
 
 

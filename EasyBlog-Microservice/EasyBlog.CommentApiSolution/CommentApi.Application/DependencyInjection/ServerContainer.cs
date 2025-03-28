@@ -6,6 +6,7 @@ using Polly;
 using CommentApi.Application.Interfaces;
 using CommentApi.Application.Services;
 using EasyBlog.SharedLibrary.Logs;
+using EasyBlog.SharedLibrary.HttpClients;
 
 namespace CommentApi.Application.DependencyInjection
 {
@@ -13,12 +14,14 @@ namespace CommentApi.Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration config)
         {
+
+            services.AddTransient<AuthHttpMessageHandler>();
             // Đăng ký dịch vụ HttpClient với Dependency Injection
             services.AddHttpClient<ICommentService, CommentService>(options =>
             {
                 options.BaseAddress = new Uri(config["ApiGateway:BaseAddress"]!);
                 options.Timeout = TimeSpan.FromSeconds(10);
-            });
+            }).AddHttpMessageHandler<AuthHttpMessageHandler>();
 
             // Tạo chiến lược retry
             var retryStrategy = new RetryStrategyOptions
@@ -42,7 +45,6 @@ namespace CommentApi.Application.DependencyInjection
             {
                 builder.AddRetry(retryStrategy);
             });
-
             return services;
         }
     }

@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Json;
 using System.Runtime.InteropServices;
+using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
-using CommentApi.Application.DTOs;
 using CommentApi.Application.DTOs.Conversions;
+using CommentApi.Application.DTOs.Responses;
+using CommentApi.Application.DTOs.Resquest;
 using CommentApi.Application.Interfaces;
 using CommentApi.Domain.Entities;
 using EasyBlog.SharedLibrary.Response;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
 using Polly;
 using Polly.Registry;
@@ -19,107 +23,267 @@ namespace CommentApi.Application.Services
     public class CommentService : ICommentService
     {
         private readonly HttpClient _httpClient;
+        private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ResiliencePipelineProvider<string> _resiliencePipeline;
         private readonly ICommentRepository _commentRepository;
 
-        public CommentService(HttpClient httpClient, ResiliencePipelineProvider<string> resiliencePipeline, ICommentRepository commentRepository)
+        public CommentService(HttpClient httpClient, ResiliencePipelineProvider<string> resiliencePipeline, 
+            ICommentRepository commentRepository, IHttpContextAccessor httpClientAccessor)
         {
             _httpClient = httpClient;
             _resiliencePipeline = resiliencePipeline;
             _commentRepository = commentRepository;
+            _httpContextAccessor = httpClientAccessor;
         }
 
-
-
-        public async Task<UserDTO> GetUserSafeAsync(string userId)
-        {
-            var getUser = await _httpClient.GetAsync($"/api/authentication/{userId}");
-            if (!getUser.IsSuccessStatusCode)
-            {
-                return null!;
-            }
-            var user = await getUser.Content.ReadFromJsonAsync<UserDTO>();
-            return user!;
-        }
-
-        public async Task<ApiResponse<List<CommentDTO>>> GetCommentsByPostIdAsync(string postId)
-        {
-            try
-            {
-                var comments = await _commentRepository.FindByConditionAsync(c => c.PostId.ToString() == postId);
-                if (!comments.Any())
-                    return new ApiResponse<List<CommentDTO>>(false, "Không có bình luận nào", []);
-
-                var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
-
-
-              
-
-                //Lấy danh sách userId từ comments để tránh gọi API quá nhiều lần
-               var userIds = comments.Select(c => c.AuthorId).Distinct().ToList();
-                var userResponses = await Task.WhenAll(userIds.Select(async userId =>
-                    new { UserId = userId, User = await retryPipeline.ExecuteAsync(async _ => await GetUserSafeAsync(userId)) }
-                ));
-
-                // Chuyển danh sách kết quả thành Dictionary
-                var userDictionary = userResponses.ToDictionary(u => u.UserId, u => u.User ?? new UserDTO { FullName = "Người dùng không tồn tại", Avatar = "" });
-
-                // Chuyển đổi danh sách comment sang DTO bằng `CommentConversion`
-                var commentDTOs = comments
-                    .Select(comment => CommentConversion.FormEntity(comment, userDictionary[comment.AuthorId]))
-                    .Where(dto => dto is not null)
-                    .ToList();
-
-                return new ApiResponse<List<CommentDTO>>(true, "Lấy danh sách bình luận thành công", commentDTOs);
-            }
-            catch (Exception ex)
-            {
-                return new ApiResponse<List<CommentDTO>>(false, "Lỗi khi lấy bình luận", null, new List<string> { ex.Message });
-            }
-        }
-
-
-
-        public async Task<ApiResponse<bool>> CreateAsync(CommentDTO commentDTO)
-        {
-            try
-            {
-                var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
-                var postDTO = await retryPipeline.ExecuteAsync(async _ => await GetPostAsync(commentDTO.PostId));
-                if (postDTO == null)
-                {
-                    return new ApiResponse<bool>(false, "Bài viết không tồn tại", false);
-                }
-                var comment = CommentConversion.ToEntity(commentDTO, "123213");
-                await _commentRepository.CreateAsync(comment);
-                return new ApiResponse<bool>(true, "Thêm bình luận vào bài viết thành công", true);
-            }
-            catch (Exception ex)
-            {
-                return new ApiResponse<bool>(false, "Lỗi khi thêm bình luận vào bài viết", false, new List<string> { ex.Message });
-            }
-        }
-
-        public async Task<ApiResponse<CommentDTO?>> GetByIdAsync(string id)
+        public async Task<ApiResponse<CommentResponse?>> GetByIdAsync(string id)
         {
             if (!Guid.TryParse(id, out Guid guidId))
             {
-                return new ApiResponse<CommentDTO?>(false, "ID không hợp lệ");
+                return new ApiResponse<CommentResponse?>(false, "ID không hợp lệ");
             }
-            //test
-            var userDTO = new UserDTO
+
+            var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
+            var authorResponse = await retryPipeline.ExecuteAsync(async _ => await GetCurrentUserAsync());
+
+            if (authorResponse is null)
             {
-                FullName = "Trung Tương Lai",
-                Avatar = "https://example.com/avatar.jpg" // Có thể để null nếu không có
-            };
+                return new ApiResponse<CommentResponse?>(false, "Không tìm thấy thông tin người dùng đang đăng nhập", null);
+            }
+            var commentById = await _commentRepository.GetByIdAsync(guidId);
 
-            var result = await _commentRepository.GetByIdAsync(guidId);
+            if (commentById == null)
+                return new ApiResponse<CommentResponse?>(false, "Không tìm thấy bình luận đó");
+            var commentReponse = CommentConversion.FormEntityToCommentReponse(commentById, authorResponse);
+            return new ApiResponse<CommentResponse?>(true, "Lấy bình luận thành công", commentReponse);
+        }
 
-            var commentDTO = CommentConversion.FormEntity(result, userDTO);
-            if (result == null)
-                return new ApiResponse<CommentDTO?>(false, "Không tìm thấy bình luận đó");
+        public async Task<ApiResponse<List<CommentResponse>>> GetCommentsByPostIdAsync(string postId)
+        {
+            return await GetCommentsAsync(new List<string> { postId });
+        }
 
-            return new ApiResponse<CommentDTO?>(true, "Lấy bình luận thành công", commentDTO);
+        public async Task<ApiResponse<List<CommentResponse>>> GetCommentsByPostIdsAsync(PostIdsRequest request)
+        {
+            return await GetCommentsAsync(request.PostIds);
+        }
+        
+
+        public async Task<ApiResponse<CommentResponse>> CreateAsync(CreateCommentRequest request)
+        {
+            try
+            {
+                var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
+                var authorResponse = await retryPipeline.ExecuteAsync(async _ => await GetCurrentUserAsync());
+
+                if (authorResponse is null)
+                {
+                    return new ApiResponse<CommentResponse>(false, "Không tìm thấy thông tin người dùng đang đăng nhập", null);
+                }
+
+                string? parentId = string.IsNullOrWhiteSpace(request.ParentId) ? null : request.ParentId;
+                var comment = new Comment
+                {
+                    Content = request.Content,
+                    PostId = request.PostId,
+                    AuthorId = authorResponse.Id,
+                    ParentId = parentId
+                };
+                await _commentRepository.CreateAsync(comment);
+
+                var commmentResponse = CommentConversion.FormEntityToCommentReponse(comment, authorResponse);
+                return new ApiResponse<CommentResponse>(true, "Thêm bình luận vào bài viết thành công", commmentResponse);
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<CommentResponse>(false, "Lỗi khi thêm bình luận vào bài viết", null, new List<string> { ex.Message });
+            }
+        }
+
+
+
+        public async Task<ApiResponse<UpdateCommentResponse>> UpdateAsync(UpdateCommentRequest request, string id)
+        {
+            try
+            {
+                if(!Guid.TryParse(id, out Guid guidCommentId))
+                {
+                    return new ApiResponse<UpdateCommentResponse>(false, "ID không hợp lệ", null);
+                }
+                var extingComment = await _commentRepository.GetByIdAsync(guidCommentId);
+
+                var existingComment = await _commentRepository.GetByIdAsync(guidCommentId);
+                if (existingComment == null)
+                {
+                    return new ApiResponse<UpdateCommentResponse>(false, "Không tìm thấy bình luận", null);
+                }
+                var userId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+                if (userId == null)
+                {
+                    return new ApiResponse<UpdateCommentResponse>(false, "Không tìm thấy thông tin người dùng đang đăng nhập", null);
+                }
+
+                if (existingComment.AuthorId != userId)
+                {
+                    return new ApiResponse<UpdateCommentResponse>(false, "Bạn không có quyền chỉnh sửa bình luận này", null);
+                }
+
+                existingComment.Content = request.Content;
+                existingComment.DateChange = DateTime.UtcNow;
+                await _commentRepository.UpdateAsync(existingComment);
+
+                var updateCommmentResponse = new UpdateCommentResponse()
+                {
+                    Content = existingComment.Content,
+                };
+                return new ApiResponse<UpdateCommentResponse>(true, "Sửa bình luận của bạn thành công", updateCommmentResponse);
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<UpdateCommentResponse>(false, "Lỗi khi thêm bình luận vào bài viết", null, new List<string> { ex.Message });
+            }
+        }
+        public async Task<ApiResponse<string>> SoftDeleteAsync(string commentId)
+        {
+            if (!Guid.TryParse(commentId, out Guid guidCommentId))
+            {
+                return new ApiResponse<string>(false, "ID không hợp lệ", null);
+            }
+
+            var comment = await _commentRepository.GetByIdAsync(guidCommentId);
+            if (comment == null)
+            {
+                return new ApiResponse<string>(false, "Không tìm thấy bình luận", null);
+            }
+
+            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return new ApiResponse<string>(false, "Không tìm thấy thông tin người dùng đang đăng nhập", null);
+            }
+
+            if (comment.AuthorId != userId)
+            {
+                return new ApiResponse<string>(false, "Bạn không có quyền xóa bình luận này", null);
+            }
+
+            await _commentRepository.SoftDeleteAsync(guidCommentId);
+            return new ApiResponse<string>(true, "Xóa mềm bình luận thành công", commentId);
+        }
+
+
+        public async Task<ApiResponse<string>> DeleteAsync(string commentId)
+        {
+            if (!Guid.TryParse(commentId, out Guid guidCommentId))
+            {
+                return new ApiResponse<string>(false, "ID không hợp lệ", null);
+            }
+
+            var comment = await _commentRepository.GetByIdAsync(guidCommentId);
+            if (comment == null)
+            {
+                return new ApiResponse<string>(false, "Không tìm thấy bình luận", null);
+            }
+
+            var userId = _httpContextAccessor.HttpContext?.User?.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+            if (userId == null)
+            {
+                return new ApiResponse<string>(false, "Không tìm thấy thông tin người dùng đang đăng nhập", null);
+            }
+
+            if (comment.AuthorId != userId)
+            {
+                return new ApiResponse<string>(false, "Bạn không có quyền xóa bình luận này", null);
+            }
+
+            await _commentRepository.DeleteAsync(guidCommentId);
+            return new ApiResponse<string>(true, "Xóa vĩnh viễn bình luận thành công", commentId);
+        }
+
+
+        private async Task<ApiResponse<List<CommentResponse>>> GetCommentsAsync(List<string> postIds)
+        {
+            try
+            {
+                var comments = await _commentRepository.FindByConditionAsync(c => postIds.Contains(c.PostId.ToString()));
+                if (!comments.Any())
+                    return new ApiResponse<List<CommentResponse>>(false, "Không có bình luận nào", []);
+                var userIds = comments.Select(c => c.AuthorId).Distinct().ToList();
+                var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
+                var authorsResponse = await retryPipeline.ExecuteAsync(async _ => await GetUsersByIdsAsync(userIds));
+
+                var authorsDictionary = authorsResponse?.ToDictionary(p => p.Id, p => p) ?? new Dictionary<string, AuthorResponse>();
+
+                var commentDictionary = comments.Select(comment =>
+                {
+                    var author = (authorsDictionary != null && authorsDictionary.ContainsKey(comment.AuthorId))
+                        ? authorsDictionary[comment.AuthorId]
+                        : new AuthorResponse { Id = "Không tồn tại", FullName = "Người dùng không tồn tại", Avatar = "" };
+                    return CommentConversion.FormEntityToCommentReponse(comment, author);
+                }).ToList();
+
+
+                var commentDict = comments.ToDictionary(
+                    comment => comment.Id,
+                    comment =>
+                    {
+                        var author = authorsDictionary.TryGetValue(comment.AuthorId, out var authorInfo)
+                            ? authorInfo
+                            : new AuthorResponse { Id = "Không tồn tại", FullName = "Người dùng không tồn tại", Avatar = "" };
+
+                        return CommentConversion.FormEntityToCommentReponse(comment, author);
+                    });
+
+                foreach (var comment in commentDict.Values)
+                {
+                    if (!string.IsNullOrEmpty(comment?.ParentId) && commentDict.TryGetValue(Guid.Parse(comment.ParentId), out var parentComment))
+                    {
+                        parentComment?.Replies.Add(comment);
+                    }
+                }
+                var rootComments = commentDict.Values.Where(p => string.IsNullOrEmpty(p?.ParentId)).ToList();
+                return new ApiResponse<List<CommentResponse>>(true, "Lấy danh sách bình luận theo postId thành công", rootComments!);
+            }
+            catch (Exception ex)
+            {
+                return new ApiResponse<List<CommentResponse>>(false, "Lỗi khi lấy bình luận", null, new List<string> { ex.Message });
+            }
+        }
+
+        private async Task<AuthorResponse?> GetCurrentUserAsync()
+        {
+       
+            var response = await _httpClient.GetAsync($"/api/users/profile");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<AuthorResponse>>(responseContent, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            return apiResponse?.Results;
+
+        }
+
+        private async Task<List<AuthorResponse>?> GetUsersByIdsAsync(List<string> userIds)
+        {
+            var userIdRequest = new UserIdsRequest() { UserIds = userIds };  
+
+            var response = await _httpClient.PostAsJsonAsync("/api/users/getUsersByIds", userIdRequest);
+
+            if (!response.IsSuccessStatusCode)
+                return null;
+
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var authorsResponse = JsonSerializer.Deserialize<ApiResponse<List<AuthorResponse>>>(responseContent, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+
+            return authorsResponse?.Results;
         }
     }
 }

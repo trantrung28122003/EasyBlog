@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using PostApi.Application.DTOs;
 using PostApi.Application.DTOs.Conversions;
+using PostApi.Application.DTOs.Requests;
 using PostApi.Application.Interfaces;
 using PostApi.Domain.Entities;
 
@@ -21,17 +22,17 @@ namespace PostApi.Presentation.Controllers
         {
             _postService = postService;
         }
-
-        public async Task<IActionResult> GetAll()
+        [HttpGet]
+        public async Task<IActionResult> GetAllPosts()
         {
             var response = await _postService.GetAllAsync();
             return Ok(response);
         }
 
-        [HttpGet("active")]
-        public async Task<IActionResult> GetAll([FromQuery] int offset = 0, [FromQuery] int limit = 5)
+        [HttpGet("paged")]
+        public async Task<IActionResult> GetPostspaged([FromQuery] int offset = 0, [FromQuery] int limit = 5)
         {
-            var response = await _postService.GetAllPagedAsync(offset, limit);
+            var response = await _postService.GetPostsByPageAsync(offset, limit);
             return Ok(response);
         }
 
@@ -45,28 +46,29 @@ namespace PostApi.Presentation.Controllers
         }
 
         [HttpPost("create")]
-        public async Task<IActionResult> Create([FromBody] PostDTO postDTO)
+        [Authorize]
+        public async Task<IActionResult> Create([FromForm] CreatePostRequest request, List<IFormFile> files)
         {
-            var post = PostConversion.ToEntity(postDTO, postDTO.AuthorId);
-            var response = await _postService.CreateAsync(post);
+           
+            var response = await _postService.CreateAsync(request, files);
             if (!response.IsSuccess)
                 return BadRequest(response);
-            return CreatedAtAction(nameof(GetById), new { id = post.Id }, response);
+            return Ok(response);
         }
 
-        [HttpPut("update")]
-        public async Task<IActionResult> Update([FromBody] Post post)
+        [HttpPut("update/{id}")]
+        public async Task<IActionResult> Update(string id, [FromBody] UpdatePostRequest request)
         {
-            var response = await _postService.UpdateAsync(post);
+            var response = await _postService.UpdateAsync(request, id);
             if (!response.IsSuccess)
                 return NotFound(response);
             return Ok(response);
         }
 
         [HttpDelete("delete")]
-        public async Task<IActionResult> Delete([FromBody] Post post)
+        public async Task<IActionResult> Delete(string id)
         {
-            var response = await _postService.DeleteAsync(post);
+            var response = await _postService.DeleteAsync(id);
             if (!response.IsSuccess)
                 return BadRequest(response);
             return Ok(response);

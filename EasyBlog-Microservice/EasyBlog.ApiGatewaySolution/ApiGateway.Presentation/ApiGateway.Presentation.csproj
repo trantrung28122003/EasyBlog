@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="C:\Users\trant\Desktop\EasyBLog.SharedLibrarySolution\EasyBlog.SharedLibrary\EasyBlog.SharedLibrary.csproj" />
+    <ProjectReference Include="..\..\EasyBLog.SharedLibrarySolution\EasyBlog.SharedLibrary\EasyBlog.SharedLibrary.csproj" />
   </ItemGroup>
 
 </Project>

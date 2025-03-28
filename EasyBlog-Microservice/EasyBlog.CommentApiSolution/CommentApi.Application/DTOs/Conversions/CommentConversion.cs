@@ -1,39 +1,29 @@
 ﻿
+using CommentApi.Application.DTOs.Responses;
+using CommentApi.Application.DTOs.Resquest;
 using CommentApi.Domain.Entities;
 namespace CommentApi.Application.DTOs.Conversions
 {
     public static class CommentConversion
     {
-        public static Comment ToEntity(CommentDTO commentDTO, string userId) => new()
-        {
-            Id = Guid.NewGuid(),
-            PostId = commentDTO.PostId,
-            AuthorId = userId,
-            Content = commentDTO.Content,
-            ParentId = commentDTO.ParentId,
-            DateCreate = DateTime.UtcNow,
-            IsDeleted = false
-        };
-
-
-        public static CommentDTO? FormEntity(Comment? comment, UserDTO getUser)
+       
+        public static CommentResponse? FormEntityToCommentReponse(Comment? comment, AuthorResponse author)
         {
             if (comment is null)
                 return null;
 
-            return ConvertToCommentDTO(comment, getUser);
+            return ConvertToCommentResponse(comment, author);
         }
 
 
-        private static CommentDTO ConvertToCommentDTO(Comment comment, UserDTO user) => new()
+        private static CommentResponse ConvertToCommentResponse(Comment comment, AuthorResponse author) => new()
         {
-            CommentId = comment.Id,
+            CommentId = comment.Id.ToString(),
             PostId = comment.PostId,
-            Author = user,
+            Author = author,
             Content = comment.Content,
             ParentId = comment.ParentId,
             DateCreate = comment.DateCreate,
-            DateChange = comment.DateChange,
         };
     }
 }

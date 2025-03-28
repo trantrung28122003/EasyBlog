@@ -8,6 +8,6 @@ namespace AuthenticationApi.Application.DTOs.Request
 {
     public class UserIdsRequest
     {
-        public List<string> UserIds { get; set; } = new();
+        public List<string> UserIds { get; set; } = [];
     }
 }

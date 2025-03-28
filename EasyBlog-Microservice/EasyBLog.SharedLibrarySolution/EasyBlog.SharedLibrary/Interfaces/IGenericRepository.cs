@@ -16,7 +16,7 @@ namespace EasyBlog.SharedLibrary.Interface
         Task<TEntity?> GetByIdAsync(Guid id);
         Task CreateAsync(TEntity entity);
         Task UpdateAsync(TEntity entity);
-        Task DeleteAsync(TEntity entity);
+        Task DeleteAsync(Guid id);
         Task SoftDeleteAsync(Guid id);
     }
 }
