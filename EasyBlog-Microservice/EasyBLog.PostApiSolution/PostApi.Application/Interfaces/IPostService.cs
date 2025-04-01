@@ -16,8 +16,9 @@ namespace PostApi.Application.Interfaces
     {
         Task<ApiResponse<List<PostResponse>>> GetAllAsync();
         Task<ApiResponse<List<PostResponse>>> GetPostsByPageAsync(int offset, int limit);
+        Task<ApiResponse<List<AuthorResponse>?>> GetTop3AuthorsWithMostPosts();
         Task<ApiResponse<List<Post>>> FindByConditionAsync(Expression<Func<Post, bool>> predicate);
-        Task<ApiResponse<PostResponse?>> GetByIdAsync(string id);
+        Task<ApiResponse<PostResponse?>> GetPostByIdAsync(string id);
         Task<ApiResponse<PostResponse>> CreateAsync(CreatePostRequest request, List<IFormFile> files);
         Task<ApiResponse<PostResponse>> UpdateAsync(UpdatePostRequest request, string id);
         Task<ApiResponse<bool>> DeleteAsync(string id);

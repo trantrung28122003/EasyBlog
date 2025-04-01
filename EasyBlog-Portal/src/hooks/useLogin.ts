@@ -1,5 +1,5 @@
-import { LoginResponse } from "../model/Authentication";
-import { User } from "../model/User";
+
+import { User, UserProfile } from "../model/User";
 
 const isUserLogin = (): boolean => {
   const storedAuth = localStorage.getItem("authentication");
@@ -17,12 +17,10 @@ const isUserLogin = (): boolean => {
 
 const getCredentials = (): string => {
   const storedAuth = localStorage.getItem("authentication");
-  console.log("storedAuth", storedAuth);
   if (!storedAuth) return "";
 
   try {
     const authData = JSON.parse(storedAuth);
-    console.log("authData", authData.token);
     return authData.token || "";
 
   } catch (error) {
@@ -34,7 +32,7 @@ const getCredentials = (): string => {
 
 const getUserInfo = () => {
   if (localStorage.getItem("user_info") != null) {
-    const userInfo: User = JSON.parse(localStorage.getItem("user_info") || "");
+    const userInfo: UserProfile = JSON.parse(localStorage.getItem("user_info") || "");
     return userInfo;
   } else {
     return null;

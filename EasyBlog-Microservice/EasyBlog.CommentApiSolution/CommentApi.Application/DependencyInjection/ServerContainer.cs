@@ -14,16 +14,13 @@ namespace CommentApi.Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services, IConfiguration config)
         {
-
             services.AddTransient<AuthHttpMessageHandler>();
-            // Đăng ký dịch vụ HttpClient với Dependency Injection
             services.AddHttpClient<ICommentService, CommentService>(options =>
             {
                 options.BaseAddress = new Uri(config["ApiGateway:BaseAddress"]!);
                 options.Timeout = TimeSpan.FromSeconds(10);
             }).AddHttpMessageHandler<AuthHttpMessageHandler>();
 
-            // Tạo chiến lược retry
             var retryStrategy = new RetryStrategyOptions
             {
                 ShouldHandle = new PredicateBuilder().Handle<TaskCanceledException>(),
@@ -40,7 +37,6 @@ namespace CommentApi.Application.DependencyInjection
                 }
             };
 
-            // Đăng ký Resilience Pipeline (đường ống chịu lỗi) sử dụng chiến lược retry
             services.AddResiliencePipeline("my-retry-pipeline", builder =>
             {
                 builder.AddRetry(retryStrategy);

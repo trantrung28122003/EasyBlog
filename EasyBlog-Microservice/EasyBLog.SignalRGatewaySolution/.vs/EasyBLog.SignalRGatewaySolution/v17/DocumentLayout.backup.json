@@ -1,0 +1,206 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.application\\consumers\\commentcreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|solutionrelative:signalrgateway.application\\consumers\\commentcreatedconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.application\\hubs\\commenthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|solutionrelative:signalrgateway.application\\hubs\\commenthub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|solutionrelative:signalrgateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|solutionrelative:signalrgateway.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.application\\dtos\\responses\\authorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|solutionrelative:signalrgateway.application\\dtos\\responses\\authorresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.application\\dtos\\responses\\commentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}|SignalRGateway.Application\\SignalRGateway.Application.csproj|solutionrelative:signalrgateway.application\\dtos\\responses\\commentresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AD02BE-571F-495C-9F3C-9FCC5DB07829}|SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.infrastructure\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{01AD02BE-571F-495C-9F3C-9FCC5DB07829}|SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj|solutionrelative:signalrgateway.infrastructure\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|solutionrelative:signalrgateway.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{01AD02BE-571F-495C-9F3C-9FCC5DB07829}|SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.infrastructure\\signalrgateway.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{01AD02BE-571F-495C-9F3C-9FCC5DB07829}|SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj|solutionrelative:signalrgateway.infrastructure\\signalrgateway.infrastructure.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.signalrgatewaysolution\\signalrgateway.presentation\\signalrgateway.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{0F926F58-856F-44AD-BC63-1A518E8911BE}|SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj|solutionrelative:signalrgateway.presentation\\signalrgateway.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 45,
+          "SelectedChildIndex": 11,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:988834101:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "SignalRGateway.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "SignalRGateway.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAABAAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T02:35:29.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CommentHub.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\Hubs\\CommentHub.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Application\\Hubs\\CommentHub.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\Hubs\\CommentHub.cs",
+              "RelativeToolTip": "SignalRGateway.Application\\Hubs\\CommentHub.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:26:23.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SignalRGateway.Presentation",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj",
+              "RelativeDocumentMoniker": "SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj",
+              "RelativeToolTip": "SignalRGateway.Presentation\\SignalRGateway.Presentation.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T02:09:01.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "SignalRGateway.Presentation\\appsettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\appsettings.json",
+              "RelativeToolTip": "SignalRGateway.Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-31T02:09:27.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "CommentResponse.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\DTOs\\Responses\\CommentResponse.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Application\\DTOs\\Responses\\CommentResponse.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\DTOs\\Responses\\CommentResponse.cs",
+              "RelativeToolTip": "SignalRGateway.Application\\DTOs\\Responses\\CommentResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:01:59.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AuthorResponse.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\DTOs\\Responses\\AuthorResponse.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Application\\DTOs\\Responses\\AuthorResponse.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\DTOs\\Responses\\AuthorResponse.cs",
+              "RelativeToolTip": "SignalRGateway.Application\\DTOs\\Responses\\AuthorResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T02:01:51.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Presentation\\Program.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Presentation\\Program.cs*",
+              "RelativeToolTip": "SignalRGateway.Presentation\\Program.cs*",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACEAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T01:58:17.514Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CommentCreatedConsumer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\Consumers\\CommentCreatedConsumer.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Application\\Consumers\\CommentCreatedConsumer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Application\\Consumers\\CommentCreatedConsumer.cs",
+              "RelativeToolTip": "SignalRGateway.Application\\Consumers\\CommentCreatedConsumer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T01:56:49.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ServerContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "RelativeDocumentMoniker": "SignalRGateway.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "RelativeToolTip": "SignalRGateway.Infrastructure\\DependencyInjection\\ServerContainer.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAuwBIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T01:51:17.927Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "SignalRGateway.Infrastructure",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj",
+              "RelativeDocumentMoniker": "SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SignalRGatewaySolution\\SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj",
+              "RelativeToolTip": "SignalRGateway.Infrastructure\\SignalRGateway.Infrastructure.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-31T01:50:08.11Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

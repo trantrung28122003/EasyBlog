@@ -7,11 +7,14 @@
       "RelativeMoniker": "D:0:0:{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\ocelot.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.apigatewaysolution\\apigateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|solutionrelative:apigateway.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{5048B44C-2931-42C3-A4D9-03B3026C2C3E}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\dependencyinjection\\sharedservicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B6361E40-ABC5-4BF0-8154-E5EFD1124BB3}|ApiGateway.Presentation\\ApiGateway.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.apigatewaysolution\\apigateway.presentation\\apigateway.presentation.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -40,12 +43,12 @@
   ],
   "DocumentGroupContainers": [
     {
-      "Orientation": 0,
+      "Orientation": 1,
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 45,
-          "SelectedChildIndex": 5,
+          "DockedHeight": 227,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,32 +68,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "ApiGateway.Presentation\\Properties\\launchSettings.json",
-              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
-              "RelativeToolTip": "ApiGateway.Presentation\\Properties\\launchSettings.json",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-23T08:13:35.119Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ocelot.json",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\ocelot.json",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\ocelot.json",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\ocelot.json",
               "RelativeToolTip": "ApiGateway.Presentation\\ocelot.json",
-              "ViewState": "AgIAADkAAAAAAAAAAAAAAEYAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAvwF0AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-23T08:15:55.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\appsettings.json",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\appsettings.json",
@@ -102,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "ApiGateway.Presentation.csproj",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\ApiGateway.Presentation.csproj",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\ApiGateway.Presentation.csproj",
@@ -110,12 +101,11 @@
               "RelativeToolTip": "ApiGateway.Presentation\\ApiGateway.Presentation.csproj",
               "ViewState": "AgIAAAwAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-23T08:15:33.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T08:15:33.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ApiGateway.Presentation.http",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\ApiGateway.Presentation.http",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\ApiGateway.Presentation.http",
@@ -127,31 +117,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\Program.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Program.cs",
               "RelativeToolTip": "ApiGateway.Presentation\\Program.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAowB8AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAUwBUAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T11:29:23.89Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-23T11:29:23.89Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
-              "ViewState": "AgIAAKETAAAAAAAAAAAnwKoTAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAAKITAAAAAAAAAAAYwKoTAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2025-03-25T13:30:35.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T13:30:35.774Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "ApiGateway.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-23T08:13:35.119Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SharedServiceContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\SharedServiceContainer.cs",
+              "ViewState": "AgIAACsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T11:32:58.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "AttachSignatureToRequest.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\Middleware\\AttachSignatureToRequest.cs",
@@ -163,7 +175,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "appsettings.Development.json",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.ApiGatewaySolution\\ApiGateway.Presentation\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ApiGateway.Presentation\\appsettings.Development.json",
@@ -172,6 +184,28 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-03-23T08:13:27.552Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 173,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

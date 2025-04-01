@@ -169,4 +169,8 @@ D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Present
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\CommentApi.Application.pdb
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\CommentApi.Domain.pdb
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\EasyBlog.SharedLibrary.pdb
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\MassTransit.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\bin\Debug\net8.0\RabbitMQ.Client.dll
 D:\EasyBlog\EasyBlog-Microservice\EasyBlog.CommentApiSolution\CommentApi.Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

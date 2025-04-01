@@ -4,7 +4,7 @@
   padding: 2rem;
   background: #f8fafc;
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 300px 1fr 550px;
   gap: 2rem;
 }
 
@@ -16,8 +16,12 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  overflow-y: auto;
 }
 
+.right-sidebar {
+  padding-top: 3rem;
+}
 .main-content {
   max-width: 100%;
 }
@@ -26,179 +30,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-}
-
-.user-profile {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem;
-  background: white;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.user-avatar {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #06bbcc;
-  padding: 2px;
-}
-
-.user-info {
-  flex: 1;
-}
-
-.user-name {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0;
-}
-
-.user-bio {
-  font-size: 0.875rem;
-  color: #64748b;
-  margin: 0.25rem 0 0;
-}
-
-.settings-button {
-  background: none;
-  border: none;
-  color: #64748b;
-  font-size: 1.25rem;
-  cursor: pointer;
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.settings-button:hover {
-  background: #f8fafc;
-  color: #0f172a;
-}
-
-.section-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.section-header h3 {
-  font-size: 1rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0;
-}
-
-.see-all {
-  background: none;
-  border: none;
-  color: #06bbcc;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.see-all:hover {
-  background: rgba(6, 187, 204, 0.1);
-}
-
-.suggested-users,
-.trending-topics {
-  background: white;
-  border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.suggested-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.suggested-user {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.suggested-avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.suggested-info {
-  flex: 1;
-}
-
-.suggested-info h4 {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: #1e293b;
-  margin: 0;
-}
-
-.suggested-info p {
-  font-size: 0.75rem;
-  color: #64748b;
-  margin: 0;
-}
-
-.follow-button {
-  background: none;
-  border: 1px solid #06bbcc;
-  color: #06bbcc;
-  font-size: 0.875rem;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 0.25rem 0.75rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-}
-
-.follow-button:hover {
-  background: rgba(6, 187, 204, 0.1);
-}
-
-.topics-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.topic-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
-.topic-item:hover {
-  background: #f8fafc;
-}
-
-.topic-tag {
-  font-size: 0.875rem;
-  font-weight: 500;
-  color: #1e293b;
-}
-
-.topic-posts {
-  font-size: 0.75rem;
-  color: #64748b;
 }
 
 /* Responsive styles */

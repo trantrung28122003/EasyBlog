@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Net.Http.Json;
 using System.Runtime.InteropServices;
 using System.Security.Claims;
@@ -10,10 +11,12 @@ using System.Threading.Tasks;
 using CommentApi.Application.DTOs.Conversions;
 using CommentApi.Application.DTOs.Responses;
 using CommentApi.Application.DTOs.Resquest;
+using CommentApi.Application.Hubs;
 using CommentApi.Application.Interfaces;
 using CommentApi.Domain.Entities;
 using EasyBlog.SharedLibrary.Response;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.SignalR;
 using Microsoft.Extensions.Hosting;
 using Polly;
 using Polly.Registry;
@@ -26,14 +29,18 @@ namespace CommentApi.Application.Services
         private readonly IHttpContextAccessor _httpContextAccessor;
         private readonly ResiliencePipelineProvider<string> _resiliencePipeline;
         private readonly ICommentRepository _commentRepository;
+        private readonly IHubContext<CommentHub> _hubContext;
 
         public CommentService(HttpClient httpClient, ResiliencePipelineProvider<string> resiliencePipeline, 
-            ICommentRepository commentRepository, IHttpContextAccessor httpClientAccessor)
+            ICommentRepository commentRepository, IHttpContextAccessor httpClientAccessor, IHubContext<CommentHub> hubContext
+
+            )
         {
             _httpClient = httpClient;
             _resiliencePipeline = resiliencePipeline;
             _commentRepository = commentRepository;
             _httpContextAccessor = httpClientAccessor;
+            _hubContext = hubContext;
         }
 
         public async Task<ApiResponse<CommentResponse?>> GetByIdAsync(string id)
@@ -91,8 +98,30 @@ namespace CommentApi.Application.Services
                 };
                 await _commentRepository.CreateAsync(comment);
 
-                var commmentResponse = CommentConversion.FormEntityToCommentReponse(comment, authorResponse);
-                return new ApiResponse<CommentResponse>(true, "Thêm bình luận vào bài viết thành công", commmentResponse);
+                var commentResponse = CommentConversion.FormEntityToCommentReponse(comment, authorResponse);
+                await _hubContext.Clients.Group(request.PostId).SendAsync("ReceiveComment", commentResponse);
+
+
+                var postResponse = await retryPipeline.ExecuteAsync(async _ => await GetPostByIdAsync(request.PostId));
+                if (postResponse is not null && postResponse.Author.Id != authorResponse.Id)
+                {
+                    
+                    var notificationRequest = new CreateNotificationRequest
+                    {
+                        UserIds = new List<string> { postResponse.Author.Id },
+                        TypeNotification = "NewComment",
+                        Message = $"{authorResponse.FullName} đã bình luận bài viết của bạn: {comment.Content}"
+                    };
+
+
+                    bool isNotificationSent = await retryPipeline.ExecuteAsync(async _ => await SendNotificationAsync(notificationRequest));
+                    if (!isNotificationSent)
+                    {
+                        return new ApiResponse<CommentResponse>(true, "Thêm bình luận thành công nhưng không thể gửi thông báo", commentResponse);
+                    }
+                }
+
+                return new ApiResponse<CommentResponse>(true, "Thêm bình luận vào bài viết thành công", commentResponse);
             }
             catch (Exception ex)
             {
@@ -265,6 +294,23 @@ namespace CommentApi.Application.Services
                 PropertyNameCaseInsensitive = true
             });
             return apiResponse?.Results;
+        }
+
+        private async Task<PostResponse?> GetPostByIdAsync(string id)
+        {
+
+            var response = await _httpClient.GetAsync($"/api/posts/{id}");
+
+            if (!response.IsSuccessStatusCode)
+            {
+                return null;
+            }
+            var responseContent = await response.Content.ReadAsStringAsync();
+            var apiResponse = JsonSerializer.Deserialize<ApiResponse<PostResponse>>(responseContent, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            });
+            return apiResponse?.Results;
 
         }
 
@@ -285,5 +331,30 @@ namespace CommentApi.Application.Services
 
             return authorsResponse?.Results;
         }
+
+        private async Task<bool> SendNotificationAsync(CreateNotificationRequest request)
+        {
+            try
+            {
+                
+                var response = await _httpClient.PostAsJsonAsync("/api/notifications/create", request);
+
+           
+                if (!response.IsSuccessStatusCode)
+                {
+                    var errorResponse = await response.Content.ReadAsStringAsync();
+                    Console.WriteLine($"Error sending notification: {errorResponse}");
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Exception occurred: {ex.Message}");
+                return false;
+            }
+        }
+
     }
 }

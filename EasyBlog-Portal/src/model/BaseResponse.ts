@@ -1,5 +1,6 @@
 export interface ApplicationResponse<T> {
-  code: number;
-  result: T;
+  isSuccess: boolean;
   message: string;
+  results: T;
+  errors?: any;
 }

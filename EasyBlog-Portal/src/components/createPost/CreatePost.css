@@ -1,0 +1,243 @@
+.create-post {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: visible;
+  position: relative;
+  width: 100%;
+}
+
+.create-post-header {
+  padding: 16px;
+  border-bottom: 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.create-post-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #262626;
+}
+
+.create-post-content {
+  padding: 16px;
+  position: relative;
+}
+
+.post-textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  resize: vertical;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 16px;
+}
+
+.post-textarea:focus {
+  outline: none;
+  border-color: #0095f6;
+  box-shadow: 0 0 0 2px rgba(0, 149, 246, 0.1);
+}
+
+.post-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.post-action-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border: none;
+  background: white;
+  color: #262626;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.post-action-button:hover {
+  background: #f8f8f8;
+}
+
+.post-action-button svg {
+  font-size: 20px;
+  color: #262626;
+}
+
+.post-action-note {
+  flex: 1;
+  color: #737373;
+  font-size: 13px;
+  line-height: 1.4;
+  padding-left: 12px;
+  border-left: 1px solid #dbdbdb;
+}
+
+.post-action-note strong {
+  color: #262626;
+  font-weight: 500;
+}
+
+.selected-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #fafafa;
+  border-radius: 8px;
+  border: 1px solid #dbdbdb;
+}
+
+.image-preview {
+  position: relative;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.image-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.2s;
+}
+
+.image-preview:hover img {
+  transform: scale(1.05);
+}
+
+.remove-image {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  opacity: 0;
+}
+
+.image-preview:hover .remove-image {
+  opacity: 1;
+}
+
+.remove-image:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: scale(1.1);
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background-color: #fff5f5;
+  border: 1px solid #fed7d7;
+  border-radius: 8px;
+  color: #e53e3e;
+  font-size: 14px;
+  margin-bottom: 16px;
+  animation: slideIn 0.3s ease;
+}
+
+.error-message svg {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.publish-button {
+  padding: 8px 24px;
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 80px;
+}
+
+.publish-button:hover:not(:disabled) {
+  background-color: #1877f2;
+}
+
+.publish-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .create-post {
+    margin: 0;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  .post-actions-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .post-action-note {
+    padding: 8px 0 0 0;
+    border-left: none;
+    border-top: 1px solid #dbdbdb;
+  }
+
+  .selected-images {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 6px;
+    padding: 8px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+
+  .post-action-button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .publish-button {
+    padding: 6px 16px;
+    font-size: 14px;
+    min-width: 70px;
+  }
+}

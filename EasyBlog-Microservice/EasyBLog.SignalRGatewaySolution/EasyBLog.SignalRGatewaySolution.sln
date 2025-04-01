@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRGateway.Application", "SignalRGateway.Application\SignalRGateway.Application.csproj", "{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRGateway.Domain", "SignalRGateway.Domain\SignalRGateway.Domain.csproj", "{27B9BD61-9521-4C6E-8ACC-9317EC2EB665}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRGateway.Infrastructure", "SignalRGateway.Infrastructure\SignalRGateway.Infrastructure.csproj", "{01AD02BE-571F-495C-9F3C-9FCC5DB07829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRGateway.Presentation", "SignalRGateway.Presentation\SignalRGateway.Presentation.csproj", "{0F926F58-856F-44AD-BC63-1A518E8911BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyBlog.SharedLibrary", "..\EasyBLog.SharedLibrarySolution\EasyBlog.SharedLibrary\EasyBlog.SharedLibrary.csproj", "{4AD64689-DCF3-4CC8-96A7-7EF7BB490243}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{937A97EB-F3E2-417C-9CBA-D1FB6AB6AA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B9BD61-9521-4C6E-8ACC-9317EC2EB665}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B9BD61-9521-4C6E-8ACC-9317EC2EB665}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B9BD61-9521-4C6E-8ACC-9317EC2EB665}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B9BD61-9521-4C6E-8ACC-9317EC2EB665}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AD02BE-571F-495C-9F3C-9FCC5DB07829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AD02BE-571F-495C-9F3C-9FCC5DB07829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AD02BE-571F-495C-9F3C-9FCC5DB07829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AD02BE-571F-495C-9F3C-9FCC5DB07829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F926F58-856F-44AD-BC63-1A518E8911BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F926F58-856F-44AD-BC63-1A518E8911BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F926F58-856F-44AD-BC63-1A518E8911BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F926F58-856F-44AD-BC63-1A518E8911BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AD64689-DCF3-4CC8-96A7-7EF7BB490243}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AD64689-DCF3-4CC8-96A7-7EF7BB490243}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AD64689-DCF3-4CC8-96A7-7EF7BB490243}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AD64689-DCF3-4CC8-96A7-7EF7BB490243}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

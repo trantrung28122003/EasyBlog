@@ -8,6 +8,7 @@ using PostApi.Application.DTOs.Conversions;
 using PostApi.Application.DTOs.Requests;
 using PostApi.Application.Interfaces;
 using PostApi.Domain.Entities;
+using PostApi.Infrastructure.Repositories;
 
 namespace PostApi.Presentation.Controllers
 {
@@ -23,6 +24,7 @@ namespace PostApi.Presentation.Controllers
             _postService = postService;
         }
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAllPosts()
         {
             var response = await _postService.GetAllAsync();
@@ -37,11 +39,11 @@ namespace PostApi.Presentation.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<IActionResult> GetById(string Id)
+        public async Task<IActionResult> GetPostById(string Id)
         {
-            var response = await _postService.GetByIdAsync(Id);
+            var response = await _postService.GetPostByIdAsync(Id);
             if (!response.IsSuccess)
-                return NotFound(response);
+                return BadRequest(response);
             return Ok(response);
         }
 
@@ -55,6 +57,8 @@ namespace PostApi.Presentation.Controllers
                 return BadRequest(response);
             return Ok(response);
         }
+
+
 
         [HttpPut("update/{id}")]
         public async Task<IActionResult> Update(string id, [FromBody] UpdatePostRequest request)
@@ -80,6 +84,17 @@ namespace PostApi.Presentation.Controllers
             var response = await _postService.SoftDeleteAsync(id);
             if (!response.IsSuccess)
                 return BadRequest(response);
+            return Ok(response);
+        }
+
+        [HttpGet("top-authors-post")]
+        public async Task<IActionResult> GetTopAuthors()
+        {
+            var response = await _postService.GetTop3AuthorsWithMostPosts();
+
+            if (!response.IsSuccess)
+                return Ok(response);
+
             return Ok(response);
         }
 

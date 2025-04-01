@@ -48,12 +48,12 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/users/{everything}",
-            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
-            "FileCacheOptions": {
-                "TtlSeconds": 60,
-                "Region": "default",
-                "Header": "eBlog-Cacching-Control"
-            }
+            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ]
+            //"FileCacheOptions": {
+            //    "TtlSeconds": 60,
+            //    "Region": "default",
+            //    "Header": "eBlog-Cacching-Control"
+            //}
         },
 
         //Post API
@@ -68,7 +68,7 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts",
-            "UpstreamHttpMethod": ["GET"]
+            "UpstreamHttpMethod": [ "GET" ]
             //"FileCacheOptions": {
             //    "TtlSeconds": 60,
             //    "Region": "default",
@@ -91,6 +91,24 @@
             "FileCacheOptions": {
                 "TtlSeconds": 60,
                 "Region": "default",
+                "Header": "eBlog-Caching-Control"
+            }
+        },
+
+        {
+            "DownstreamPathTemplate": "/api/posts/top-authors-post",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5002
+                }
+            ],
+            "UpstreamPathTemplate": "/api/posts/top-authors-post",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
                 "Header": "eBlog-Cacching-Control"
             }
         },
@@ -106,7 +124,7 @@
                 }
             ],
             "UpstreamPathTemplate": "/api/posts/{everything}",
-            "UpstreamHttpMethod": ["POST","PUT","DELETE"],
+            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
             "AuthenticationOptions": {
                 "AuthenticationProviderKey": "Bearer",
                 "AllowedScopes": []
@@ -188,7 +206,7 @@
             }
         },
 
-        
+
         {
             "DownstreamPathTemplate": "/api/comments/{everything}",
             "DownstreamScheme": "http",
@@ -205,6 +223,35 @@
                 "AllowedScopes": []
             }
         },
+
+        {
+            "DownstreamPathTemplate": "/commentHub",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/commentHub",
+            "UpstreamHttpMethod": [ "GET", "POST", "CONNECT" ],
+            "RouteIsCaseSensitive": false
+        },
+
+        {
+            "DownstreamPathTemplate": "/commentHub/negotiate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5003
+                }
+            ],
+            "UpstreamPathTemplate": "/commentHub/negotiate",
+            "UpstreamHttpMethod": [ "POST" ],
+            "RouteIsCaseSensitive": false
+        },
+
 
         //File => POST
         {
@@ -241,6 +288,106 @@
                 "Region": "default",
                 "Header": "eBlog-Cacching-Control"
             }
+        },
+
+        //notification
+        {
+            "DownstreamPathTemplate": "/api/notifications",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/notifications/current-user",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications/current-user",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+
+        {
+            "DownstreamPathTemplate": "/api/notifications/{id}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications/{id}",
+            "UpstreamHttpMethod": [ "GET" ],
+            "FileCacheOptions": {
+                "TtlSeconds": 60,
+                "Region": "default",
+                "Header": "eBlog-Cacching-Control"
+            }
+        },
+        {
+            "DownstreamPathTemplate": "/api/notifications/user/{userId}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications/user/{userId}",
+            "UpstreamHttpMethod": [ "GET" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/notifications/{everything}",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/api/notifications/{everything}",
+            "UpstreamHttpMethod": [ "POST", "PUT", "DELETE" ],
+            "AuthenticationOptions": {
+                "AuthenticationProviderKey": "Bearer",
+                "AllowedScopes": []
+            }
+        },
+
+        {
+            "DownstreamPathTemplate": "/notificationHub",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/notificationHub",
+            "UpstreamHttpMethod": [ "GET", "POST", "CONNECT" ],
+            "RouteIsCaseSensitive": false
+        },
+
+        {
+            "DownstreamPathTemplate": "/notificationHub/negotiate",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 5005
+                }
+            ],
+            "UpstreamPathTemplate": "/notificationHub/negotiate",
+            "UpstreamHttpMethod": [ "POST" ],
+            "RouteIsCaseSensitive": false
         }
 
     ],

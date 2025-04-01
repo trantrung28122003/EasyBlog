@@ -1,19 +1,11 @@
-export interface CommentReponse {
-    id: string;
-    userId: string;
-    userFullName: string;
-    userImageUrl: string;
-    dateCreate: string;
-    contentComment: string;
-    replies: Reply[];
-  }
+import { AuthorResponse } from "./Authentication";
 
-
-export  interface Reply {
-    id: string;
-    userId: string;
-    userFullName: string;
-    userImageUrl: string;
-    dateCreate: string;
-    contentReply: string;
-  }
+export interface CommentResponse {
+  commentId: string;
+  postId: string;
+  author: AuthorResponse;
+  content: string;
+  parentId?: string;
+  dateCreate: string;
+  replies: CommentResponse[];
+}

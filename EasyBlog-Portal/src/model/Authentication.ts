@@ -20,3 +20,10 @@ export interface RegisterRequest extends APIRegisterRequest {
   confirmPassword: string;
   termAndConditions: boolean;
 }
+
+export interface AuthorResponse {
+  id: string;
+  fullName: string;
+  avatar: string;
+  postCount?: number;
+}

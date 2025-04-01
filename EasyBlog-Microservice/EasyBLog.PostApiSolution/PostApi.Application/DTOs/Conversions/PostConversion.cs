@@ -42,6 +42,7 @@ namespace PostApi.Application.DTOs.Conversions
                 Title = post.Title,
                 Content = post.Content,
                 Author = authorResponse,
+                DateCreated = post.DateCreate,
                 CommentsResponse = commentsResponse,
                 ImageUrls = imageUrls,
                 LikeCount = likeCount,

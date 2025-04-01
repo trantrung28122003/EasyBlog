@@ -60,7 +60,7 @@ namespace CommentApi.Infrastructure.Repositories
         public async Task UpdateAsync(Comment comment)
         {
             var existingPost = await _context.Comments.FindAsync(comment.Id);
-            if (existingPost is null) throw new Exception("Post not found");
+            if (existingPost is null) throw new Exception("Comment not found");
 
             existingPost.Content = comment.Content;
             existingPost.DateChange = DateTime.UtcNow;
@@ -71,7 +71,7 @@ namespace CommentApi.Infrastructure.Repositories
         public async Task DeleteAsync(Guid id)
         {
             var existingPost = await _context.Comments.FindAsync(id);
-            if (existingPost is null) throw new Exception("Post not found");
+            if (existingPost is null) throw new Exception("Comment not found");
 
             _context.Comments.Remove(existingPost);
             await _context.SaveChangesAsync();
@@ -80,7 +80,7 @@ namespace CommentApi.Infrastructure.Repositories
         public async Task SoftDeleteAsync(Guid id)
         {
             var existingPost = await _context.Comments.FindAsync(id);
-            if (existingPost is null) throw new Exception("Post not found");
+            if (existingPost is null) throw new Exception("Comment not found");
 
             existingPost.IsDeleted = true;
             existingPost.DateChange = DateTime.UtcNow;

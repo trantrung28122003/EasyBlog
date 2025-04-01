@@ -1,4 +1,4 @@
-
+﻿
 
 using ApiGateway.Presentation.Middleware;
 using EasyBlog.SharedLibrary.DependencyInjection;
@@ -15,17 +15,23 @@ builder.Services.AddOcelot().AddCacheManager(x => x.WithDictionaryHandle());
 JWTAuthenticationScheme.AddJWTAuthenticationScheme(builder.Services, builder.Configuration);
 builder.Services.AddCors(options =>
 {
-    options.AddDefaultPolicy(builder =>
-    {
-        builder.AllowAnyHeader()
-        .AllowAnyMethod()
-        .AllowAnyOrigin();
-    });
+    options.AddPolicy("AllowFrontend",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") 
+                  .AllowAnyHeader()
+                  .AllowAnyMethod()
+                  .AllowCredentials(); 
+        });
 });
+
 var app = builder.Build();
-app.UseCors();
+app.UseCors("AllowFrontend");
+
 app.UseHttpsRedirection();
 app.UseMiddleware<AttachSignatureToRequest>();
+
+app.UseWebSockets();
 app.UseOcelot().Wait();
 app.Run();
 

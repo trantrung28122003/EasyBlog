@@ -1,0 +1,318 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.presentation\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|solutionrelative:notification.presentation\\controllers\\notificationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|solutionrelative:notification.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|solutionrelative:notification.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\interfaces\\inotificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|solutionrelative:notification.presentation\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\dtos\\reponses\\notificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\dtos\\reponses\\notificationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B3F118-5B20-4626-9C18-7461C7DF494B}|Notification.Domain\\NotificationApi.Domain.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B3F118-5B20-4626-9C18-7461C7DF494B}|Notification.Domain\\NotificationApi.Domain.csproj|solutionrelative:notification.domain\\enums\\notificationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\hubs\\notificationhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\dtos\\requests\\useridsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\dtos\\requests\\useridsrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\notificationapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\notificationapi.application.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\interfaces\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\interfaces\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\dtos\\requests\\createnotificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\dtos\\requests\\createnotificationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.application\\dtos\\conversions\\notificationconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6AB0CDD4-ED55-4BC8-8999-74F7CE3E611A}|Notification.Application\\NotificationApi.Application.csproj|solutionrelative:notification.application\\dtos\\conversions\\notificationconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{04999372-A248-412C-A9E9-2D621E6187D9}|Notification.Presentation\\NotificationApi.Presentation.csproj|solutionrelative:notification.presentation\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B1B3F118-5B20-4626-9C18-7461C7DF494B}|Notification.Domain\\NotificationApi.Domain.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.notificationapi\\notification.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B1B3F118-5B20-4626-9C18-7461C7DF494B}|Notification.Domain\\NotificationApi.Domain.csproj|solutionrelative:notification.domain\\entities\\notification.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 395,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:988834101:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NotificationsController.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Controllers\\NotificationsController.cs",
+              "RelativeDocumentMoniker": "Notification.Presentation\\Controllers\\NotificationsController.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Controllers\\NotificationsController.cs",
+              "RelativeToolTip": "Notification.Presentation\\Controllers\\NotificationsController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAABUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:59:38.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\Services\\NotificationService.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Notification.Application\\Services\\NotificationService.cs",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAYwFQAAABgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:01:11.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NotificationResponse.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Reponses\\NotificationResponse.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\DTOs\\Reponses\\NotificationResponse.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Reponses\\NotificationResponse.cs",
+              "RelativeToolTip": "Notification.Application\\DTOs\\Reponses\\NotificationResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:42:52.19Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "Notification.Presentation\\Properties\\launchSettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Properties\\launchSettings.json",
+              "RelativeToolTip": "Notification.Presentation\\Properties\\launchSettings.json",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-01T03:19:37.434Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "INotificationService.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Interfaces\\INotificationService.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\Interfaces\\INotificationService.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Interfaces\\INotificationService.cs",
+              "RelativeToolTip": "Notification.Application\\Interfaces\\INotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:01:08.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Notification.Presentation\\Program.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\Program.cs",
+              "RelativeToolTip": "Notification.Presentation\\Program.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBkAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:55:35.914Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Notification.Presentation\\appsettings.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\appsettings.json",
+              "RelativeToolTip": "Notification.Presentation\\appsettings.json",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAABIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-01T01:53:28.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NotificationType.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Domain\\Enums\\NotificationType.cs",
+              "RelativeDocumentMoniker": "Notification.Domain\\Enums\\NotificationType.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Domain\\Enums\\NotificationType.cs",
+              "RelativeToolTip": "Notification.Domain\\Enums\\NotificationType.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:14:10.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NotificationHub.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Hubs\\NotificationHub.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\Hubs\\NotificationHub.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Hubs\\NotificationHub.cs",
+              "RelativeToolTip": "Notification.Application\\Hubs\\NotificationHub.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:54:48.197Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CreateNotificationRequest.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Requests\\CreateNotificationRequest.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\DTOs\\Requests\\CreateNotificationRequest.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Requests\\CreateNotificationRequest.cs",
+              "RelativeToolTip": "Notification.Application\\DTOs\\Requests\\CreateNotificationRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T00:59:48.395Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserIdsRequest.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Requests\\UserIdsRequest.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\DTOs\\Requests\\UserIdsRequest.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Requests\\UserIdsRequest.cs",
+              "RelativeToolTip": "Notification.Application\\DTOs\\Requests\\UserIdsRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T03:07:50.917Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "NotificationApi.Application.csproj",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\NotificationApi.Application.csproj",
+              "RelativeDocumentMoniker": "Notification.Application\\NotificationApi.Application.csproj",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\NotificationApi.Application.csproj",
+              "RelativeToolTip": "Notification.Application\\NotificationApi.Application.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-01T03:59:04.329Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Interfaces\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\Interfaces\\INotificationRepository.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\Interfaces\\INotificationRepository.cs",
+              "RelativeToolTip": "Notification.Application\\Interfaces\\INotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:32:31.619Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Notification.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Domain\\Entities\\Notification.cs",
+              "RelativeDocumentMoniker": "Notification.Domain\\Entities\\Notification.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Domain\\Entities\\Notification.cs",
+              "RelativeToolTip": "Notification.Domain\\Entities\\Notification.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:42:12.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "Notification.Presentation\\appsettings.Development.json",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Presentation\\appsettings.Development.json",
+              "RelativeToolTip": "Notification.Presentation\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-01T01:53:27.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "NotificationConversion.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Conversions\\NotificationConversion.cs",
+              "RelativeDocumentMoniker": "Notification.Application\\DTOs\\Conversions\\NotificationConversion.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.NotificationApi\\Notification.Application\\DTOs\\Conversions\\NotificationConversion.cs",
+              "RelativeToolTip": "Notification.Application\\DTOs\\Conversions\\NotificationConversion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAcwAsAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-01T01:53:49.577Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 77,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 164,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

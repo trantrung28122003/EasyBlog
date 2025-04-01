@@ -27,3 +27,23 @@ export interface UserNote {
   courseId: string,
   courseEventName: string,
 };
+
+export interface UserProfile {
+  id: string;
+  fullName: string,
+  email: number, 
+  phoneNumber: string,
+  address: string,
+  avatar: string,
+};
+
+
+export interface Notification {
+  id: string;
+  Message: string,
+  IsRead: boolean, 
+  Type: string,
+  DateCreate: string,
+};
+
+

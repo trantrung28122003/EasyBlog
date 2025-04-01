@@ -138,9 +138,8 @@
 
 .notification-badge {
   position: absolute;
-  top: -5px;
-  right: -5px;
-  background: #ff4757;
+  left: -4px;
+  background: linear-gradient(45deg, #06bbcc, #0597a6);
   color: white;
   font-size: 0.75rem;
   min-width: 18px;
@@ -447,4 +446,36 @@
     width: 100%;
     justify-content: center;
   }
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: linear-gradient(45deg, #0597a6, #06bbcc) !important;
+  transform: translateY(-2px);
+}
+
+.nav-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover .nav-icon {
+  transform: scale(1.1);
+}
+
+.nav-link span {
+  font-weight: 500;
+  font-size: 0.95rem;
 }

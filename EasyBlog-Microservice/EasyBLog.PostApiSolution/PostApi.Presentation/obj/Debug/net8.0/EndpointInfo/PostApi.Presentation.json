@@ -195,6 +195,18 @@
           }
         }
       }
+    },
+    "/api/Posts/top-authors-post": {
+      "get": {
+        "tags": [
+          "Posts"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
     }
   },
   "components": {

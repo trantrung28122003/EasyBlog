@@ -4,7 +4,7 @@ export const RoutesConfig: ApplicationRoute[] = [
   {
     path: "/",
     component: LazyLoadComponent(import("../pages/Client/Home/Home")),
-    isProtected: false,
+    isProtected: true,
     isAdmin: false,
   },
   

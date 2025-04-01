@@ -35,7 +35,10 @@ const RESET_PASSWORD = BASE_URL +"/customer/resetPassword"
  * home
  */
 
-const GET_NOTIFICATION_BY_USER = BASE_URL + "/customer/notificationByUser"
+
+const GET_NOTIFICATION_BY_USER = BASE_URL + "/api/notifications/current-user"
+
+const GET_TOP_AUTHORS_POST = BASE_URL + "/api/posts/top-authors-post"
 const UPDATE_NOTIFICATION_READ_STATUS = BASE_URL + "/customer/updateNotificationStatusIsRead"
 const ADD_BLOG = BASE_URL +"/blog/addBlog"
 const LIKE_BLOG = BASE_URL +"/blog/like"
@@ -43,11 +46,37 @@ const UN_LIKE_BLOG = BASE_URL +"/blog/unLike"
 const GET_BLOGS = BASE_URL +"/blog"
 const STATUS_LIKE_BLOG = BASE_URL +"/customer/status"
 
-/**s
+/**
  * home
  */
 
 
+
+
+/**
+ * post
+ */
+const BASE_URL_POST = BASE_URL + "/api/posts";
+const GET_ALL_POST = BASE_URL_POST + "/";
+const ADD_POST = BASE_URL_POST + "/create";
+
+
+/**
+ * post
+ */
+
+
+/**
+ * comment
+ */
+const BASE_URL_COMMENT = BASE_URL + "/api/comments";
+const ADD_COMMENT = BASE_URL_COMMENT + "/create";
+const UPDATE_COMMENT = BASE_URL_COMMENT + "/update";
+
+
+/**
+ * comment
+ */
 
 export {
   BASE_URL,
@@ -67,4 +96,9 @@ export {
   LIKE_BLOG,
   STATUS_LIKE_BLOG,
   UN_LIKE_BLOG,
+  GET_ALL_POST,
+  ADD_POST,
+  ADD_COMMENT,
+  UPDATE_COMMENT,
+  GET_TOP_AUTHORS_POST
 };

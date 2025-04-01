@@ -31,7 +31,6 @@ const Login: React.FC = () => {
   });
 
   const doLogin = (user: LoginRequest) => {
-    console.log("Login attempt with:", user);
     setIsLoading(true);
     DoCallAPIWithOutToken<LoginRequest>(LOGIN_URL, "post", user)
       .then((res) => {
@@ -39,22 +38,16 @@ const Login: React.FC = () => {
           const authData = { token: res.data.results };
           localStorage.setItem("authentication", JSON.stringify(authData));
           fetchCurrentUser();
-        } else {
-          console.log("Login failed with status:", res.status);
-          setLoginError("Tài khoản hoặc mật khẩu không đúng.");
         }
       })
       .catch((err) => {
         console.error("Login error:", err);
-        if (
-          err.response &&
-          (err.response.status === 404 || err.response.status === 500)
-        ) {
-          console.log("Login error status:", err.response.status);
-          setLoginError("Tài khoản hoặc mật khẩu không đúng.");
+        if (err.response?.status === 401) {
+          setLoginError("Email hoặc mật khẩu không đúng.");
         } else {
           setLoginError("Đăng nhập thất bại. Vui lòng thử lại sau.");
         }
+        setIsLoading(false);
       });
   };
 
@@ -69,7 +62,7 @@ const Login: React.FC = () => {
             "authentication",
             JSON.stringify(res.data.results)
           );
-          console.log("Authentication stored:", res.data.results);
+
           fetchCurrentUser();
         } else {
           setLoginError("Đăng nhập không thành công");
@@ -86,7 +79,6 @@ const Login: React.FC = () => {
     setIsLoading(true);
     DoCallAPIWithToken(GET_USER_INFO_URL, "GET")
       .then((res) => {
-        console.log("User info response:", res);
         if (res.status === HTTP_OK) {
           localStorage.setItem("user_info", JSON.stringify(res.data.results));
           navigate("/", { replace: true });
@@ -165,15 +157,6 @@ const Login: React.FC = () => {
                 <div className={styles.error_message}>{errors.password}</div>
               )}
             </div>
-
-            {loginError && (
-              <div
-                className={styles.error_message}
-                style={{ textAlign: "center", marginBottom: "1rem" }}
-              >
-                {loginError}
-              </div>
-            )}
 
             <div className={styles.form_group}>
               <button

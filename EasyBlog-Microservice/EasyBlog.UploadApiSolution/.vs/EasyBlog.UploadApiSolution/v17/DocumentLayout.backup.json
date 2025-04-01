@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.application\\dtos\\conversions\\filemetadataconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|solutionrelative:uploadapi.application\\dtos\\conversions\\filemetadataconversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\controllers\\filemetadatacontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\controllers\\filemetadatacontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.application\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|solutionrelative:uploadapi.application\\dependencyinjection\\servercontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.application\\services\\filemetadataservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +17,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.application\\services\\uploadfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E87F681E-A29F-4E02-9E4B-E74819B66375}|UploadApi.Application\\UploadApi.Application.csproj|solutionrelative:uploadapi.application\\services\\uploadfileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\controllers\\filemetadatacontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\controllers\\filemetadatacontroller .cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.uploadapisolution\\uploadapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BB6685B5-CBA1-478F-B661-6DB600AC4E76}|UploadApi.Presentation\\UploadApi.Presentation.csproj|solutionrelative:uploadapi.presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{43134544-5DDD-4F34-8276-0363A95647F2}|..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\EasyBlog.SharedLibrary.csproj|d:\\easyblog\\easyblog-microservice\\easyblog.sharedlibrarysolution\\easyblog.sharedlibrary\\dependencyinjection\\jwtauthenticationscheme.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -33,7 +41,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 45,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -52,12 +60,33 @@
               "Name": "ST:988834101:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{269a02dc-6af8-11d3-bdc4-00c04f688e50}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FileMetadataConversion.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\DTOs\\Conversions\\FileMetadataConversion.cs",
+              "RelativeDocumentMoniker": "UploadApi.Application\\DTOs\\Conversions\\FileMetadataConversion.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\DTOs\\Conversions\\FileMetadataConversion.cs",
+              "RelativeToolTip": "UploadApi.Application\\DTOs\\Conversions\\FileMetadataConversion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T10:52:24.985Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
+              "Title": "ServerContainer.cs",
+              "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "RelativeDocumentMoniker": "UploadApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "RelativeToolTip": "UploadApi.Application\\DependencyInjection\\ServerContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-29T10:52:21.374Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "UploadFileService.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\Services\\UploadFileService.cs",
               "RelativeDocumentMoniker": "UploadApi.Application\\Services\\UploadFileService.cs",
@@ -65,25 +94,23 @@
               "RelativeToolTip": "UploadApi.Application\\Services\\UploadFileService.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:40:24.668Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:40:24.668Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "FileMetadataController .cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Presentation\\Controllers\\FileMetadataController .cs",
               "RelativeDocumentMoniker": "UploadApi.Presentation\\Controllers\\FileMetadataController .cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Presentation\\Controllers\\FileMetadataController .cs",
               "RelativeToolTip": "UploadApi.Presentation\\Controllers\\FileMetadataController .cs",
-              "ViewState": "AgIAAEAAAAAAAAAAAAAkwFAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCgAAABYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:31:46.545Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:31:46.545Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Presentation\\appsettings.json",
               "RelativeDocumentMoniker": "UploadApi.Presentation\\appsettings.json",
@@ -91,12 +118,11 @@
               "RelativeToolTip": "UploadApi.Presentation\\appsettings.json",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAABQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-28T13:22:25.113Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:22:25.113Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Presentation\\Program.cs",
               "RelativeDocumentMoniker": "UploadApi.Presentation\\Program.cs",
@@ -104,25 +130,23 @@
               "RelativeToolTip": "UploadApi.Presentation\\Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:22:22.664Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:22:22.664Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FileMetadataService.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\Services\\FileMetadataService.cs",
               "RelativeDocumentMoniker": "UploadApi.Application\\Services\\FileMetadataService.cs",
               "ToolTip": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBlog.UploadApiSolution\\UploadApi.Application\\Services\\FileMetadataService.cs",
               "RelativeToolTip": "UploadApi.Application\\Services\\FileMetadataService.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAYwHkAAAAOAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAQwCcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:10:04.222Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:10:04.222Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "JWTAuthenticationScheme.cs",
               "DocumentMoniker": "D:\\EasyBlog\\EasyBlog-Microservice\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
               "RelativeDocumentMoniker": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
@@ -130,8 +154,29 @@
               "RelativeToolTip": "..\\EasyBLog.SharedLibrarySolution\\EasyBlog.SharedLibrary\\DependencyInjection\\JWTAuthenticationScheme.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwCsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-28T13:07:55.989Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-28T13:07:55.989Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 1145,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }

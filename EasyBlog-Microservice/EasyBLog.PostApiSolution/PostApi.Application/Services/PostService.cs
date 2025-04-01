@@ -73,7 +73,7 @@ namespace PostApi.Application.Services
             return new ApiResponse<List<Post>>(true, "Lọc bài viết thành công", result);
         }
 
-        public async Task<ApiResponse<PostResponse?>> GetByIdAsync(string id)
+        public async Task<ApiResponse<PostResponse?>> GetPostByIdAsync(string id)
         {
             if (!Guid.TryParse(id, out Guid guidId))
             {
@@ -225,10 +225,41 @@ namespace PostApi.Application.Services
             });
             return commentsResponse?.Results;
         }
+
+        public async Task<ApiResponse<List<AuthorResponse>?>> GetTop3AuthorsWithMostPosts()
+        {
+            var userIds = await _postRepository.GetTop3AuthorsWithMostPosts(); 
+
+            if (userIds == null || !userIds.Any())
+                return new ApiResponse<List<AuthorResponse>?>(false, "Không tìm thấy thông tin người dùng", null);
+
+            var retryPipeline = _resiliencePipeline.GetPipeline("my-retry-pipeline");
+            var authorsResponse = await retryPipeline.ExecuteAsync(async _ => await GetUsersByIdsAsync(userIds));
+
+            if (authorsResponse == null || !authorsResponse.Any())
+                return new ApiResponse<List<AuthorResponse>?>(false, "Không tìm thấy thông tin người dùng", null);
+
+            var postCount = await _postRepository.CountPostsByAuthor("efc5735a-b50b-475c-aca9-59766c0b8332");
+            var updatedAuthors = await Task.WhenAll(
+                authorsResponse.Select(async author => new AuthorResponse
+                {
+                    Id = author.Id,
+                    FullName = author.FullName,
+                    Avatar = author.Avatar,
+                    PostCount = await _postRepository.CountPostsByAuthor(author.Id) 
+                })
+            );
+
+            return new ApiResponse<List<AuthorResponse>?>(true, "Danh sách user có nhiều bài viết nhất", updatedAuthors.ToList());
+        }
+
+
+
+
         private async Task<List<AuthorResponse>?> GetUsersByIdsAsync(List<string> userIds)
         {
             var userIdRequest = new UserIdsRequest() { UserIds = userIds };
-            var response = await _httpClient.PostAsJsonAsync("/api/users/getUsersByIds", userIds);
+            var response = await _httpClient.PostAsJsonAsync("/api/users/getUsersByIds", userIdRequest);
 
             if (!response.IsSuccessStatusCode)
                 return null;
@@ -335,7 +366,7 @@ namespace PostApi.Application.Services
                 ?? new Dictionary<string, string>();
            
 
-            var postsResponse = posts.Select(post =>
+            var postsResponse = posts.OrderByDescending(post => post.DateCreate).Select(post =>
             {
                 authorsDictionary.TryGetValue(post.AuthorId, out var author);
 
@@ -346,13 +377,13 @@ namespace PostApi.Application.Services
 
             
                 commentsDictionary.TryGetValue(post.Id.ToString(), out var comments);
-             
+                var sortedComments = comments?.OrderByDescending(c => c.DateCreate).ToList() ?? new List<CommentResponse>();
 
                 return PostConversion.FromEntityToPostRespone(
                     post,
                     author ?? new AuthorResponse { Id = post.AuthorId, FullName = "ẩn danh", Avatar = "URL" },
                     imageUrls,
-                    comments ?? new List<CommentResponse>(),
+                    sortedComments ?? new List<CommentResponse>(),
                     likeCount: 0,
                     commentCount: comments?.Count ?? 0
                     );

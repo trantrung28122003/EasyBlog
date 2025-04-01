@@ -6,7 +6,11 @@ const getToday = () => {
 
 const getTimeAgo = (dateCreate: string): string => {
   const currentDate = new Date();
+  
+  // Chuyển đổi sang múi giờ Việt Nam (GMT+7)
   const createdDate = new Date(dateCreate);
+  createdDate.setHours(createdDate.getHours() + 7);
+
   const diffInMs = currentDate.getTime() - createdDate.getTime();
   const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
   const diffInHours = Math.floor(diffInMs / (1000 * 60 * 60));
@@ -22,4 +26,5 @@ const getTimeAgo = (dateCreate: string): string => {
     return "Vừa xong";
   }
 };
+
 export { getToday , getTimeAgo};

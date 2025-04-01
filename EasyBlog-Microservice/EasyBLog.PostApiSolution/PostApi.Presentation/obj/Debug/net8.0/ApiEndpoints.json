@@ -11,7 +11,7 @@
   },
   {
     "ContainingType": "PostApi.Presentation.Controllers.PostsController",
-    "Method": "GetById",
+    "Method": "GetPostById",
     "RelativePath": "api/Posts/{id}",
     "HttpMethod": "GET",
     "IsController": true,
@@ -97,6 +97,16 @@
         "IsRequired": true
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "PostApi.Presentation.Controllers.PostsController",
+    "Method": "GetTopAuthors",
+    "RelativePath": "api/Posts/top-authors-post",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {

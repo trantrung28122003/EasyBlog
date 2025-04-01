@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CommentApi.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5fa3d3e40668b37d1f148b22fa60fae89abdc122")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de22b34d335dbac66f4428f56e317697323fb5e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("CommentApi.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CommentApi.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

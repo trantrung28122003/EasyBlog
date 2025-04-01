@@ -11,5 +11,6 @@ namespace PostApi.Application.DTOs.Responses
         public required string Id { get; init; }
         public required string FullName { get; init; }
         public required string Avatar { get; init; }
+        public int? PostCount { get; init; }
     }
 }

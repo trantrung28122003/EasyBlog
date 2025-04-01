@@ -38,6 +38,7 @@ namespace PostApi.Infrastructure.Repositories
         public async Task<List<Post>> GetAllActiveAsync()
         {
             return await _context.Posts
+                .Include(p=>p.Images)
                 .Where(p => !p.IsDeleted)
                 .AsNoTracking()
                 .ToListAsync();
@@ -98,6 +99,24 @@ namespace PostApi.Infrastructure.Repositories
             await _context.SaveChangesAsync();
         }
 
+        public async Task<List<string>> GetTop3AuthorsWithMostPosts()
+        {
+            return await _context.Posts
+                 .Where(p => !p.IsDeleted)
+                 .GroupBy(p => p.AuthorId)
+                 .OrderByDescending(g => g.Count())
+                 .Take(3)
+                 .Select(g => g.Key)
+                 .ToListAsync();
+        }
+
+
+        public async Task<int> CountPostsByAuthor(string authorId)
+        {
+            return await _context.Posts
+                .Where(p => p.AuthorId == authorId && !p.IsDeleted)  
+                .CountAsync();  
+        }
 
     }
 }
